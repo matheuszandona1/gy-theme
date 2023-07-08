@@ -1,0 +1,148 @@
+.newsletter {
+	&__container {
+		@include container;
+        @include xl-border;
+        @include xl-shadow;
+		display: flex;
+        gap: 48px;
+		padding: 80px;
+		background: linear-gradient(0deg, $azul-800, $azul-800), linear-gradient(90deg, rgba(0, 117, 126, 0.8) 0%, rgba(0, 117, 126, 0) 100%);
+        color: $neutro-50;
+    }
+    &__content{
+        padding-top: 70px;
+        max-width: 503px;
+    }
+    &__icon{
+        @include s-border;
+        display: inline-block;
+        background: $azul-50;
+        padding: 16px;
+    }
+    &__heading{
+        @include general-title;
+        margin: 24px auto;
+    }
+    &__text{
+        @include defaul-text;
+    }
+    &__holder{
+        background: $neutro-50;
+        padding: 48px;
+        width: 100%;
+        @include s-shadow;
+        @include l-border;
+    }
+    &__form{
+        &--double{
+            display: flex;
+            gap:24px;
+            .newsletter__form--input{
+                width:50%;
+            }
+        }
+        &--input{
+            margin-bottom: 24px;
+            label{
+                color: $neutro-800;
+                @include defaul-text;
+                display: block;
+                margin-bottom: 12px;
+            }
+            input{
+                border: none;
+                outline: none;
+                @include s-border;
+                border: 1px solid $neutro-100;
+                background: $neutro-100;
+                height: 59px;
+                width: 100%;
+                padding: 0 10px;
+            }
+            select{
+                border: none;
+                outline: none;
+                appearance: none;
+                @include s-border;
+                position: relative;
+                border: 1px solid $neutro-100;
+                background: $neutro-100;
+                padding: 0 10px;
+                height: 59px;
+                width: 100%;
+    
+            }
+            &.select{
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: url("../assets/expand_more.svg");
+                    height: 6px;
+                    right: 15px;
+                    top: 50px;
+                }
+            }
+        }
+
+    }
+    &.post {
+        .newsletter__container {
+            background: $amarelo-50;
+            padding: 80px 100px;
+            align-items: center;
+        }
+        .newsletter__content {
+            padding-top: 0;
+        }
+        .newsletter__icon {
+            padding: 0;
+            background: transparent;
+        }
+        .newsletter__heading {
+            color: $neutro-800;
+            margin: 32px 0 24px 0;
+            line-height: 100%;
+        }
+        .newsletter__text {
+            color: $neutro-800;
+        }
+        .newsletter__holder {
+            box-shadow: none;
+            background: transparent;
+            padding: 0;
+        }
+        .newsletter__form--input {
+            input {
+                background: transparent;
+                text-align: center;
+                border: 1px solid $neutro-500;
+                &::placeholder {
+                    text-align: center;
+                    color: $neutro-500;
+                }
+            }
+        }
+    }
+    &.post.sidebar {
+        .newsletter__container {
+            padding: 24px; 
+            display: flex;
+            justify-content: center;
+        }
+        .newsletter__content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            gap: 20px;
+        }
+        .newsletter__heading {
+            @include sub-title;
+            color: $verde-900;
+            margin: 0;
+        }
+        .newsletter__form {
+            width: 100%;
+        }
+    }
+}

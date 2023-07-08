@@ -1,0 +1,64 @@
+.header {
+	background: transparent;
+	padding: 32px 0px;
+	border-bottom: 1px solid #dbdbdb;
+	&__container {
+		@include container;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.navbar {
+			display: flex;
+			align-items: center;
+			padding: 0px;
+			gap: 32px;
+			list-style: none;
+
+			li {
+				a {
+					@include defaul-text;
+					color: $verde-900;
+					line-height: 100%;
+					text-decoration: none;
+					transition: ease-in-out 0.2s;
+					&:hover {
+						font-weight: 700;
+					}
+				}
+				.sub-menu {
+					display: none;
+					position: absolute;
+					left: 0;
+					top: 20px;
+				}
+				&.menu-item-has-children {
+					position: relative;
+					padding-right: 20px;
+				}
+				&.menu-item-has-children:hover {
+					.sub-menu {
+						display: block;
+					}
+				}
+				&.menu-item-has-children::after {
+					content: url("../assets/arrow_drop_down.svg");
+					position: absolute;
+					top: -3px;
+					right: 0;
+					width: 8px;
+					height: 4px;
+				}
+			}
+			.button {
+				padding: 16px 24px;
+				a {
+					font-size: 16px;
+					color: $neutro-50;
+					&:hover {
+						padding-right: 40px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.bg-gy {
+	background: url("../assets/gy.svg") no-repeat left;
+}
+.bg-gy-2 {
+	background: url("../assets/bg-main-2.png") no-repeat left;
+}
+
+.galeria {
+	padding-top: 120px;
+	&__container {
+		max-width: 1030px;
+		margin: 0 auto;
+	}
+	&__holder {
+		margin: 78px auto;
+		display: flex;
+		align-items: center;
+		gap: 56px;
+		&.fd {
+			flex-direction: row-reverse;
+			.galeria__img {
+				&:before {
+					content: url("../assets/SOMBRA_VERDE.png");
+					position: absolute;
+					top: -130px;
+					left: -146px;
+				}
+			}
+		}
+	}
+	&__img {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		max-width: 390px;
+		justify-content: end;
+		position: relative;
+		&:before {
+			content: url("../assets/SOMBRA_AMARELA.png");
+			position: absolute;
+			top: -130px;
+			left: -146px;
+		}
+		&--holder {
+			position: relative;
+			img {
+				height: 131px;
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			&:nth-child(1),
+			&:nth-child(4) {
+				img {
+					width: 190px;
+					border-radius: 12px 12px 4px 12px;
+				}
+			}
+			&:nth-child(2),
+			&:nth-child(3) {
+				img {
+					width: 142px;
+					border-radius: 12px 12px 12px 4px;
+					height: 98px;
+				}
+			}
+			&:nth-child(2) {
+				display: flex;
+				align-items: flex-end;
+			}
+			&:nth-child(3) {
+				img {
+					border-radius: 12px 4px 12px 12px;
+				}
+			}
+
+			&:nth-child(4) {
+				margin-right: 40px;
+				img {
+					border-radius: 4px 12px 12px 12px;
+				}
+			}
+		}
+	}
+	&__content {
+		max-width: 585px;
+		text-align: center;
+		position: relative;
+		color: $neutro-800;
+		&--heading {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+			margin-bottom: 32px;
+			align-items: center;
+			img {
+				padding: 10px 10px 9px;
+				background: $verde-50;
+				@include xs-border;
+			}
+		}
+		&--title {
+			@include general-title;
+		}
+		&--text {
+			b {
+				font-weight: bold;
+			}
+		}
+	}
+}
+.valores {
+	margin-bottom: 120px;
+	&__container {
+		@include container;
+	}
+	&__holder {
+		display: flex;
+		margin-top: 86px;
+		margin-bottom: 56px;
+		justify-content: center;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+	&__card {
+		background: $neutro-50;
+		padding: 32px;
+		@include ml-border;
+		@include s-shadow;
+		border: 1px solid $neutro-300;
+		max-width: 608px;
+		&--title {
+			@include defaul-text-bigger;
+			color: $neutro-800;
+			margin: 24px 0;
+		}
+		&--desc {
+			margin: 0;
+			@include defaul-text;
+			color: $neutro-800;
+		}
+	}
+}

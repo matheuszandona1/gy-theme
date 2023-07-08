@@ -1,0 +1,46 @@
+<?php
+
+// Template Name: RI
+
+get_header();
+?>
+
+<div class="page--ri">
+	<main>
+		<section class="hero no-after">
+			<div class="hero__container">
+				<div class="hero__content col-7">
+
+					<h1 class="hero__title">Relação com Investidores</h1>
+					<p class="hero__desc">
+						Com forte atuação há sete anos no fornecimento de energia solar, de soluções em eficiência energética e, há quase dois anos, em comercialização e gestão de energia no Brasil, a GreenYellow tem captado recursos por meio de emissões de debêntures e esta página tem como objetivo divulgar os fatos relevantes sobre estas transações.
+					</p>
+					<p class="hero__desc">O valor captado será utilizado para reembolsar os investimentos e aportes de capital realizados na implementação de projetos de eficiência energética e para futuros projetos com benefício ambiental.
+					</p>
+				</div>
+				<div class="hero__img">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="">
+				</div>
+			</div>
+		</section>
+		<section class="relatorios">
+			<div class="relatorios__container">
+				<div class="relatorios__items">
+					<div class="relatorios__item ativo">2021</div>
+					<div class="relatorios__item">2022</div>
+					<div class="relatorios__item">2023</div>
+				</div>
+				<h2 class="default__title no-after">2021</h2>
+				<div class="relatorios__resultado">
+					<div class="cards__category">ano</div>
+					<div class="cards__info">
+						<h3 class="cards__title">Relatório Anual</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</div>
+
+<?php
+get_footer();

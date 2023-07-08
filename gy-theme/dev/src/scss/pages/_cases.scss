@@ -1,0 +1,35 @@
+.cases {
+  &__container {    
+		@include container;
+    padding-top: 200px;
+    position: relative;
+    &--destaque {
+      .card {
+        position: absolute;
+        top: -140px;
+        left: 50%;
+        transform: translateX(-50%);
+        &-block {
+          max-width: 819px;
+        }
+        &-img {
+          width: 100%;
+          max-width: 341px;
+          height: auto;
+          img {
+            width: 100%;
+            max-width: 341px;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &--category {
+      padding-bottom: 80px;
+      .titulo {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

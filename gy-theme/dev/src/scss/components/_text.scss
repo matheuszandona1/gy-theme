@@ -1,0 +1,35 @@
+.default {
+	&__title {
+		text-align: center;
+		@include general-heading;
+		color: $neutro-800;
+		margin: 0;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			width: 40px;
+			height: 8px;
+			background: $verde-500;
+			border-radius: 150px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			bottom: -30px;
+		}
+		&.smaller {
+			font-size: 32px;
+		}
+	}
+	&__desc {
+		@include defaul-text-bigger;
+		margin: 0;
+		color: $neutro-800;
+	}
+	&__smaller {
+		@include defaul-text;
+		font-size: 16px;
+		margin: 0;
+		color: $neutro-800;
+	}
+}

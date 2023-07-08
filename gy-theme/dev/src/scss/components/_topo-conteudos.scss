@@ -1,0 +1,20 @@
+.topo__conteudos {
+  padding: 100px 0 167px 0;
+  background: $verde-50;
+  &--container {
+		@include container;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: 24px;
+    }
+    h1 {
+      @include general-heading;
+      margin: 0;
+      .categoria {
+        text-transform: lowercase;
+      }
+    }
+  }
+}

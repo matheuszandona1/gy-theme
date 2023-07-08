@@ -1,0 +1,107 @@
+.home {
+	.header {
+			background-color: $verde-50;
+			border-bottom: 0px;
+			position: relative;
+			.button--default {
+					position: relative;
+					z-index: 999;
+					background-color: $verde-50;
+					font-size: 16px;
+					&:hover {
+							&:after {
+									display: none;
+							}
+							padding-right: 24px;
+					}
+					a {
+							color: $verde-900;
+							&:hover {
+									&:after {
+											display: none;
+									}
+									padding-right: 0px;
+							}
+					}
+			}
+	}
+	.hero {
+			background-color: $verde-50;
+			position: relative;
+			&-slider {
+					@include container;
+					&::before {
+							width: 212px;
+							background: $verde-500;
+							height: 170%;
+							background-color: $verde-500;
+							position: absolute;
+							content: "";
+							right: -20px;
+							top: -190px;
+							border-radius: 16px 0px 0px 16px;
+					}
+					.slick-dots {
+							position: absolute;
+							bottom: -4px;
+							left: 85px;
+							max-width: 100px;
+							display: flex;
+							list-style-type: none;
+							gap: 8px;
+							padding-left: 0px;
+							justify-content: center;
+							@include media(s) {
+									bottom: 20px;
+							}
+							li {
+									opacity: 1;
+									&.slick-active {
+											opacity: 1;
+											button {
+													background: $verde-500;
+											}
+									}
+							}
+							button {
+									width: 24px;
+									height: 8px;
+									border: none;
+									text-indent: -9999px;
+									@include xl-border;
+									background: transparent;
+									border: 1px solid $verde-500;
+									padding: 0;
+									display: block;
+							}
+					}
+					.nav-slide-holder {
+							margin-top: 48px;
+							display: flex;
+							gap: 150px;
+					}
+					.prev-arrow,
+					.next-arrow {
+							background: transparent;
+							box-shadow: none;
+							appearance: none;
+							outline: none;
+							border: none;
+					}
+					.next-arrow {
+							right: 100px;
+					}
+			}
+			&.container {
+					position: relative;
+			}
+			&.img {
+					position: relative;
+					z-index: 20;
+					img {
+							position: relative;
+							z-index: 20;
+					}
+			}
+	}
+}

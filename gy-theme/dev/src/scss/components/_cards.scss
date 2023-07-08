@@ -1,0 +1,201 @@
+.cards {
+	@include ml-border;
+	@include s-shadow;
+	width: 100%;
+	text-decoration: none;
+	&__bigger {
+		max-width: 397px;
+		padding: 24px;
+		background: url("../assets/img-modelo.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 100%;
+		height: 600px;
+	}
+
+	&__blog {
+		display: flex;
+		max-width: 397px;
+		height: 100%;
+		padding: 32px;
+		flex-direction: column;
+		flex: 0 1 100%;
+		gap: 16px;
+		border: 1px solid $neutro-300;
+		position: relative;
+		.cards__image {
+			width: 100%;
+			img {
+				border-radius: 12px;
+				height: 238px;
+				object-fit: cover
+			}
+		}
+		.cards__category {
+			margin: 15px 0 0 20px;
+			background: $neutro-50;
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				li {
+					text-align: center;
+					a {
+						@include smaller-text;
+						color: $neutro-800;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.cards__date {
+			display: flex;
+			align-items: center;
+			@include smaller-text;
+			color: $neutro-700;
+			line-height: 150%;
+			span {
+				display: inline-block;
+				margin: 0 8px;
+			}
+		}
+		.cards__desc {
+			margin: 0; 
+		}
+		.cards__readmore {
+			@include bold-links;
+			color: $verde-900;
+			text-decoration: none
+		}
+	}
+
+	&__category {
+		@include smaller-text;
+		color: $neutro-800;
+		background: $amarelo-50;
+		@include sm-border;
+		padding: 12px 16px;
+		display: inline;
+		text-transform: uppercase;
+		position: absolute;
+	}
+	&__info {
+		background: $neutro-50;
+		padding: 24px;
+		margin-top: auto;
+		@include m-border;
+		@include m-shadow;
+	}
+	&__title {
+		color: $verde-900;
+		@include sub-title;
+		margin-bottom: 0;
+	}
+	&__desc {
+		margin-bottom: 0px;
+		margin-top: 24px;
+		@include defaul-text;
+		color: $neutro-700;
+	}
+}
+.card {
+	@include s-shadow;
+	@include l-border;
+	@include highlight-links;
+
+	background: $neutro-50;
+	padding: 32px;
+	margin-bottom: 24px;
+	font-size: 24px;
+
+	&--border {
+		border: 1px solid $neutro-300;
+	}
+	&-block {
+		display: block;
+	}
+	&-flex {
+		display: flex;
+		gap: 32px;
+	}
+	&-img {
+		@include m-border;
+
+		img {
+			@include m-border;
+		}
+	}
+	&-title {
+		@include highlight-links;
+		margin-bottom: 32px;
+	}
+	&-desc {
+		@include highlight-links;
+		margin-bottom: 0px;
+	}
+	&-text {
+		@include defaul-text;
+		font-size: 18px;
+	}
+	&-s-img {
+		.card-img {
+			width: 150px;
+			height: 100%;
+			background: $verde-500;
+			img {
+				width: 150px;
+				height: 150px;
+				object-fit: cover;
+			}
+		}
+	}
+	&-m-img {
+		.card-img {
+			width: 150px;
+			height: 150px;
+			background: $verde-500;
+			img {
+				width: 150px;
+				height: 150px;
+				object-fit: cover;
+			}
+		}
+	}
+
+	a {
+		color: $verde-900;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&-title {
+		color: $verde-900;
+	}
+	&-link {
+		font-size: 16px;
+		margin-left: 3px;
+		span {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	&:hover {
+		.card-link {
+			span {
+				margin-left: 10px;
+			}
+		}
+	}
+	&-check {
+		@include ml-border;
+		@include s-shadow;
+		background: $neutro-50;
+		padding: 32px;
+		&__text {
+			@include defaul-text-bigger;
+			color: $neutro-800;
+			margin-top: 24px;
+		}
+	}	
+}

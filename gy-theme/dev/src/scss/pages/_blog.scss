@@ -1,0 +1,234 @@
+.blog {
+	&__container {
+		@include container;
+    padding-top: 100px;
+    position: relative;    
+    .titulo {
+      margin-bottom: 32px;
+      h2 {
+        color: $neutro-800;
+        margin-bottom: 0;
+      }
+    }
+
+    &--destaque {
+      position: absolute;
+      top: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      .card {
+        &-block {
+          max-width: 819px;
+        }
+        &-img {
+          width: 100%;
+          max-width: 341px;
+          height: auto;
+          img {
+            width: 100%;
+            max-width: 341px;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &--categorias {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .button {
+        @include defaul-text;
+        line-height: 100%;
+        text-transform: none;
+        width: 228px;
+        padding: 24px;
+        border-radius: 28px;
+        text-align: center;
+      }
+    }
+    &--ultimas {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 80px 0 32px 0;
+    }
+    &--maislidos {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 160px 0 56px 0;
+      .col-6:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+    &--relacionados {
+      @include container;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 0;
+      .titulo {
+        margin-bottom: 32px;
+        h2 {
+          @include general-title-smaller;
+          color: $neutro-800;
+          margin-bottom: 0;
+        }
+      }
+      .col-6:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+    &--todos {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 80px 0 32px 0;
+      .col-4 {
+        margin-bottom: 32px;
+      }      
+      .col-4:nth-child(3n) {
+        margin-right: 0;
+      }
+    } 
+  }
+  .topo__post {
+    background: $verde-50;
+    &--container {
+      padding: 100px 0 187px 0;
+      @include container;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      img {
+        margin-right: 24px;
+      }
+      h1 {
+        @include general-heading;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+    &--category {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          a {
+            @include defaul-text;
+            text-decoration: none;
+						color: $neutro-800;
+            text-transform: uppercase
+          }
+        }
+      }
+    }
+    &--img {
+      width: 100%;
+      position: absolute;
+      bottom: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        border-radius: 12px;
+        height: 300px;
+        object-fit: cover
+      }
+    }
+    &--date {
+			display: flex;
+			align-items: center;
+			@include defaul-text;
+			color: $neutro-700;
+      text-transform: uppercase;
+    }
+  }
+  .post__container {
+    padding: 230px 0 80px 0;
+    @include container;
+    display: flex;
+    &--content {
+      p, code {
+        @include defaul-text;
+        color: $neutro-800;
+      }
+      a {
+        @include bold-links;
+        color: $verde-500;
+      }
+    }
+  }
+}
+// 		//padding-top: 100px;
+// 		//position: relative;
+// 		.titulo {
+// 			margin-bottom: 32px;
+// 			h2 {
+// 				color: $neutro-800;
+// 				text-align: center;
+// 			}
+// 		}
+// 		&--destaque {
+// 			position: absolute;
+// 			top: -140px;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			display: flex;
+// 			.card {
+// 				&-block {
+// 					max-width: 819px;
+// 				}
+// 				&-img {
+// 					width: 100%;
+// 					max-width: 341px;
+// 					height: auto;
+// 					img {
+// 						width: 100%;
+// 						max-width: 341px;
+// 						height: 100%;
+// 						object-fit: cover;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		&--categorias {
+// 			display: flex;
+// 			align-items: center;
+// 			padding: 80px 0;
+// 		}
+// 		&--ultimas {
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 			margin-bottom: 32px;
+// 		}
+// 		&--maislidos {
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 			margin: 160px 0 80px 0;
+// 		}
+// 		&--relacionados {
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 		}
+// 	}
+// 	.topo__post {
+// 		padding: 100px 0 167px 0;
+// 		background: $verde-50;
+// 		&--container {
+// 			@include container;
+// 			img {
+// 				margin-right: 24px;
+// 			}
+// 			h1 {
+// 				@include general-heading;
+// 				max-width: 700px;
+// 				margin: 0 auto;
+// 			}
+// 		}
+// 	}
+// 	.post__container {
+// 		@include container;
+// 		display: flex;
+// 	}
+// }

@@ -1,0 +1,47 @@
+// Imports Gerais
+@import "./general/normalize";
+@import "./general/global";
+
+// functions de responsividade e grid
+@import "./structure/functions";
+@import "./structure/variables";
+@import "./structure/mixins";
+
+@import "./components/buttons";
+@import "./components/text";
+@import "./components/header";
+@import "./components/footer";
+
+@import "./components/newsletter";
+@import "./components/cards";
+@import "./components/cases-cta";
+@import "./components/projetos-personalizados";
+@import "./components/topo-conteudos";
+@import "./components/diagrama-solucoes";
+
+@import "./components/hero";
+
+@import "./pages/conheca-gy";
+@import "./pages/esg";
+@import "./pages/page";
+@import "./pages/shift";
+@import "./pages/cases";
+@import "./pages/case";
+@import "./pages/blog";
+@import "./pages/segmentos";
+@import "./pages/contato";
+@import "./pages/hub";
+@import "./pages/home";
+
+* {
+	&.no-after {
+		&:after {
+			display: none;
+		}
+	}
+	&.no-before {
+		&:before {
+			display: none;
+		}
+	}
+}

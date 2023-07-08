@@ -1,0 +1,58 @@
+.footer {
+  padding: 80px 0;
+  &__container {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  &__column { 
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    &.middle {
+      gap: 24px;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+  .logo {
+    img {
+      width: 240px;
+    }
+  }
+  h2 {
+    @include general-title-smaller;
+    font-weight: 700;
+    color: $neutro-800;
+    margin-bottom: 0;
+  }
+  &__navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &--link {
+      @include defaul-text;
+      color: $verde-900;
+      font-weight: 700;
+      line-height: 100%;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  &__text {
+    max-width: 292px;
+    a {
+      @include defaul-text;
+      color: $neutro-800;
+      text-decoration: none;
+      display: block;
+    }
+  }
+}

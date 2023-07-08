@@ -1,0 +1,200 @@
+.button {
+	@include primary-btn;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 20px 32px;
+	padding-right: 42px;
+
+	@include media(s) {
+		padding: 16px 24px;
+
+		&:hover {
+			padding: 16px 30px;
+
+			&::after {
+				right: 10px;
+			}
+		}
+	}
+	&:hover {
+		color: $neutro-50;
+	}
+
+	&--redirect {
+		background: $verde-500;
+		color: $neutro-50;
+		@include m-shadow;
+		@include s-border;
+		position: relative;
+		transition: all 0.2s ease-in;
+
+		&::after {
+			transition: all 0.2s ease-in;
+			content: url("../assets/seta-btn.svg");
+			position: absolute;
+			right: 0px;
+			opacity: 0;
+			top: 33%;
+		}
+
+		&:hover {
+			padding-right: 42px;
+
+			&:after {
+				opacity: 1;
+				right: 18px;
+			}
+		}
+	}
+
+	&--lighten {
+		background: $verde-50;
+		color: $verde-900;
+		@include m-shadow;
+		@include s-border;
+		position: relative;
+		transition: all 0.2s ease-in;
+
+		&::after {
+			transition: all 0.2s ease-in;
+			content: url("../assets/seta-btn-verde.svg");
+			position: absolute;
+			right: 0px;
+			opacity: 0;
+			top: 33%;
+		}
+
+		&:hover {
+			padding-right: 42px;
+
+			&:after {
+				opacity: 1;
+				right: 18px;
+			}
+		}
+	}
+
+	&--border {
+		background: transparent;
+		border: 1px solid $verde-500;
+		color: $verde-500;
+		@include m-shadow;
+		@include s-border;
+		position: relative;
+		transition: all 0.2s ease-in;
+
+		&::after {
+			transition: all 0.2s ease-in;
+			content: url("../assets/seta-btn-verde-claro.svg");
+			position: absolute;
+			right: 0px;
+			opacity: 0;
+			top: 33%;
+		}
+
+		&:hover {
+			padding-right: 42px;
+
+			&:after {
+				opacity: 1;
+				right: 18px;
+			}
+		}
+	}
+
+	&--border-lg {
+		background: transparent;
+		border: 1px solid $verde-50;
+		color: $verde-50;
+		@include m-shadow;
+		@include s-border;
+		position: relative;
+		transition: all 0.2s ease-in;
+
+		&::after {
+			transition: all 0.2s ease-in;
+			content: url("../assets/seta-btn-verde-lg.svg");
+			position: absolute;
+			right: 0px;
+			opacity: 0;
+			top: 33%;
+		}
+
+		&:hover {
+			padding-right: 42px;
+
+			&:after {
+				opacity: 1;
+				right: 18px;
+			}
+		}
+	}
+}
+
+.button {
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.2s all ease-in;
+	position: relative;
+	&--container {
+		&.center {
+			text-align: center;
+		}
+	}
+	&--default {
+		background: $verde-500;
+		@include s-shadow;
+		@include s-border;
+		@include primary-btn;
+		padding: 24px 32px;
+		color: $neutro-50;
+		position: relative;
+		&:after {
+			content: url("../assets/arrow-btn-v.svg");
+			right: 0;
+			opacity: 0;
+			transition: 0.2s all ease-in;
+			position: absolute;
+		}
+		&:hover {
+			padding-right: 48px;
+			color: $neutro-50;
+			&:after {
+				opacity: 1;
+				right: 15px;
+			}
+		}
+	}
+	&--transp {
+		border: 1px solid $verde-500;
+		@include s-border;
+		color: $verde-500;
+		@include primary-btn;
+		padding: 24px 32px;
+		&:after {
+			content: url("../assets/arrow-btn-transp.svg");
+			right: 0;
+			opacity: 0;
+			transition: 0.2s all ease-in;
+			position: absolute;
+		}
+		&:hover {
+			padding-right: 48px;
+			color: $verde-500;
+			&:after {
+				opacity: 1;
+				right: 15px;
+			}
+		}
+	}
+	&--newsletter {
+		@include s-border;
+		background: $azul-800;
+		width: 100%;
+		height: 59px;
+		color: $neutro-50;
+		@include primary-btn;
+		border-color: transparent;
+	}
+}
