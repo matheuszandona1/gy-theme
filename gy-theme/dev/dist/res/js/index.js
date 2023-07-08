@@ -20,4 +20,3 @@ $(".hero-slider").slick({
     nextArrow: $(".next-arrow")
 });
 
-//# sourceMappingURL=index.js.map

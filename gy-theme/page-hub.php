@@ -9,21 +9,35 @@ get_header();
   <main class="hub">
     <section class="topo__hub">
       <div class="topo__hub--links">
-        <div class="button--container">
-          <a href="<?php echo site_url(); ?>/blog" class="button">
+        <div class="button__container">
+          <a href="<?php echo site_url(); ?>/blog" class="button button--lighten">
             <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/icon-artigos.svg" alt="ícone artigos">
             Artigos
           </a>
+          <a href="<?php echo site_url(); ?>/materiais" class="button button--lighten">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/icon-materiais.svg" alt="ícone materiais">
+            Materiais
+          </a>
+          <a href="<?php echo site_url(); ?>/podcast" class="button button--lighten">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/icon-podcast.svg" alt="ícone podcast">
+            Podcast
+          </a>
+          <a href="<?php echo site_url(); ?>/cases-de-sucesso" class="button button--lighten">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/icon-cases.svg" alt="ícone case">
+            Cases
+          </a>
+          <a href="<?php echo site_url(); ?>/gy-na-midia" class="button button--lighten">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/icon-gymidia.svg" alt="ícone GY na mídia">
+            GY na midia
+          </a>
         </div>
       </div>
-    </section>
-    <div class="blog__container">
-      <div class="blog__container--destaque">
+      <div class="topo__hub--destaque">
         <?php
         $args = array(
           'post_type' => 'post',
           'post_status' => 'publish',
-          'posts_per_page' => 2,
+          'posts_per_page' => 1,
           'orderby' => 'date',
           'order' => 'DESC',
         );
@@ -32,7 +46,7 @@ get_header();
           while ($wpb_all_query->have_posts()) {
             $wpb_all_query->the_post();
         ?>
-            <?php get_template_part('components/card', 'conteudo'); ?>
+            <?php get_template_part('components/card', 'destaque'); ?>
         <?php
           }
           wp_reset_postdata();
@@ -42,27 +56,10 @@ get_header();
         ?>
 
       </div>
-      <div class="blog__container--categorias">
-        <?php
-        // Get all categories
-        $categories = get_categories(array(
-          'orderby' => 'name',
-          'order'   => 'ASC',
-          'number'  => 5,  // Limit the number of categories
-        ));
-
-        // Check if any category exists
-        if (!empty($categories) && !is_wp_error($categories)) {
-          foreach ($categories as $category) {
-            $category_link = get_category_link($category->term_id);
-
-            echo '<div class="button--container"><a href="' . esc_url($category_link) . '" class="button button--lighten">' . $category->name . '</a></div>';
-          }
-        }
-        ?>
-      </div>
+    </section>
+    <div class="blog__container">
       <div class="blog__container--ultimas">
-        <div class="titulo col-12">
+        <div class="titulo col-12 text-center">
           <h2>Últimas do blog</h2>
         </div>
         <?php
