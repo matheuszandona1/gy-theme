@@ -82,13 +82,13 @@ get_header();
 
 						// Check if any post exists
 						if ($the_query->have_posts()) {
-							echo '<h2>' . $term->name . '</h2>';  // Display the term name
+							echo '<h2 class="titulo text-center">' . $term->name . '</h2>';  // Display the term name
 
 							while ($the_query->have_posts()) {
 								$the_query->the_post();
 
 								// Display the post here
-								get_template_part('components/card', 'conteudo');
+								get_template_part('components/card', 'case');
 							}
 
 							// Reset post data

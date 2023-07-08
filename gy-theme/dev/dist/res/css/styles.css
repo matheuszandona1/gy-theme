@@ -3399,6 +3399,111 @@ html {
   position: relative;
 }
 
+.midia__container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 200px;
+  position: relative;
+}
+
+.midia__container--destaque .card {
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.midia__container--destaque .card-block {
+  max-width: 819px;
+}
+
+.midia__container--destaque .card-img {
+  width: 100%;
+  max-width: 341px;
+  height: auto;
+}
+
+.midia__container--destaque .card-img img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 341px;
+  height: 100%;
+}
+
+.midia__container--postagens {
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  display: flex;
+}
+
+.midia__container--postagens .card.col-6:nth-child(2n) {
+  margin-right: 0;
+}
+
+.podcast__container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 100px;
+  position: relative;
+}
+
+.podcast__container--destaque .box {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.podcast__container--info {
+  background: #87bc25;
+  border-radius: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 24px;
+  padding: 100px;
+  display: flex;
+}
+
+.podcast__container--info p {
+  color: #fff;
+  margin-bottom: 0;
+  font-family: Nunito, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.podcast__container--info .buttons {
+  align-items: center;
+  display: flex;
+}
+
+.podcast__container--info .buttons .button {
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 32px;
+  display: flex;
+}
+
+.podcast__container--info .buttons .button:last-child {
+  margin-right: 0;
+}
+
+.podcast__container--info .buttons .button svg {
+  margin-right: 12px;
+}
+
+.podcast__container--info .buttons .button span {
+  line-height: 1em;
+}
+
 .no-after:after, .no-before:before {
   display: none;
 }
@@ -3481,5 +3586,10 @@ html {
   .page--segmentos .pr-operating__slider .slick-dots, .home .hero-slider .slick-dots {
     bottom: 20px;
   }
+
+  .podcast__container--info p {
+    font-size: 24px;
+  }
 }
 
+/*# sourceMappingURL=styles.css.map */
