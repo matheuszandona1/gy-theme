@@ -14,6 +14,8 @@
 		document.documentElement.classList.remove("no-js")
 		document.documentElement.classList.add("js")
 	</script>
+	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
 
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />

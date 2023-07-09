@@ -1,85 +1,166 @@
 .hub {
-  &__container {    
+	&__container {
 		@include container;
-    padding-top: 100px;
-    position: relative;    
-    .titulo {
-      margin-bottom: 32px;
-      h2 {
-        color: $neutro-800;
-        text-align: center;
-      }
-    }
-    &--destaque {
-      position: absolute;
-      top: -140px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      .card {
-        &-block {
-          max-width: 819px;
-        }
-        &-img {
-          width: 100%;
-          max-width: 341px;
-          height: auto;
-          img {
-            width: 100%;
-            max-width: 341px;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-    &--categorias {
-      display: flex;
-      align-items: center;
-      padding: 80px 0;
-    }
-    &--ultimas {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-    &--maislidos {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 160px 0 80px 0;
-    }
-    &--relacionados {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-  .topo__hub {
-    padding: 100px 0 167px 0;
-    background: $verde-50;
-    &--links {
-      @include container;
-      margin-bottom: 24px;
-      .button__container {    
-        display: flex;
-        justify-content: space-between;    
-        .button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          max-width: 229px;
-          background: $neutro-50;
-          padding: 24px;
-          text-align: center;
-          text-transform: none;
-          img {
-            margin-right: 16px;
-          }
-        }
-      }
-    }
-    &--destaque {
-      @include container;
-    }
-  }
+		padding-top: 100px;
+		position: relative;
+		.titulo {
+			margin-bottom: 32px;
+			h2 {
+				color: $neutro-800;
+				text-align: center;
+			}
+		}
+		&--destaque {
+			position: absolute;
+			top: -140px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			.card {
+				&-block {
+					max-width: 819px;
+				}
+				&-img {
+					width: 100%;
+					max-width: 341px;
+					height: auto;
+					img {
+						width: 100%;
+						max-width: 341px;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+		&--categorias {
+			display: flex;
+			align-items: center;
+			padding: 80px 0;
+		}
+		&--ultimas {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 32px;
+		}
+		&--maislidos {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 160px 0 80px 0;
+		}
+		&--relacionados {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.topo__hub {
+		padding: 100px 0 467px 0;
+		background: $verde-50;
+		margin-bottom: 60px;
+		&--links {
+			@include container;
+			margin-bottom: 24px;
+			.button__container {
+				display: flex;
+				justify-content: space-between;
+				.button {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					max-width: 229px;
+					background: $neutro-50;
+					padding: 24px;
+					text-align: center;
+					text-transform: none;
+					&::after {
+						display: none;
+					}
+					&:hover {
+						color: $verde-900;
+						transform: scale(1.1);
+					}
+					img {
+						margin-right: 16px;
+					}
+				}
+			}
+		}
+		&--destaque {
+			@include container;
+			.card-flex {
+				gap: 16px;
+			}
+			.card-block {
+				max-width: 819px;
+			}
+			.card-img {
+				img {
+					width: 341px;
+					height: 238px;
+				}
+			}
+		}
+	}
+	&__floating {
+		@include container;
+		display: flex;
+		position: absolute;
+		gap: 24px;
+		.cards__bigger {
+			@include s-shadow;
+		}
+		&--middle {
+			max-width: 608px;
+			.card-title {
+				height: 46px;
+			}
+			.card-link {
+				line-height: 11px;
+			}
+			.sidebar {
+				.newsletter {
+					&__icon {
+						svg {
+							width: 67px;
+							height: 67px;
+						}
+					}
+					&__container {
+						justify-content: start !important;
+						@include s-shadow;
+					}
+					&__heading {
+						height: 28px;
+					}
+					&__content {
+						align-items: start !important;
+						max-width: 100%;
+					}
+					&__form {
+						display: flex;
+						&--input {
+							max-width: 480px;
+							width: 100%;
+							margin-right: 24px;
+							margin-bottom: 0px;
+						}
+						.button {
+							text-align: center;
+							max-width: 70px;
+							padding: 0;
+							svg {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+		&--end {
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 }

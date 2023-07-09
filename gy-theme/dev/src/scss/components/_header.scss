@@ -2,6 +2,9 @@
 	background: transparent;
 	padding: 32px 0px;
 	border-bottom: 1px solid #dbdbdb;
+	.menu-item {
+		z-index: 21;
+	}
 	&__container {
 		@include container;
 		display: flex;

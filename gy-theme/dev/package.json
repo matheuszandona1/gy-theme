@@ -43,6 +43,7 @@
 		"dir-archiver": "^2.1.0",
 		"jquery": "^3.6.3",
 		"lite-youtube-embed": "^0.2.0",
+		"livereload": "^0.9.3",
 		"rimraf": "^5.0.1"
 	}
 }

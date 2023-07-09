@@ -19,4 +19,13 @@ $(".hero-slider").slick({
     prevArrow: $(".prev-arrow"),
     nextArrow: $(".next-arrow")
 });
+$(".clientes-slider").slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    dots: true,
+    prevArrow: $(".prev-arrow-clientes"),
+    nextArrow: $(".next-arrow-clientes")
+});
 
+//# sourceMappingURL=index.js.map

@@ -54,7 +54,55 @@ get_header();
           echo '<p>Nenhum case antigo, veja nossos últimos posts acima!</p>';
         }
         ?>
-
+        <div class="hub__floating">
+          <div class="cards cards__bigger">
+            <div class="cards__category">case de sucesso</div>
+            <div class="cards__info">
+              <h3 class="cards__title">Relatório de Responsabilidade Corporativa 2021 – ZOOM Brasil</h3>
+              <p class="cards__desc">Confira a 2ª edição do Relatório de Responsabilidade Corporativa – Zoom Brasil.</p>
+            </div>
+          </div>
+          <div class="hub__floating--middle">
+            <div class="sidebar">
+              <?php
+              $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 2,
+                'orderby' => 'date',
+                'order' => 'DESC',
+              );
+              $wpb_all_query = new WP_Query($args); ?>
+              <?php if ($wpb_all_query->have_posts()) {
+                while ($wpb_all_query->have_posts()) {
+                  $wpb_all_query->the_post();
+              ?>
+                  <div class="card card--border">
+                    <h3 class="card-title">
+                      <?php the_title(); ?>
+                    </h3>
+                    <a href="<?php echo the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
+                  </div>
+              <?php
+                }
+                wp_reset_postdata();
+              } else {
+                echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
+              }
+              ?>
+              <?php get_template_part('components/newsletter', 'sidebar-hub'); ?>
+            </div><!-- #secondary -->
+          </div>
+          <div class="hub__floating--end">
+            <a href="">
+              <div class="cards cards__bigger">
+                <div class="cards__info">
+                  <h3 class="cards__title">Relatório Anual</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
     <div class="blog__container">
