@@ -14,8 +14,8 @@ get_header();
         </div>
         <?php get_template_part('components/diagrama', 'solucoes'); ?>
 
-        <?php get_template_part('components/newsletter'); ?>
     </section>
+    <?php get_template_part('components/newsletter'); ?>
 
 </main>
 
