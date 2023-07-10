@@ -43,36 +43,42 @@ paths.forEach(function(path) {
         }
     });
     var image = document.createElement("img");
-    image.src = "/wp-content/themes/gy-theme/dev/src/assets/PIN.svg";
+    image.src = "http://greenyellow.local/wp-content/uploads/2023/07/PIN.png";
     image.style.position = "absolute";
-    image.style.zIndex = "99999";
+    image.style.zIndex = "20";
     image.addEventListener("load", function() {
         var pathRect = path.getBoundingClientRect();
         image.style.left = pathRect.left + pathRect.width / 2 - image.width / 2 + "px";
         image.style.top = pathRect.top + pathRect.height / 3 - image.height / 2 + "px";
     }, false);
     path.parentNode.parentNode.appendChild(image);
-    image.addEventListener("error", function() {
-        console.error("Error loading image");
-    });
     image.addEventListener("click", function(event) {
         event.stopPropagation();
         var pathName = path.id;
-        var pathLink = "https://exemplo.com/" + path.id;
-        // Atualiza o texto e o link da tooltip
-        document.getElementById("tooltipText").textContent = pathName;
-        document.getElementById("tooltipLink").textContent = "Ir para " + pathName;
-        document.getElementById("tooltipLink").href = pathLink;
-        // Posiciona a tooltip próxima à imagem
-        var tooltip = document.getElementById("tooltip");
-        tooltip.style.left = event.pageX + 10 + "px";
-        tooltip.style.top = event.pageY - 10 + "px";
+        var pathLink;
+        if (path.id === "Brasil") pathLink = "https://greenyellow.com.br/";
+        else if (path.id === "Fran\xe7a") pathLink = "https://fr.greenyellow.com/en";
+        else if (path.id === "Tail\xe2ndia") pathLink = "https://www.greenyellow.co.th/";
+        else if (path.id === "Col\xf4mbia") pathLink = "https://www.greenyellow.co/";
+        else pathLink = "https://exemplo.com/" + path.id;
+        var tooltip = document.createElement("div");
+        tooltip.className = "tooltipMap";
+        var tooltipLink = document.createElement("a");
+        tooltipLink.textContent = pathName;
+        tooltipLink.href = pathLink;
+        tooltip.appendChild(tooltipLink);
+        document.body.appendChild(tooltip);
+        tooltip.style.left = event.pageX + "px";
+        tooltip.style.top = event.pageY - 15 - tooltip.offsetHeight + "px";
         tooltip.style.display = "block";
+        tooltip.style.opacity = 1;
+        tooltip.style.position = "absolute";
+        tooltip.style.color = "#fff";
     });
-});
-document.addEventListener("click", function(event) {
-    var tooltip = document.getElementById("tooltip");
-    if (!tooltip.contains(event.target)) tooltip.style.display = "none";
+    document.addEventListener("click", function(event) {
+        var tooltip = document.querySelector(".tooltip");
+        if (tooltip && !tooltip.contains(event.target)) document.body.removeChild(tooltip);
+    });
 });
 
 //# sourceMappingURL=index.js.map

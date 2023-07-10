@@ -1,4 +1,4 @@
-.page-gy-mundo {
+.page-template-page-gy-mundo {
 	.hero {
 		&__sub-title {
 			font-weight: 400;
@@ -27,14 +27,26 @@
 				z-index: 19;
 			}
 		}
-		#tooltip {
-			position: absolute;
-			z-index: 100;
-			padding: 10px;
-			background-color: #f9f9f9;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			display: none;
+	}
+	.tooltipMap {
+		opacity: 1;
+		background: rgba(135, 188, 37, 0.8);
+		display: block;
+		position: absolute;
+		z-index: 9999;
+		padding: 5px 12px;
+		border: 2px solid $neutro-50;
+		@include xs-border;
+		&::after {
+			content: "→";
+			color: $neutro-50;
+			margin-left: 5px;
+		}
+		a {
+			color: $neutro-50;
+			@include bold-links;
+			text-decoration: none;
+			position: relative;
 		}
 	}
 }
