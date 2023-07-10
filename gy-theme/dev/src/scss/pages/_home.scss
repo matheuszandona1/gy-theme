@@ -31,6 +31,9 @@
 	.hero {
 		background-color: $verde-50;
 		position: relative;
+		&::after {
+			bottom: -65px;
+		}
 		&-slider {
 			@include container;
 			&::before {
@@ -202,5 +205,23 @@
 				filter: grayscale(100%);
 			}
 		}
+	}
+	.hub {
+		padding-bottom: 321px;
+		background-color: $verde-50;
+		.newsletter.sidebar {
+			margin-top: 0px !important;
+		}
+		.button--container {
+			margin: 56px 0 100px;
+		}
+	}
+	.topo__hub--destaque {
+		.hub__floating {
+			position: relative;
+		}
+	}
+	.mapa {
+		padding: 80px 0px;
 	}
 }

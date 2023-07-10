@@ -12,41 +12,49 @@
 			}
 		}
 	}
-	.mapa {
-		&__container {
-			@include container;
-			.default__title {
-				margin-bottom: 24px;
-			}
+}
+.mapa {
+	&__container {
+		@include container;
+		.default__title {
+			margin-bottom: 24px;
 		}
-		#mapa {
-			position: relative;
-			z-index: 19;
-			path {
-				position: relative;
-				z-index: 19;
-			}
+		.default__desc {
+			font-size: 16px;
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto;
+			margin-bottom: 48px;
+			color: $neutro-700;
 		}
 	}
-	.tooltipMap {
-		opacity: 1;
-		background: rgba(135, 188, 37, 0.8);
-		display: block;
-		position: absolute;
-		z-index: 9999;
-		padding: 5px 12px;
-		border: 2px solid $neutro-50;
-		@include xs-border;
-		&::after {
-			content: "→";
-			color: $neutro-50;
-			margin-left: 5px;
-		}
-		a {
-			color: $neutro-50;
-			@include bold-links;
-			text-decoration: none;
+	#mapa {
+		position: relative;
+		z-index: 19;
+		path {
 			position: relative;
+			z-index: 19;
 		}
+	}
+}
+.tooltipMap {
+	opacity: 1;
+	background: rgba(135, 188, 37, 0.8);
+	display: block;
+	position: absolute;
+	z-index: 9999;
+	padding: 5px 12px;
+	border: 2px solid $neutro-50;
+	@include xs-border;
+	&::after {
+		content: "→";
+		color: $neutro-50;
+		margin-left: 5px;
+	}
+	a {
+		color: $neutro-50;
+		@include bold-links;
+		text-decoration: none;
+		position: relative;
 	}
 }

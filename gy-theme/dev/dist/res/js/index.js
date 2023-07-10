@@ -43,6 +43,7 @@ paths.forEach(function(path) {
         }
     });
     var image = document.createElement("img");
+    image.classList.add("pins");
     image.src = "http://greenyellow.local/wp-content/uploads/2023/07/PIN.png";
     image.style.position = "absolute";
     image.style.zIndex = "20";

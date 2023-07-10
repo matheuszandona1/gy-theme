@@ -3431,6 +3431,10 @@ html {
   position: relative;
 }
 
+.home .hero:after {
+  bottom: -65px;
+}
+
 .home .hero-slider {
   width: 100%;
   max-width: 1240px;
@@ -3602,6 +3606,27 @@ html {
   height: auto;
 }
 
+.home .hub {
+  background-color: #f1f7e6;
+  padding-bottom: 321px;
+}
+
+.home .hub .newsletter.sidebar {
+  margin-top: 0 !important;
+}
+
+.home .hub .button--container {
+  margin: 56px 0 100px;
+}
+
+.home .topo__hub--destaque .hub__floating {
+  position: relative;
+}
+
+.home .mapa {
+  padding: 80px 0;
+}
+
 .midia__container {
   width: 100%;
   max-width: 1240px;
@@ -3756,22 +3781,30 @@ html {
   border: none;
 }
 
-.page-template-page-gy-mundo .mapa__container {
+.mapa__container {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
 }
 
-.page-template-page-gy-mundo .mapa__container .default__title {
+.mapa__container .default__title {
   margin-bottom: 24px;
 }
 
-.page-template-page-gy-mundo .mapa #mapa, .page-template-page-gy-mundo .mapa #mapa path {
+.mapa__container .default__desc {
+  text-align: center;
+  color: #5c5c5c;
+  max-width: 700px;
+  margin: 0 auto 48px;
+  font-size: 16px;
+}
+
+.mapa #mapa, .mapa #mapa path {
   z-index: 19;
   position: relative;
 }
 
-.page-template-page-gy-mundo .tooltipMap {
+.tooltipMap {
   opacity: 1;
   z-index: 9999;
   background: #87bc25cc;
@@ -3782,13 +3815,13 @@ html {
   position: absolute;
 }
 
-.page-template-page-gy-mundo .tooltipMap:after {
+.tooltipMap:after {
   content: "→";
   color: #fff;
   margin-left: 5px;
 }
 
-.page-template-page-gy-mundo .tooltipMap a {
+.tooltipMap a {
   color: #fff;
   font-family: Nunito, sans-serif;
   font-size: 16px;

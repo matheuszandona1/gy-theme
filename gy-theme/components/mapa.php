@@ -1,7 +1,7 @@
 <section class="mapa">
     <div class="mapa__container">
         <h2 class="default__title no-after smaller">Inovação e sustentabilidade sem fronteiras</h2>
-        <p class="defaul__desc">Presentes em diversos países, espalhamos nosso modelo energético por onde passamos e contribuímos para que o mundo seja mais sustentável hoje.</p>
+        <p class="default__desc">Presentes em diversos países, espalhamos nosso modelo energético por onde passamos e contribuímos para que o mundo seja mais sustentável hoje.</p>
         <svg version="1.1" id="mapa" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1242 594" style="enable-background:new 0 0 1242 594;" xml:space="preserve">
             <style type="text/css">
                 .st0 {
