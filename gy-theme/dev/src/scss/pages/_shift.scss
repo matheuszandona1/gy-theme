@@ -159,6 +159,13 @@
 		}
 	}
 	&.efficiency {
+		.hero {
+			&::after {
+				display: block;
+				content: url("../assets/sino.svg");
+				bottom: -344px;
+			}
+		}
 		.crumb {
 			padding: 80px 0px;
 			background: $neutro-50;
@@ -217,8 +224,21 @@
 				}
 			}
 		}
+		.cases__container {
+			padding-top: 0px;
+		}
 	}
 	&.production {
+		.hero {
+			&::after {
+				display: block;
+				content: url("../assets/painel.svg");
+				bottom: 40px;
+			}
+		}
+		.cases__container {
+			padding-top: 0px;
+		}
 		.pr-operating {
 			&__container {
 				padding-right: 0px;
@@ -235,6 +255,10 @@
 				.default__title {
 					text-align: left;
 					padding-right: 2px;
+				}
+				.default__desc {
+					font-size: 16px;
+					margin: 40px 0px;
 				}
 
 				.default__smaller {
@@ -358,6 +382,19 @@
 		}
 	}
 	&.services {
+		.hero {
+			&::after {
+				display: block;
+				content: url("../assets/raio.svg");
+				bottom: -200px;
+			}
+		}
+		.cases__container {
+			padding-top: 0px;
+		}
+		.relatorios {
+			padding-top: 0px;
+		}
 		.pr-operating {
 			&__container {
 				padding-right: 0px;
@@ -520,6 +557,13 @@
 		}
 	}
 	&.mobility {
+		.hero {
+			&::after {
+				display: block;
+				content: url("../assets/plug.svg");
+				bottom: 0px;
+			}
+		}
 		.resources {
 			&::before {
 				top: 280px;

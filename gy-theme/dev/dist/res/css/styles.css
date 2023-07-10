@@ -1986,6 +1986,12 @@ html {
   max-width: 900px;
 }
 
+.page--shift.efficiency .hero:after {
+  content: url("../img/assets/sino.svg");
+  display: block;
+  bottom: -344px;
+}
+
 .page--shift.efficiency .crumb {
   background: #fff;
   border-top: 1px solid #dbdbdb;
@@ -2061,6 +2067,20 @@ html {
   display: flex;
 }
 
+.page--shift.efficiency .cases__container {
+  padding-top: 0;
+}
+
+.page--shift.production .hero:after {
+  content: url("../img/assets/painel.svg");
+  display: block;
+  bottom: 40px;
+}
+
+.page--shift.production .cases__container {
+  padding-top: 0;
+}
+
 .page--shift.production .pr-operating__container {
   gap: 24px;
   padding-right: 0;
@@ -2079,6 +2099,11 @@ html {
 .page--shift.production .pr-operating__content .default__title {
   text-align: left;
   padding-right: 2px;
+}
+
+.page--shift.production .pr-operating__content .default__desc {
+  margin: 40px 0;
+  font-size: 16px;
 }
 
 .page--shift.production .pr-operating__content .default__smaller {
@@ -2201,6 +2226,16 @@ html {
 
 .page--shift.production .resources__card--desc {
   color: #5c5c5c;
+}
+
+.page--shift.services .hero:after {
+  content: url("../img/assets/raio.svg");
+  display: block;
+  bottom: -200px;
+}
+
+.page--shift.services .cases__container, .page--shift.services .relatorios {
+  padding-top: 0;
 }
 
 .page--shift.services .pr-operating__container {
@@ -2370,6 +2405,12 @@ html {
 
 .page--shift.services .resources__card--desc {
   color: #5c5c5c;
+}
+
+.page--shift.mobility .hero:after {
+  content: url("../img/assets/plug.svg");
+  display: block;
+  bottom: 0;
 }
 
 .page--shift.mobility .resources:before {
@@ -3090,6 +3131,10 @@ html {
 
 .page--segmentos .cases-cta {
   padding-top: 0;
+}
+
+.page--segmentos.general .default__title.smaller {
+  color: #5c5c5c;
 }
 
 .page--segmentos.general .cases {

@@ -116,9 +116,7 @@ get_header();
 		<section class="type">
 			<div class="type__container">
 				<h2 class="default__title no-after">Modelos de negócio</h2>
-				<p class="type__desc">
-					Se o seu negócio pede um modelo customizado, você pode contar com as soluções sob medida da GreenYellow, desenvolvidas por especialistas.
-				</p>
+
 				<div class="relatorios">
 					<div class="relatorios__container">
 						<div class="relatorios__items">

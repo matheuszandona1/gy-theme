@@ -14,8 +14,8 @@ get_header();
 					<h2 class="default__title no-after smaller">Benefícios da geração de energia renovável</h2>
 
 					<div class="nav-slide-holder">
-						<button class="prev-arrow"><img src="./assets/seta-slider-right.svg" alt="" /></button>
-						<button class="next-arrow"><img src="./assets/seta-slider-left.svg" alt="" /></button>
+						<button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
+						<button class="next-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-left.svg" alt="" /></button>
 					</div>
 				</div>
 				<div class="pr-operating__holder">
@@ -54,27 +54,27 @@ get_header();
 				<h2 class="default__title no-after smaller text-start">Projetos personalizados e soluções sob medida</h2>
 				<div class="pr-custom__content text-center">
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 					<div class="card-check">
-						<img src="./assets/check.svg" alt="" />
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
 						<p class="card-check__text">Uso racional das fontes de energia</p>
 					</div>
 				</div>

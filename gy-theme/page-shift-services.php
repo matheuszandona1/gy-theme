@@ -5,7 +5,7 @@
 get_header();
 ?>
 
-<div class="page--shift production">
+<div class="page--shift services">
 	<main>
 		<?php get_template_part('components/hero'); ?>
 		<section class="resources">

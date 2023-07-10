@@ -10,7 +10,8 @@ get_header();
 	<main class="manipulating">
 		<section class="cases">
 			<div class="cases__container">
-				<h2 class="default__title no-after smaller">Nossos cases de sucesso</h2>
+				<h2 class="default__title no-after">Comece sua transição energética agora!</h2>
+				<h3 class="default__title no-after smaller">Conheça nossa atuação:</h3>
 				<div class="relatorios__content">
 					<a href="">
 						<div class="cards cards__bigger">
