@@ -163,4 +163,11 @@
 			}
 		}
 	}
+	.cases {
+		&__container--destaque {
+			.card {
+				position: relative;
+			}
+		}
+	}
 }

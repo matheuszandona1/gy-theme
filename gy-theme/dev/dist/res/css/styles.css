@@ -3434,6 +3434,10 @@ html {
   text-decoration: none;
 }
 
+.hub .cases__container--destaque .card {
+  position: relative;
+}
+
 .home .header {
   background-color: #f1f7e6;
   border-bottom: 0;
