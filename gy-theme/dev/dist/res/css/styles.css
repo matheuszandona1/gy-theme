@@ -3745,6 +3745,31 @@ html {
   margin-right: 0;
 }
 
+.page-gy-mundo .hero__sub-title {
+  color: #5c5c5c;
+  margin-bottom: 48px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.page-gy-mundo .hero__img img {
+  border: none;
+}
+
+.page-gy-mundo .mapa__container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.page-gy-mundo .mapa__container .default__title {
+  margin-bottom: 24px;
+}
+
+.page-gy-mundo .mapa #mapa path {
+  position: relative;
+}
+
 .no-after:after, .no-before:before {
   display: none;
 }

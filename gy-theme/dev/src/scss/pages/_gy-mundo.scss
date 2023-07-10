@@ -1,0 +1,28 @@
+.page-gy-mundo {
+	.hero {
+		&__sub-title {
+			font-weight: 400;
+			font-size: 24px;
+			margin-bottom: 48px;
+			color: $neutro-700;
+		}
+		&__img {
+			img {
+				border: none;
+			}
+		}
+	}
+	.mapa {
+		&__container {
+			@include container;
+			.default__title {
+				margin-bottom: 24px;
+			}
+		}
+		#mapa {
+			path {
+				position: relative;
+			}
+		}
+	}
+}
