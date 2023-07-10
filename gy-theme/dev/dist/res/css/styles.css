@@ -3766,8 +3766,19 @@ html {
   margin-bottom: 24px;
 }
 
-.page-gy-mundo .mapa #mapa path {
+.page-gy-mundo .mapa #mapa, .page-gy-mundo .mapa #mapa path {
+  z-index: 19;
   position: relative;
+}
+
+.page-gy-mundo .mapa #tooltip {
+  z-index: 100;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  display: none;
+  position: absolute;
 }
 
 .no-after:after, .no-before:before {

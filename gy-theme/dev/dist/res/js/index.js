@@ -42,15 +42,19 @@ paths.forEach(function(path) {
             isHovered = false;
         }
     });
-    // Adiciona a imagem sobre o path
     var image = document.createElement("img");
-    image.src = "http://greenyellow.local/wp-content/uploads/2023/07/PIN.png";
+    image.src = "/wp-content/themes/gy-theme/dev/src/assets/PIN.svg";
     image.style.position = "absolute";
-    image.style.zIndex = "20";
-    var pathRect = path.getBoundingClientRect();
-    image.style.left = pathRect.left + pathRect.width / 2 - image.width / 2 + "px";
-    image.style.top = pathRect.top + pathRect.height / 2 - image.height / 2 + "px";
-    path.parentNode.appendChild(image);
+    image.style.zIndex = "99999";
+    image.addEventListener("load", function() {
+        var pathRect = path.getBoundingClientRect();
+        image.style.left = pathRect.left + pathRect.width / 2 - image.width / 2 + "px";
+        image.style.top = pathRect.top + pathRect.height / 3 - image.height / 2 + "px";
+    }, false);
+    path.parentNode.parentNode.appendChild(image);
+    image.addEventListener("error", function() {
+        console.error("Error loading image");
+    });
     image.addEventListener("click", function(event) {
         event.stopPropagation();
         var pathName = path.id;
