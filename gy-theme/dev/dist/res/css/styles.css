@@ -3831,6 +3831,15 @@ html {
   position: relative;
 }
 
+.page--solucoes-gy .solucoes {
+  padding: 80px 0;
+}
+
+.page--solucoes-gy .solucoes .default__desc {
+  text-align: center;
+  margin: 48px 0 40px;
+}
+
 .no-after:after, .no-before:before {
   display: none;
 }
