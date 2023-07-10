@@ -52,40 +52,47 @@ paths.forEach(function (path) {
 			isHovered = false
 		}
 	})
+        var tooltip = document.createElement("div")
+        tooltip.className = "tooltip"
+        document.body.appendChild(tooltip)
 
-	// Adiciona a imagem sobre o path
-	var image = document.createElement("img")
-	image.src = "http://greenyellow.local/wp-content/uploads/2023/07/PIN.png"
-	image.style.position = "absolute"
-	image.style.zIndex = "20"
+        var tooltipText = document.createElement("div")
+        tooltipText.id = "tooltipText"
+        tooltip.appendChild(tooltipText)
 
-	var pathRect = path.getBoundingClientRect()
-	image.style.left = pathRect.left + pathRect.width / 2 - image.width / 2 + "px"
-	image.style.top = pathRect.top + pathRect.height / 2 - image.height / 2 + "px"
+        var tooltipLink = document.createElement("a")
+        tooltipLink.id = "tooltipLink"
+        tooltip.appendChild(tooltipLink)
 
-	path.parentNode.appendChild(image)
+        var image = document.createElement("img")
+        image.src = "http://greenyellow.local/wp-content/uploads/2023/07/PIN.png"
+        image.style.position = "absolute"
+        image.style.zIndex = "20"
 
-	image.addEventListener("click", function (event) {
-		event.stopPropagation()
-		var pathName = path.id
-		var pathLink = "https://exemplo.com/" + path.id
+        image.addEventListener('load', function() {
+            var pathRect = path.getBoundingClientRect()
+            image.style.left = pathRect.left + pathRect.width / 2 - image.width / 2 + "px"
+            image.style.top = pathRect.top + pathRect.height / 3 - image.height / 2 + "px"
+        }, false);
 
-		// Atualiza o texto e o link da tooltip
-		document.getElementById("tooltipText").textContent = pathName
-		document.getElementById("tooltipLink").textContent = "Ir para " + pathName
-		document.getElementById("tooltipLink").href = pathLink
+        path.parentNode.appendChild(image)
 
-		// Posiciona a tooltip próxima à imagem
-		var tooltip = document.getElementById("tooltip")
-		tooltip.style.left = event.pageX + 10 + "px"
-		tooltip.style.top = event.pageY - 10 + "px"
-		tooltip.style.display = "block"
-	})
-})
+        image.addEventListener("click", function (event) {
+            event.stopPropagation()
+            var pathName = path.id
+            var pathLink = "https://exemplo.com/" + path.id
 
-document.addEventListener("click", function (event) {
-	var tooltip = document.getElementById("tooltip")
-	if (!tooltip.contains(event.target)) {
-		tooltip.style.display = "none"
-	}
-})
+            document.getElementById("tooltipText").textContent = pathName
+            document.getElementById("tooltipLink").textContent = "Ir para " + pathName
+            document.getElementById("tooltipLink").href = pathLink
+
+            tooltip.style.left = event.pageX + "px"
+            tooltip.style.top = event.pageY - 15 - tooltip.offsetHeight + "px"
+            tooltip.style.display = "block"
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!tooltip.contains(event.target)) {
+                tooltip.style.display = "none"
+            }
+        });

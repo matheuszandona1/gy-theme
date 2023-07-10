@@ -20,9 +20,21 @@
 			}
 		}
 		#mapa {
+			position: relative;
+			z-index: 19;
 			path {
 				position: relative;
+				z-index: 19;
 			}
+		}
+		#tooltip {
+			position: absolute;
+			z-index: 100;
+			padding: 10px;
+			background-color: #f9f9f9;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			display: none;
 		}
 	}
 }
