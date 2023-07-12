@@ -40,17 +40,35 @@ get_header();
 						</div>
 					</div>
 				</div>
-				<h2 class="default__title no-after">Anos anteriores</h2>
-				<div class="relatorios__items">
-					<div class="relatorios__item ativo">Relatório 1</div>
-					<div class="relatorios__item">Relatório 2</div>
-					<div class="relatorios__item">Relatório 3</div>
-				</div>
-				<div class="relatorios__resultado">
-					<div class="cards__category">ano</div>
-					<div class="cards__info">
-						<h3 class="cards__title">Relatório Anual</h3>
+				<h2 class="default__title no-after" style="margin-bottom: 32px;">Anos anteriores</h2>
+				<nav>
+					<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+						<button class="nav-link active" id="nav-year-tab" data-bs-toggle="tab" data-bs-target="#nav-year" type="button" role="tab" aria-controls="nav-year" aria-selected="false">Relatório 1</button>
+						<button class="nav-link" id="nav-year1-tab" data-bs-toggle="tab" data-bs-target="#nav-year1" type="button" role="tab" aria-controls="nav-year1" aria-selected="false">Relatório 2</button>
+						<button class="nav-link" id="nav-year2-tab" data-bs-toggle="tab" data-bs-target="#nav-year2" type="button" role="tab" aria-controls="nav-year2" aria-selected="false">Relatório 3</button>
 					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="relatorios__resultado tab-pane fade show active" id="nav-year" role="tabpanel" aria-labelledby="nav-year-tab" tabindex="0">
+						<div class="cards__category">ano</div>
+						<div class="cards__info">
+							<h3 class="cards__title">Relatório Anual</h3>
+						</div>
+					</div>
+					<div class="relatorios__resultado tab-pane fade" id="nav-year1" role="tabpanel" aria-labelledby="nav-year1-tab" tabindex="0">
+						<div class="cards__category">ano</div>
+						<div class="cards__info">
+							<h3 class="cards__title">Relatório Anual</h3>
+						</div>
+					</div>
+					<div class="relatorios__resultado tab-pane fade" id="nav-year2" role="tabpanel" aria-labelledby="nav-year2-tab" tabindex="0">
+						<div class="cards__category">ano</div>
+						<div class="cards__info">
+							<h3 class="cards__title">Relatório Anual</h3>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 		</section>

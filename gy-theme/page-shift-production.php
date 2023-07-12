@@ -120,28 +120,76 @@ get_header();
 				<div class="relatorios">
 					<div class="relatorios__container">
 						<div class="relatorios__items">
-							<div class="relatorios__item ativo">Contrato de performance</div>
-							<div class="relatorios__item">Utilities as a service</div>
-							<div class="relatorios__item">Utilities as a service</div>
+							<nav>
+								<div class="nav nav-tabs justify-content-center" style="margin-bottom: 0px;" id="nav-tab" role="tablist">
+									<button class="nav-link active" id="nav-buss-tab" data-bs-toggle="tab" data-bs-target="#nav-buss" type="button" aria-controls="nav-buss" aria-selected="false">Contrato de performance</button>
+									<button class="nav-link" id="nav-buss1-tab" data-bs-toggle="tab" data-bs-target="#nav-buss1" type="button" aria-controls="nav-buss1" aria-selected="false">Utilities as a service</button>
+									<button class="nav-link" id="nav-buss2-tab" data-bs-toggle="tab" data-bs-target="#nav-buss2" type="button" aria-controls="nav-buss2" aria-selected="false">Utilities as a service</button>
+								</div>
+
+							</nav>
 						</div>
 					</div>
 				</div>
-				<div class="type__project d-flex">
-					<div class="dynamic__img bn"></div>
-					<div class="type__content">
-						<div class="type__project--title">
-							<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="type__tab tab-pane fade show active" id="nav-buss" role="tabpanel" aria-labelledby="nav-buss-tab" tabindex="0">
+						<div class="type__project ">
+							<div class="dynamic__img bn"></div>
+							<div class="type__content">
+								<div class="type__project--title">
+									<h3 class="default__title no-after smaller">Contratosdas de Performance</h3>
+								</div>
+								<p class="type__project--desc">
+									Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e
+									implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar
+									para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos. Os painéis captam a radiação solar e convertem em
+									eletricidade, que varia de acordo com a extensão do telhado. O inversor solar converte a energia solar para a sua casa ou empresa. A corrente
+									alternada permite ligar aparelhos elétricos da sua empresa. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de
+									concessionária e transformada em créditos para abatimento da conta.
+								</p>
+							</div>
 						</div>
-						<p class="type__project--desc">
-							Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e
-							implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar
-							para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos. Os painéis captam a radiação solar e convertem em
-							eletricidade, que varia de acordo com a extensão do telhado. O inversor solar converte a energia solar para a sua casa ou empresa. A corrente
-							alternada permite ligar aparelhos elétricos da sua empresa. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de
-							concessionária e transformada em créditos para abatimento da conta.
-						</p>
 					</div>
+					<div class="type__tab tab-pane fade" id="nav-buss1" role="tabpanel" aria-labelledby="nav-buss1-tab" tabindex="0">
+						<div class="type__project">
+							<div class="dynamic__img bn"></div>
+							<div class="type__content">
+								<div class="type__project--title">
+									<h3 class="default__title no-after smaller">Contraadq3qdq3dto de Performance</h3>
+								</div>
+								<p class="type__project--desc">
+									Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e
+									implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar
+									para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos. Os painéis captam a radiação solar e convertem em
+									eletricidade, que varia de acordo com a extensão do telhado. O inversor solar converte a energia solar para a sua casa ou empresa. A corrente
+									alternada permite ligar aparelhos elétricos da sua empresa. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de
+									concessionária e transformada em créditos para abatimento da conta.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="type__tab tab-pane fade" id="nav-buss2" role="tabpanel" aria-labelledby="nav-buss2-tab" tabindex="0">
+						<div class="type__project">
+							<div class="dynamic__img bn"></div>
+							<div class="type__content">
+								<div class="type__project--title">
+									<h3 class="default__title no-after smaller">Contrato de Perforlkanflajdfnmance</h3>
+								</div>
+								<p class="type__project--desc">
+									Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e
+									implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar
+									para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos. Os painéis captam a radiação solar e convertem em
+									eletricidade, que varia de acordo com a extensão do telhado. O inversor solar converte a energia solar para a sua casa ou empresa. A corrente
+									alternada permite ligar aparelhos elétricos da sua empresa. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de
+									concessionária e transformada em créditos para abatimento da conta.
+								</p>
+							</div>
+						</div>
+					</div>
+
 				</div>
+
+
 			</div>
 		</section>
 		<section class="cases">

@@ -140,3 +140,12 @@
 		}
 	}
 }
+
+.page-template-page-conheca {
+	.hero {
+		&::after {
+			display: block;
+			bottom: -50px;
+		}
+	}
+}

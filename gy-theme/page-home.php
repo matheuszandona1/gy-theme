@@ -28,6 +28,10 @@ get_header();
             </div>
           </div>
           <div class="hero__img no-before">
+            <div class="cards__category">relatorio</div>
+            <a href="#" class="cards__info">
+              <h3 class="cards__title">Relatório Anual</h3>
+            </a>
             <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
           </div>
         </div>
@@ -52,10 +56,15 @@ get_header();
             </div>
           </div>
           <div class="hero__img no-before">
+            <div class="cards__category">relatorio</div>
+            <a href="#" class="cards__info">
+              <h3 class="cards__title">Relatório Anual</h3>
+            </a>
             <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
           </div>
         </div>
       </div>
+
     </div>
   </section>
   <section class="solucoes container">

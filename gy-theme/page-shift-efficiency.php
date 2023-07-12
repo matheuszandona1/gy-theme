@@ -155,26 +155,69 @@ get_header();
 				</p>
 				<div class="relatorios">
 					<div class="relatorios__container">
-						<div class="relatorios__items">
-							<div class="relatorios__item ativo">Contrato de performance</div>
-							<div class="relatorios__item">Utilities as a service</div>
-						</div>
+						<nav>
+							<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+								<button class="nav-link active" id="nav-type-tab" data-bs-toggle="tab" data-bs-target="#nav-type" type="button" role="tab" aria-controls="nav-type" aria-selected="false">Relatório 1</button>
+								<button class="nav-link" id="nav-type1-tab" data-bs-toggle="tab" data-bs-target="#nav-type1" type="button" role="tab" aria-controls="nav-type1" aria-selected="false">Relatório 2</button>
+								<button class="nav-link" id="nav-type2-tab" data-bs-toggle="tab" data-bs-target="#nav-type2" type="button" role="tab" aria-controls="nav-type2" aria-selected="false">Relatório 3</button>
+							</div>
+						</nav>
 					</div>
 				</div>
-				<div class="type__project d-flex">
-					<div class="type__content">
-						<div class="type__project--title">
-							<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
-							<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="type__tab tab-pane fade show active" id="nav-type" role="tabpanel" aria-labelledby="nav-type-tab" tabindex="0">
+						<div class="type__project ">
+							<div class="type__content">
+								<div class="type__project--title">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
+									<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+								</div>
+								<div class="type__addons">
+									<b>Investimento:</b>
+									GreenYellow ou compartilhado.
+								</div>
+								<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
+								<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
+							</div>
+							<div class="dynamic__img bn"></div>
 						</div>
-						<div class="type__addons">
-							<b>Investimento:</b>
-							GreenYellow ou compartilhado.
-						</div>
-						<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
-						<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
 					</div>
-					<div class="dynamic__img bn"></div>
+					<div class="type__tab tab-pane fade" id="nav-type1" role="tabpanel" aria-labelledby="nav-type1-tab" tabindex="0">
+						<div class="type__project ">
+							<div class="type__content">
+								<div class="type__project--title">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
+									<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+								</div>
+								<div class="type__addons">
+									<b>Investimento:</b>
+									GreenYellow ou compartilhado.
+								</div>
+								<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
+								<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
+							</div>
+							<div class="dynamic__img bn"></div>
+						</div>
+					</div>
+					<div class="type__tab tab-pane fade" id="nav-type2" role="tabpanel" aria-labelledby="nav-type2-tab" tabindex="0">
+						<div class="type__project">
+							<div class="type__content">
+								<div class="type__project--title">
+									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
+									<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+								</div>
+								<div class="type__addons">
+									<b>Investimento:</b>
+									GreenYellow ou compartilhado.
+								</div>
+								<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
+								<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
+							</div>
+							<div class="dynamic__img bn"></div>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 		</section>

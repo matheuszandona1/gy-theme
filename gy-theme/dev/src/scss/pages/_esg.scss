@@ -3,6 +3,12 @@
 	padding-bottom: 80px;
 	&__container {
 		@include container;
+		.nav-link {
+			&.active {
+				background-color: $verde-500;
+				color: $neutro-50;
+			}
+		}
 	}
 	.default__title {
 		font-size: 32px;
@@ -57,9 +63,16 @@
 		padding: 24px;
 		gap: 24px;
 		flex-direction: column;
+		transition: 0.3s ease-in;
+
+		&.fade:not(.show) {
+			opacity: 0;
+		}
 		.cards__category {
 			max-width: fit-content;
 			position: relative;
+			display: inline-block;
+			margin-bottom: 32px;
 		}
 		.cards__info {
 			width: 100%;

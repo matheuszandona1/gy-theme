@@ -12,53 +12,151 @@ get_header();
 			<h2 class="default__title smaller no-after">Conheça as três possibilidades que a GreenYellow oferece</h2>
 			<div class="relatorios">
 				<div class="relatorios__container">
-					<div class="relatorios__items">
-						<div class="relatorios__item ativo">Contrato de performance</div>
-						<div class="relatorios__item">Utilities as a service</div>
-						<div class="relatorios__item">Utilities as a service</div>
-					</div>
+					<nav>
+						<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+							<button class="nav-link active" id="nav-psb-tab" data-bs-toggle="tab" data-bs-target="#nav-psb" type="button" role="tab" aria-controls="nav-psb" aria-selected="false">tipo 1</button>
+							<button class="nav-link" id="nav-psb1-tab" data-bs-toggle="tab" data-bs-target="#nav-psb1" type="button" role="tab" aria-controls="nav-psb1" aria-selected="false">tipo 2</button>
+							<button class="nav-link" id="nav-psb2-tab" data-bs-toggle="tab" data-bs-target="#nav-psb2" type="button" role="tab" aria-controls="nav-psb2" aria-selected="false">tipo 3</button>
+						</div>
+					</nav>
 				</div>
 			</div>
-			<div class="resources__container">
-				<div class="resources__img col-6">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-				</div>
-				<div class="resources__content col-6">
-					<div class="resources__top">
-						<div class="check-vazado"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check-vazado.svg" alt="" /></div>
-						<h2 class="default__title no-after smaller text-start">comercializadora</h2>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="resources__tab tab-pane fade show active" id="nav-psb" role="tabpanel" aria-labelledby="nav-psb-tab" tabindex="0">
+					<div class="resources__container ">
+						<div class="resources__img col-6">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
+						</div>
+						<div class="resources__content col-6">
+							<div class="resources__top">
+								<div class="check-vazado"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check-vazado.svg" alt="" /></div>
+								<h2 class="default__title no-after smaller text-start">comercializadora</h2>
+							</div>
+							<p class="default__smaller">
+								Negocie o custo de energia para obter previsão de orçamento com apoio personalizado. Uma estratégia energética otimizada para suprir as necessidades
+								globais de nossos clientes, reduzindo não somente o consumo, mas também o custo da energia. Temos soluções otimizadas para o seu negócio.
+							</p>
+							<div class="resources__side">
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Telhado solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Instalação no telhado ou no estacionamento, diminuindo a distância entre a geração e o consumo, aproveitando áreas inutilizadas e aumentando a
+										independência do fornecimento da distribuidora local.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Fazenda solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Usina instalada no chão, de até 5 MWp, gera energia para uma ou mais unidades dentro da mesma área de concessão. Permite que empreendimentos
+										cercados por altas construções e sem área suficiente de telhado possam suprir seu consumo a partir da energia solar.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Carport solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
+										urna nibh, viverra non, semper suscipit, posuere a, pede.
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<p class="default__smaller">
-						Negocie o custo de energia para obter previsão de orçamento com apoio personalizado. Uma estratégia energética otimizada para suprir as necessidades
-						globais de nossos clientes, reduzindo não somente o consumo, mas também o custo da energia. Temos soluções otimizadas para o seu negócio.
-					</p>
-					<div class="resources__side">
-						<div class="resources__card">
-							<div class="resources__card--top d-flex">
-								<p class="resources__card--title">Telhado solar</p>
-							</div>
-							<p class="resources__card--desc">
-								Instalação no telhado ou no estacionamento, diminuindo a distância entre a geração e o consumo, aproveitando áreas inutilizadas e aumentando a
-								independência do fornecimento da distribuidora local.
-							</p>
+				</div>
+				<div class="resources__tab tab-pane fade " id="nav-psb1" role="tabpanel" aria-labelledby="nav-psb1-tab" tabindex="0">
+					<div class="resources__container ">
+						<div class="resources__img col-6">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
 						</div>
-						<div class="resources__card">
-							<div class="resources__card--top d-flex">
-								<p class="resources__card--title">Fazenda solar</p>
+						<div class="resources__content col-6">
+							<div class="resources__top">
+								<div class="check-vazado"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check-vazado.svg" alt="" /></div>
+								<h2 class="default__title no-after smaller text-start">comercializadora</h2>
 							</div>
-							<p class="resources__card--desc">
-								Usina instalada no chão, de até 5 MWp, gera energia para uma ou mais unidades dentro da mesma área de concessão. Permite que empreendimentos
-								cercados por altas construções e sem área suficiente de telhado possam suprir seu consumo a partir da energia solar.
+							<p class="default__smaller">
+								Negocie o custo de energia para obter previsão de orçamento com apoio personalizado. Uma estratégia energética otimizada para suprir as necessidades
+								globais de nossos clientes, reduzindo não somente o consumo, mas também o custo da energia. Temos soluções otimizadas para o seu negócio.
 							</p>
+							<div class="resources__side">
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Telhado solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Instalação no telhado ou no estacionamento, diminuindo a distância entre a geração e o consumo, aproveitando áreas inutilizadas e aumentando a
+										independência do fornecimento da distribuidora local.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Fazenda solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Usina instalada no chão, de até 5 MWp, gera energia para uma ou mais unidades dentro da mesma área de concessão. Permite que empreendimentos
+										cercados por altas construções e sem área suficiente de telhado possam suprir seu consumo a partir da energia solar.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Carport solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
+										urna nibh, viverra non, semper suscipit, posuere a, pede.
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="resources__card">
-							<div class="resources__card--top d-flex">
-								<p class="resources__card--title">Carport solar</p>
+					</div>
+				</div>
+				<div class="resources__tab tab-pane fade " id="nav-psb2" role="tabpanel" aria-labelledby="nav-psb2-tab" tabindex="0">
+					<div class="resources__container ">
+						<div class="resources__img col-6">
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
+						</div>
+						<div class="resources__content col-6">
+							<div class="resources__top">
+								<div class="check-vazado"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check-vazado.svg" alt="" /></div>
+								<h2 class="default__title no-after smaller text-start">comercializadora</h2>
 							</div>
-							<p class="resources__card--desc">
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
-								urna nibh, viverra non, semper suscipit, posuere a, pede.
+							<p class="default__smaller">
+								Negocie o custo de energia para obter previsão de orçamento com apoio personalizado. Uma estratégia energética otimizada para suprir as necessidades
+								globais de nossos clientes, reduzindo não somente o consumo, mas também o custo da energia. Temos soluções otimizadas para o seu negócio.
 							</p>
+							<div class="resources__side">
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Telhado solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Instalação no telhado ou no estacionamento, diminuindo a distância entre a geração e o consumo, aproveitando áreas inutilizadas e aumentando a
+										independência do fornecimento da distribuidora local.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Fazenda solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Usina instalada no chão, de até 5 MWp, gera energia para uma ou mais unidades dentro da mesma área de concessão. Permite que empreendimentos
+										cercados por altas construções e sem área suficiente de telhado possam suprir seu consumo a partir da energia solar.
+									</p>
+								</div>
+								<div class="resources__card">
+									<div class="resources__card--top d-flex">
+										<p class="resources__card--title">Carport solar</p>
+									</div>
+									<p class="resources__card--desc">
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
+										urna nibh, viverra non, semper suscipit, posuere a, pede.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

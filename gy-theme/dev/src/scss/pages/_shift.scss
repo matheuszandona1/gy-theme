@@ -118,6 +118,7 @@
 		}
 		&__project {
 			gap: 56px;
+			display: flex;
 
 			&--title {
 				display: flex;
@@ -159,6 +160,9 @@
 		}
 	}
 	&.efficiency {
+		.type__project {
+			display: flex;
+		}
 		.hero {
 			&::after {
 				display: block;

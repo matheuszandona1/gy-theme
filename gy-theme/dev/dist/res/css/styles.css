@@ -1271,6 +1271,11 @@ html {
   box-shadow: 0 1px 1px #0000000f;
 }
 
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #87bc25;
+}
+
 .hero {
   padding: 80px 0;
   position: relative;
@@ -1518,6 +1523,11 @@ html {
   line-height: 150%;
 }
 
+.page-template-page-conheca .hero:after {
+  display: block;
+  bottom: -50px;
+}
+
 .relatorios {
   padding-top: 185px;
   padding-bottom: 80px;
@@ -1527,6 +1537,11 @@ html {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.relatorios__container .nav-link.active {
+  color: #fff;
+  background-color: #87bc25;
 }
 
 .relatorios .default__title {
@@ -1593,13 +1608,20 @@ html {
   max-width: 397px;
   margin: 0 auto;
   padding: 24px;
+  transition: all .3s ease-in;
   display: flex;
   box-shadow: 0 1px 1px #0000000f;
+}
+
+.relatorios__resultado.fade:not(.show) {
+  opacity: 0;
 }
 
 .relatorios__resultado .cards__category {
   max-width: -moz-fit-content;
   max-width: fit-content;
+  margin-bottom: 32px;
+  display: inline-block;
   position: relative;
 }
 
@@ -1935,6 +1957,7 @@ html {
 
 .page--shift .type__project {
   gap: 56px;
+  display: flex;
 }
 
 .page--shift .type__project--title {
@@ -1984,6 +2007,10 @@ html {
 
 .page--shift .relatorios__items {
   max-width: 900px;
+}
+
+.page--shift.efficiency .type__project {
+  display: flex;
 }
 
 .page--shift.efficiency .hero:after {
@@ -3557,6 +3584,51 @@ html {
 .home .hero.img, .home .hero.img img {
   z-index: 20;
   position: relative;
+}
+
+.home .hero__img {
+  position: relative;
+}
+
+.home .hero__img .cards__info {
+  z-index: 30;
+  padding: 16px;
+  text-decoration: none;
+  transition: all .3s ease-in;
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+.home .hero__img .cards__info:hover {
+  padding-right: 32px;
+}
+
+.home .hero__img .cards__info:hover .cards__title:after {
+  opacity: 1;
+  right: -20px;
+}
+
+.home .hero__img .cards__info .cards__title {
+  font-size: 16px;
+  position: relative;
+}
+
+.home .hero__img .cards__info .cards__title:after {
+  content: url("../img/assets/seta-btn-verde.svg");
+  opacity: 0;
+  transition: all .2s ease-in;
+  position: absolute;
+  top: 5%;
+  right: -30px;
+}
+
+.home .hero__img .cards__category {
+  z-index: 30;
+  position: absolute;
+  bottom: 91px;
+  left: 24px;
 }
 
 .home .solucoes, .home .segmentos {
