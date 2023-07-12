@@ -5,9 +5,10 @@
 					<h1 class="hero__title"><?php the_sub_field('titulo'); ?></h1>
 					<?php if (get_sub_field('subtitulo')) { ?><h2 class="hero__sub-title"><?php the_sub_field('subtitulo'); ?></h2><?php } ?>
 					<?php if (get_sub_field('texto')) { ?><p class="hero__desc"><?php the_sub_field('texto'); ?></p><?php } ?>
-					<div class="button--container">
-						<a href="<?php the_sub_field('link_cta'); ?>" class="button button--default"><?php the_sub_field('texto_cta'); ?></a>
-					</div>
+					<?php if (get_sub_field('texto_cta')) { ?>
+						<div class="button--container">
+							<a href="<?php the_sub_field('link_cta'); ?>" class="button button--default"><?php the_sub_field('texto_cta'); ?></a>
+						</div><?php } ?>
 				</div>
 				<div class="hero__img">
 					<img src="<?php the_sub_field('imagem'); ?>" alt="banner <?php the_sub_field('titulo'); ?>" />

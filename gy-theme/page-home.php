@@ -99,7 +99,7 @@ get_header();
       </div>
     </div>
     <div class="button--container center">
-      <a href="" class="button button--default">Conheça nossas solucoes</a>
+      <a href="<?php echo site_url(); ?>/solucoes-gy" class="button button--default">Conheça nossas solucoes</a>
     </div>
   </section>
   <section class="segmentos container">
@@ -108,76 +108,68 @@ get_header();
     <section class="cases">
       <div class="cases__container">
         <div class="relatorios__content">
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/varejo" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/varejo.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Varejo</h3>
               </div>
             </div>
           </a>
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/shoppings-e-predios-comerciais" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/shoppings.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Shoppings
+                  e prédios
+                  comerciais</h3>
               </div>
             </div>
           </a>
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/hotelaria" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/hotelaria.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Hotelaria</h3>
               </div>
             </div>
           </a>
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/mineracao" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/mineracao.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Mineração</h3>
               </div>
             </div>
           </a>
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/industria" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/industria.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Indústria</h3>
               </div>
             </div>
           </a>
-          <a href="">
-            <div class="cards cards__bigger">
+          <a href="<?php echo site_url(); ?>/segmentos/logistica" class="col-2">
+            <div class="cards cards__bigger" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/logistica.jpg');">
               <div class="cards__info">
-                <h3 class="cards__title">Relatório Anual</h3>
+                <h3 class="cards__title">Logística</h3>
               </div>
             </div>
           </a>
         </div>
       </div>
     </section>
+    <div class="button--container center">
+      <a href="<?php echo site_url(); ?>/segmentos" class="button button--default">Conheça nossos segmentos</a>
+    </div>
   </section>
 
   <section class="clientes">
     <div class="clientes__container">
       <h2 class="default__title no-after smaller">Nossos Clientes</h2>
       <div class="clientes-slider">
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-        <div class="clientes__slide">
-          <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-        </div>
-
+        <?php if (have_rows('clientes')) { ?>
+          <?php while (have_rows('clientes')) : the_row(); ?>
+            <div class="clientes__slide">
+              <img src="<?php the_sub_field('logo') ?>" alt="" />
+            </div>
+            <?php endwhile; ?><?php  } ?>
       </div>
       <div class="nav-slide-holder">
         <button class="prev-arrow-clientes"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
@@ -187,6 +179,8 @@ get_header();
   </section>
   <section class="hub">
     <div class="hub__container">
+      <h2 class="titulo text-center">Tudo sobre transição energética e tendências do setor</h2>
+      <p class="text-center mb-5">Confira nossos conteúdos.</p>
       <div class="topo__hub--destaque">
         <?php
         $args = array(
@@ -260,7 +254,7 @@ get_header();
         </div>
       </div>
       <div class="button--container center">
-        <a href="#" class="button button--default">ACESSE TODOS OS NOSSOS CONTEÚDOS</a>
+        <a href="<?php echo site_url(); ?>/hub-de-conteudos" class="button button--default">Acesse todos os nossos conteúdos</a>
       </div>
     </div>
   </section>

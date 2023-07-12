@@ -3656,6 +3656,10 @@ html {
   text-decoration: none;
 }
 
+.home .cases__container .relatorios__content {
+  gap: 0;
+}
+
 .home .clientes {
   padding: 80px 0;
 }
@@ -3722,9 +3726,11 @@ html {
 }
 
 .home .clientes__slide img {
+  object-fit: contain;
   filter: grayscale();
   max-width: 200px;
-  height: auto;
+  height: 106px;
+  margin: 0 auto;
 }
 
 .home .hub {
@@ -4049,4 +4055,3 @@ html {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
