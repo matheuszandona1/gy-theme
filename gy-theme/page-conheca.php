@@ -144,7 +144,7 @@ get_header();
 					</div>
 				</div>
 				<div class="button--container center">
-					<a href="#" class="button button--default">conheça nossoas soluções</a>
+					<a href="<?php echo site_url(); ?>/solucoes-gy" class="button button--default">conheça nossoas soluções</a>
 				</div>
 			</div>
 		</section>

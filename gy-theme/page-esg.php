@@ -74,7 +74,7 @@ get_header();
 		</section>
 		<section class="dynamic">
 			<div class="dynamic__container">
-				<div class="dynamic__img"></div>
+				<div class="dynamic__img" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/0f0764be4822b9f36637dbf779160fd9.jpg');"></div>
 				<div class="dynamic__content">
 					<h3 class="default__title no-after smaller">Política Ambiental</h3>
 					<p class="dynamic__desc">
@@ -97,12 +97,12 @@ get_header();
 					<div class="button--container"><a href="#" class="button button--transp">código de ética gy</a></div>
 					<div class="button--container"><a href="#" class="button button--transp">política anticorrupção gy</a></div>
 				</div>
-				<div class="etica__side"></div>
+				<div class="etica__side" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/bae7de34ff9b1a49897e9d331ca72424.jpg');"></div>
 			</div>
 		</section>
 		<section class="dynamic">
 			<div class="dynamic__container">
-				<div class="dynamic__img"></div>
+				<div class="dynamic__img" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/416d56c0fe9cc79fdbade38ba8d22abe.jpg');"></div>
 				<div class="dynamic__content">
 					<h3 class="default__title no-after smaller">Regras de Ouro – Segurança</h3>
 					<p class="default__desc">As Golden Rules, ou Regras de Ouro, servem para mantermos um ambiente de trabalho seguro para todos.</p>
