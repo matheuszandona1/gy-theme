@@ -28,45 +28,45 @@ get_header();
 					</div>
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Mais qualidade da rede elétrica</p>
 					</div>
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Mesmo nível de conforto com menor custo</p>
 					</div>
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Menos emissões de CO2</p>
 					</div>
 				</div>
-				<div class="button--container center"><a href="#" class="button button--default">conheça nossas soluções</a></div>
+				<div class="button--container center"><a href="<?php echo site_url(); ?>/solucoes-gy" class="button button--default">conheça nossas soluções</a></div>
 			</div>
 		</section>
 		<section class="pr-operating">
 			<div class="pr-operating__container">
-				<h2 class="default__title no-after smaller">Projetos personalizados e soluções sob medida</h2>
+				<h2 class="default__title no-after smaller">Mais de 1.000 projetos em operação</h2>
 				<h3 class="default__desc text-center">Levantamento de oportunidades de melhoria com estimativas de investimentos e ganhos.</h3>
 				<div class="pr-operating__content text-center">
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Estudos, concepção do projeto e obras</p>
 					</div>
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Visão 360°, com mapeamento das oportunidades em todo site/loja do cliente</p>
 					</div>
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
+						<p class="card-check__text">Financiamento 100% nosso para a realização dos projetos</p>
 					</div>
 				</div>
-				<div class="button--container center"><a href="#" class="button button--default">conheça nossas soluções</a></div>
+				<div class="button--container center"><a href="#contato" class="button button--default">saiba-mais</a></div>
 			</div>
 		</section>
 		<section class="resources">
 			<div class="resources__container">
 				<div class="resources__img col-6">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2023/07/986e52de6b6f152dbef73ba55f43f69d.jpg" alt="" />
 				</div>
 				<div class="resources__content col-6">
 					<div class="resources__top">
@@ -99,7 +99,7 @@ get_header();
 							<p class="default__desc">Automação inteligente</p>
 						</div>
 					</div>
-					<div class="button--container"><a href="#" class="button button--default">conheça nossas soluções</a></div>
+					<div class="button--container"><a href="<?php echo site_url(); ?>/solucoes-gy" class="button button--default">conheça nossas soluções</a></div>
 				</div>
 			</div>
 		</section>
@@ -157,9 +157,8 @@ get_header();
 					<div class="relatorios__container">
 						<nav>
 							<div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-								<button class="nav-link active" id="nav-type-tab" data-bs-toggle="tab" data-bs-target="#nav-type" type="button" role="tab" aria-controls="nav-type" aria-selected="false">Relatório 1</button>
-								<button class="nav-link" id="nav-type1-tab" data-bs-toggle="tab" data-bs-target="#nav-type1" type="button" role="tab" aria-controls="nav-type1" aria-selected="false">Relatório 2</button>
-								<button class="nav-link" id="nav-type2-tab" data-bs-toggle="tab" data-bs-target="#nav-type2" type="button" role="tab" aria-controls="nav-type2" aria-selected="false">Relatório 3</button>
+								<button class="nav-link active" id="nav-type-tab" data-bs-toggle="tab" data-bs-target="#nav-type" type="button" role="tab" aria-controls="nav-type" aria-selected="false">Contrato de performance</button>
+								<button class="nav-link" id="nav-type1-tab" data-bs-toggle="tab" data-bs-target="#nav-type1" type="button" role="tab" aria-controls="nav-type1" aria-selected="false">Utilities as a service</button>
 							</div>
 						</nav>
 					</div>
@@ -179,7 +178,7 @@ get_header();
 								<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
 								<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
 							</div>
-							<div class="dynamic__img bn"></div>
+							<div class="dynamic__img bn" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/eeca11d7839516c762417ee025fd0264-1.jpg');"></div>
 						</div>
 					</div>
 					<div class="type__tab tab-pane fade" id="nav-type1" role="tabpanel" aria-labelledby="nav-type1-tab" tabindex="0">
@@ -199,25 +198,6 @@ get_header();
 							<div class="dynamic__img bn"></div>
 						</div>
 					</div>
-					<div class="type__tab tab-pane fade" id="nav-type2" role="tabpanel" aria-labelledby="nav-type2-tab" tabindex="0">
-						<div class="type__project">
-							<div class="type__content">
-								<div class="type__project--title">
-									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
-									<h3 class="default__title no-after smaller">Contrato de Performance</h3>
-								</div>
-								<div class="type__addons">
-									<b>Investimento:</b>
-									GreenYellow ou compartilhado.
-								</div>
-								<div class="type__addons"><b> Projeto financiado pela economia de energia gerada:</b> médio/longo prazo.</div>
-								<div class="type__addons"><b>Incluso: </b>Economia garantida; Manutenção e Monitoramento.</div>
-							</div>
-							<div class="dynamic__img bn"></div>
-						</div>
-					</div>
-
-
 				</div>
 			</div>
 		</section>

@@ -11,35 +11,41 @@ get_header();
 			<section class="resources">
 				<div class="resources__container">
 					<div class="resources__img col-6">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
+						<img src="<?php echo site_url(); ?>/wp-content/uploads/2023/07/909fd7d49688e34e18820a63747fbe93-2.jpg" alt="" />
 					</div>
 					<div class="resources__content col-6">
 						<div class="resources__top">
 							<div class="check-vazado"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check-vazado.svg" alt="" /></div>
-							<h2 class="default__title no-after smaller text-start">comercializadora</h2>
+							<h2 class="default__title no-after smaller text-start">Conheça a solução Charge as a Service</h2>
 						</div>
-						<p class="default__smaller">
-							Negocie o custo de energia para obter previsão de orçamento com apoio personalizado. Uma estratégia energética otimizada para suprir as necessidades
-							globais de nossos clientes, reduzindo não somente o consumo, mas também o custo da energia. Temos soluções otimizadas para o seu negócio.
-						</p>
 						<div class="resources__side">
 							<div class="resources__card">
 								<div class="resources__card--top d-flex">
-									<p class="resources__card--title">Telhado solar</p>
+									<p class="resources__card--title">Adequação da infraestrutura elétrica do local</p>
 								</div>
 							</div>
 							<div class="resources__card">
 								<div class="resources__card--top d-flex">
-									<p class="resources__card--title">Fazenda solar</p>
+									<p class="resources__card--title">Implantação do eletroposto</p>
 								</div>
 							</div>
 							<div class="resources__card">
 								<div class="resources__card--top d-flex">
-									<p class="resources__card--title">Carport solar</p>
+									<p class="resources__card--title">Operação e manutenção</p>
+								</div>
+							</div>
+							<div class="resources__card">
+								<div class="resources__card--top d-flex">
+									<p class="resources__card--title">Fornecimento de energia renovável para o eletroposto</p>
+								</div>
+							</div>
+							<div class="resources__card">
+								<div class="resources__card--top d-flex">
+									<p class="resources__card--title">Investimento 100% GY</p>
 								</div>
 							</div>
 							<div class="button--container">
-								<a href="#" class="button button--default">Lorem ipsum</a>
+								<a href="#" class="button button--default">Saiba mais sobre os carregadores elétricos</a>
 							</div>
 						</div>
 					</div>
@@ -48,10 +54,9 @@ get_header();
 			<section class="pr-operating">
 				<div class="pr-operating__container">
 					<div class="pr-operating__content">
-						<h2 class="default__title no-after smaller">Benefícios da geração de energia renovável</h2>
+						<h2 class="default__title no-after smaller">Lorem ipsum dolor sit amet</h2>
 						<h3 class="default__desc">
-							Produzir uma energia verde, econômica e local é reduzir suas despesas energéticas, ter previsão de custos e evitar a inflação da energia, além de
-							expressar seu compromisso com o meio ambiente. Nossos especialistas cuidam de tudo para que você cuide da sua empresa:
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci.
 						</h3>
 						<div class="nav-slide-holder">
 							<button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
@@ -63,25 +68,25 @@ get_header();
 							<div class="pr-operating__slide">
 								<div class="card-check">
 									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-									<p class="card-check__text">Uso racional das fontes de energia</p>
+									<p class="card-check__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci.</p>
 								</div>
 							</div>
 							<div class="pr-operating__slide">
 								<div class="card-check">
 									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-									<p class="card-check__text">Uso racional das fontes de energia</p>
+									<p class="card-check__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci.</p>
 								</div>
 							</div>
 							<div class="pr-operating__slide">
 								<div class="card-check">
 									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-									<p class="card-check__text">Uso racional das fontes de energia</p>
+									<p class="card-check__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci.</p>
 								</div>
 							</div>
 							<div class="pr-operating__slide">
 								<div class="card-check">
 									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-									<p class="card-check__text">Uso racional das fontes de energia</p>
+									<p class="card-check__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci.</p>
 								</div>
 							</div>
 							<div class="pr-operating__slide">

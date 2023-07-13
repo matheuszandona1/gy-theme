@@ -23,31 +23,25 @@ get_header();
 						<div class="pr-operating__slide">
 							<div class="card-check">
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Investimos nos projetos enquanto você investe no seu negócio.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Desenvolvemos o design do projeto, modelagem financeira e contratual, fundiário e licenciamento ambiental.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Fazemos a gestão de ativos e garantimos a geração e performance da usina.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
 								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-								<p class="card-check__text">Uso racional das fontes de energia</p>
-							</div>
-						</div>
-						<div class="pr-operating__slide">
-							<div class="card-check">
-								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Investimos nos projetos enquanto você investe no seu negócio.</p>
 							</div>
 						</div>
 					</div>
@@ -61,7 +55,7 @@ get_header();
 		<section class="resources">
 			<div class="resources__container">
 				<div class="resources__img col-6">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2023/07/49be169c67dcff74542a5c2ab10b75b7-1.jpg" alt="" />
 				</div>
 				<div class="resources__content col-6">
 					<div class="resources__top">
@@ -115,18 +109,16 @@ get_header();
 
 		<section class="type">
 			<div class="type__container">
-				<h2 class="default__title no-after">Modelos de negócio</h2>
-
+				<h2 class="default__title no-after">Conheça nossas três modalidades de contratação</h2>
 				<div class="relatorios">
 					<div class="relatorios__container">
 						<div class="relatorios__items">
 							<nav>
 								<div class="nav nav-tabs justify-content-center" style="margin-bottom: 0px;" id="nav-tab" role="tablist">
-									<button class="nav-link active" id="nav-buss-tab" data-bs-toggle="tab" data-bs-target="#nav-buss" type="button" aria-controls="nav-buss" aria-selected="false">Contrato de performance</button>
-									<button class="nav-link" id="nav-buss1-tab" data-bs-toggle="tab" data-bs-target="#nav-buss1" type="button" aria-controls="nav-buss1" aria-selected="false">Utilities as a service</button>
-									<button class="nav-link" id="nav-buss2-tab" data-bs-toggle="tab" data-bs-target="#nav-buss2" type="button" aria-controls="nav-buss2" aria-selected="false">Utilities as a service</button>
+									<button class="nav-link active" id="nav-buss-tab" data-bs-toggle="tab" data-bs-target="#nav-buss" type="button" aria-controls="nav-buss" aria-selected="false">Geração Solar Distribuída</button>
+									<button class="nav-link" id="nav-buss1-tab" data-bs-toggle="tab" data-bs-target="#nav-buss1" type="button" aria-controls="nav-buss1" aria-selected="false">Autoprodução no Mercado Livre de Energia</button>
+									<button class="nav-link" id="nav-buss2-tab" data-bs-toggle="tab" data-bs-target="#nav-buss2" type="button" aria-controls="nav-buss2" aria-selected="false">Behind the meter</button>
 								</div>
-
 							</nav>
 						</div>
 					</div>
@@ -134,18 +126,22 @@ get_header();
 				<div class="tab-content" id="nav-tabContent">
 					<div class="type__tab tab-pane fade show active" id="nav-buss" role="tabpanel" aria-labelledby="nav-buss-tab" tabindex="0">
 						<div class="type__project ">
-							<div class="dynamic__img bn"></div>
+							<div class="dynamic__img bn" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/49be169c67dcff74542a5c2ab10b75b7-1.jpg');"></div>
 							<div class="type__content">
 								<div class="type__project--title">
-									<h3 class="default__title no-after smaller">Contratosdas de Performance</h3>
+									<h3 class="default__title no-after smaller">Geração Solar Distribuída</h3>
 								</div>
 								<p class="type__project--desc">
-									Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e
-									implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar
-									para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos. Os painéis captam a radiação solar e convertem em
-									eletricidade, que varia de acordo com a extensão do telhado. O inversor solar converte a energia solar para a sua casa ou empresa. A corrente
-									alternada permite ligar aparelhos elétricos da sua empresa. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de
-									concessionária e transformada em créditos para abatimento da conta.
+									Em 2012, a ANEEL publicou a Resolução Normativa 482, estabelecendo as condições gerais da micro e minigeração distribuída no Brasil e implementando o Sistema de Compensação de Energia Elétrica. Assim, o consumidor passou a ter o direito de gerar energia solar, consumir e exportar para a rede elétrica em caso de excedente, gerando créditos que podem ser usados por 5 anos.
+								</p>
+								<p class="type__project--desc">
+									1. Os painéis captam a radiação solar e convertem em eletricidade, que varia de acordo com a extensão do telhado.
+									<br>
+									2. O inversor solar converte a energia solar para a sua casa ou empresa.
+									<br>
+									3. A corrente alternada permite ligar aparelhos elétricos da sua empresa.
+									<br>
+									4. A energia gerada e não consumida ao longo do dia é redirecionada para a rede de concessionária e transformada em créditos para abatimento da conta.
 								</p>
 							</div>
 						</div>

@@ -8,18 +8,18 @@
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-solucoes.png" alt="" class="mx-auto w-100">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-solucoes.png" alt="" class="mx-auto w-100" width="100%">
   </div>
   <div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile2-tab" tabindex="0">
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia.png" alt="">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia.png" alt="" width="100%">
   </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-energia.png" alt="">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-energia.png" alt="" width="100%">
   </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-mobilidade.png" alt="">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-mobilidade.png" alt="" width="100%">
   </div>
   <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
-    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos.png" alt="">
+    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos.png" alt="" width="100%">
   </div>
 </div>
