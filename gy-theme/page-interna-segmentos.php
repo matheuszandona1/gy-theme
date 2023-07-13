@@ -67,30 +67,13 @@ get_header();
 			<div class="pr-custom__container">
 				<h2 class="default__title no-after smaller text-start">Por que ter a GY como parceira?</h2>
 				<div class="pr-custom__content text-center">
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
-					<div class="card-check">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
-						<p class="card-check__text">Uso racional das fontes de energia</p>
-					</div>
+					<?php if (have_rows('gy_parceira')) { ?>
+						<?php while (have_rows('gy_parceira')) : the_row(); ?>
+							<div class="card-check">
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
+								<p class="card-check__text"><?php the_sub_field('motivo') ?></p>
+							</div>
+							<?php endwhile; ?><?php  } ?>
 				</div>
 			</div>
 		</section>

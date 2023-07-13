@@ -25,6 +25,7 @@
 		height: 560px;
 		padding: 80px 100px;
 		background-size: cover;
+		background-position: center;
 		&__container {
 			@include container;
 			display: flex;

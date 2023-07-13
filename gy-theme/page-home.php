@@ -8,63 +8,40 @@ get_header();
 <main class="page--home before bg-gy" style="background-position: center bottom; background-size:110%;">
   <section class="hero ">
     <div class="hero-slider">
-      <div class="hero__slide">
-        <div class="hero__container">
-          <div class="hero__content col-7">
-            <h1 class="hero__title">Lorem ipsum</h1>
-            <p class="hero__desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
-              ipsum consequat, gravida quam nec, ornare orci. Etiam at ex rutrum,
-              vehicula quam vitae, consequat ex. Mauris dictum interdum augue vitae
-              dictum. Suspendisse potenti. Nulla venenatis massa non porttitor
-              eleifend.
-            </p>
-            <div class="button--container">
-              <a href="#" class="button button--default">Lorem ipsum</a>
-            </div>
-            <div class="nav-slide-holder">
-              <button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
-              <button class="next-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-left.svg" alt="" /></button>
-            </div>
-          </div>
-          <div class="hero__img no-before">
-            <div class="cards__category">relatorio</div>
-            <a href="#" class="cards__info">
-              <h3 class="cards__title">Relatório Anual</h3>
-            </a>
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="hero__slide">
-        <div class="hero__container">
-          <div class="hero__content col-7">
-            <h1 class="hero__title">Lorem ipsum</h1>
-            <p class="hero__desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non
-              ipsum consequat, gravida quam nec, ornare orci. Etiam at ex rutrum,
-              vehicula quam vitae, consequat ex. Mauris dictum interdum augue vitae
-              dictum. Suspendisse potenti. Nulla venenatis massa non porttitor
-              eleifend.
-            </p>
-            <div class="button--container">
-              <a href="#" class="button button--default">Lorem ipsum</a>
-            </div>
-            <div class="nav-slide-holder">
-              <button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
-              <button class="next-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-left.svg" alt="" /></button>
+      <?php if (have_rows('slide')) { ?>
+        <?php while (have_rows('slide')) : the_row(); ?>
+          <div class="hero__slide">
+            <div class="hero__container">
+              <div class="hero__content col-7">
+                <h1 class="hero__title"><?php the_sub_field('titulo') ?></h1>
+                <?php if (get_sub_field('subtitulo')) { ?>
+                  <h2 class="hero__sub-title"><?php the_sub_field('subtitulo'); ?></h2>
+                <?php } ?>
+                <p class="hero__desc">
+                  <?php the_sub_field('texto') ?>
+                </p>
+                <div class="button--container">
+                  <a href="<?php the_sub_field('link_cta') ?>" class="button button--default"><?php the_sub_field('texto_cta') ?></a>
+                </div>
+                <div class="nav-slide-holder">
+                  <button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
+                  <button class="next-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-left.svg" alt="" /></button>
+                </div>
+              </div>
+              <div class="hero__img no-before">
+                <?php if (get_sub_field('texto_tag_imagem')) { ?>
+                  <a href="<?php the_sub_field('link_tag_imagem'); ?>" class="cards__category"><?php the_sub_field('texto_tag_imagem'); ?></a>
+                <?php } ?>
+                <?php if (get_sub_field('texto_cta_imagem')) { ?>
+                  <a href="<?php the_sub_field('link_cta_imagem'); ?>" class="cards__info">
+                    <h3 class="cards__title"><?php the_sub_field('texto_cta_imagem'); ?></h3>
+                  </a>
+                <?php } ?>
+                <img src="<?php the_sub_field('imagem'); ?>" alt="banner <?php the_sub_field('titulo'); ?>" />
+              </div>
             </div>
           </div>
-          <div class="hero__img no-before">
-            <div class="cards__category">relatorio</div>
-            <a href="#" class="cards__info">
-              <h3 class="cards__title">Relatório Anual</h3>
-            </a>
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/img-modelo.png" alt="" />
-          </div>
-        </div>
-      </div>
-
+          <?php endwhile; ?><?php  } ?>
     </div>
   </section>
   <section class="solucoes container">

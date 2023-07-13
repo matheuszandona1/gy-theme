@@ -3239,6 +3239,7 @@ html {
 }
 
 .page--contato .vagas {
+  background-position: center;
   background-size: cover;
   height: 560px;
   padding: 80px 100px;
