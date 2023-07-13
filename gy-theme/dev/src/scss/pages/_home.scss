@@ -6,7 +6,7 @@
 		.menu-item {
 			z-index: 21;
 		}
-		.button--default {
+		&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
 			position: relative;
 			z-index: 999;
 			background-color: $verde-50;
