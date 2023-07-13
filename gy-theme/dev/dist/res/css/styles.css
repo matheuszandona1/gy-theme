@@ -3170,6 +3170,7 @@ html {
 }
 
 .page--segmentos.general .cases .relatorios__content {
+  gap: 0;
   margin-bottom: 100px;
 }
 

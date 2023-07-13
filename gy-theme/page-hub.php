@@ -197,7 +197,7 @@ get_header();
       </div>
       <div class="success-cases">
         <div class="titulo text-center">
-          <h2 class="default__title no-after smaller">Baixe nossos materiais ricos</h2>
+          <h2 class="default__title no-after smaller">Nossos cases de sucesso</h2>
         </div>
         <div class="succes-cases d-flex">
 

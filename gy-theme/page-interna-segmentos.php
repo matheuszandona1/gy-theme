@@ -6,12 +6,21 @@ get_header();
 ?>
 
 <div class="page--segmentos">
-	<?php get_template_part('components/hero', 'segmentos'); ?>
 	<main class="manipulating">
+		<?php get_template_part('components/hero', 'segmentos'); ?>
+		<section class="solucoes">
+			<div class="solucoes__container">
+				<h2 class="default__title no-after">Nossas soluções</h2>
+				<div class="solucoes__container--content">
+					<?php the_content(); ?>
+				</div>
+				<?php get_template_part('components/diagrama', 'solucoes'); ?>
+			</div>
+		</section>
 		<section class="pr-operating">
 			<div class="pr-operating__container">
 				<div class="pr-operating__content">
-					<h2 class="default__title no-after smaller">Benefícios da geração de energia renovável</h2>
+					<h2 class="default__title no-after smaller">Benefícios da transição energética e descarbonização no segmento</h2>
 
 					<div class="nav-slide-holder">
 						<button class="prev-arrow"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/seta-slider-right.svg" alt="" /></button>
@@ -22,27 +31,32 @@ get_header();
 					<div class="pr-operating__slider">
 						<div class="pr-operating__slide">
 							<div class="card-check">
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Redução das despesas, seja pela redução do consumo, seja pela redução do custo da energia.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Redução da pegada de carbono para atingimento de metas sustentáveis.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Maior previsibilidade dos custos de energia e utilidades.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Maior confiabilidade dos equipamentos, reduzindo quebras e falhas.</p>
 							</div>
 						</div>
 						<div class="pr-operating__slide">
 							<div class="card-check">
-								<p class="card-check__text">Uso racional das fontes de energia</p>
+								<p class="card-check__text">Redução do uso de fluidos refrigerantes emissores de gases de efeito estufa.</p>
+							</div>
+						</div>
+						<div class="pr-operating__slide">
+							<div class="card-check">
+								<p class="card-check__text">Redução de quebras e perda de produtos.</p>
 							</div>
 						</div>
 					</div>
@@ -51,7 +65,7 @@ get_header();
 		</section>
 		<section class="pr-custom">
 			<div class="pr-custom__container">
-				<h2 class="default__title no-after smaller text-start">Projetos personalizados e soluções sob medida</h2>
+				<h2 class="default__title no-after smaller text-start">Por que ter a GY como parceira?</h2>
 				<div class="pr-custom__content text-center">
 					<div class="card-check">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/check.svg" alt="" />
