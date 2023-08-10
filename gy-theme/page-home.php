@@ -49,30 +49,15 @@ get_header();
     <?php get_template_part('components/diagrama', 'solucoes'); ?>
     <div class="numeros">
       <div class="case__container--numbers">
-        <div class="col-3">
-          <div class="box text-center">
-            <span>+1000</span>
-            <p>lorem ipsum dolor sit amet </p>
+      <?php if (have_rows('numeros')) { ?>
+        <?php while (have_rows('numeros')) : the_row(); ?>
+          <div class="col-2">
+            <div class="box text-center">
+              <span>+<?php the_sub_field('numero'); ?></span>
+              <p><?php the_sub_field('descricao'); ?></p>
+            </div>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="box text-center">
-            <span>+1000</span>
-            <p>lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="box text-center">
-            <span>+1000</span>
-            <p>lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="box text-center">
-            <span>+1000</span>
-            <p>lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
+        <?php endwhile; ?><?php  } ?>
       </div>
     </div>
     <div class="button--container center">

@@ -82,3 +82,4 @@ paths.forEach(function(path) {
     });
 });
 
+//# sourceMappingURL=index.js.map
