@@ -24,7 +24,7 @@
                 </div>
                 <div class="newsletter__form--double">
                     <div class="newsletter__form--input">
-                        <label for="email">E-mail</label>
+                        <label for="email">E-mail corporativo</label>
                         <input type="email" id="email">
                     </div>
                     <div class="newsletter__form--input">
@@ -34,17 +34,17 @@
                 </div>
                 <div class="newsletter__form--double">
                     <div class="newsletter__form--input">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa">
                     </div>
-                    <div class="newsletter__form--input select">
-                        <label for="solucoes">Solução de interesse</label>
-                        <select name="solucoes" id="solucoes">
-                            <option value="">teste</option>
-                            <option value="">teste2</option>
-                            <option value="">teste3</option>
-                        </select>
+                    <div class="newsletter__form--input">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" id="cargo">
                     </div>
+                </div>
+                <div class="newsletter__form--input">
+                    <label for="mensagem">Mensagem</label>
+                    <input type="textarea" id="mensagem" rows="5">
                 </div>
                 <input type="submit" class="button button--newsletter" value="ENVIAR" />
             </form>

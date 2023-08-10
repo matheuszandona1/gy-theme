@@ -957,6 +957,10 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
   right: 15px;
 }
 
+.newsletter__form--input #mensagem {
+  height: 150px;
+}
+
 .newsletter.post .newsletter__container {
   background: #fef8e1;
   align-items: center;
