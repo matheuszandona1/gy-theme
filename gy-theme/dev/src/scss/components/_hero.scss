@@ -57,7 +57,6 @@
 	&__img {
 		position: relative;
 		@include media(s) {
-			display: none;
 		}
 		&:before {
 			content: url("../assets/sombra.png");

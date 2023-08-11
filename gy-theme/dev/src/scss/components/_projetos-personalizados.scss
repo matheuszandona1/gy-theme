@@ -1,5 +1,8 @@
 .pr-custom {
 	padding: 80px 0;
+	@include media(s) {
+		padding: 60px 0px 0px;
+	}
 	&__container {
 		@include container;
 	}
@@ -8,19 +11,36 @@
 		justify-content: center;
 		gap: 24px;
 		margin: 40px 0px;
+		@include media(s) {
+			justify-content: start;
+			overflow: auto;
+			.card-check {
+				flex-shrink: 0;
+				max-width: 300px;
+			}
+		}
 	}
 }
 .pr-operating {
 	padding: 80px 0px;
+	@include media(s) {
+		padding: 60px 0px 0px;
+	}
 	&__container {
 		@include l-border;
 		@include s-shadow;
 		@include container;
 		background: $verde-50;
 		padding: 80px 100px;
+		@include media(s) {
+			padding: 60px 24px;
+		}
 		.default__desc {
 			margin-top: 16px;
 			color: $neutro-700;
+			@include media(s) {
+				text-align: left !important;
+			}
 		}
 	}
 	&__content {
@@ -28,5 +48,23 @@
 		justify-content: center;
 		gap: 24px;
 		margin: 32px auto;
+		@include media(s) {
+			justify-content: start;
+			overflow: auto;
+			.card-check {
+				flex-shrink: 0;
+				max-width: 290px;
+				height: 300px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+	.button--container {
+		@include media(s) {
+			text-align: left;
+		}
 	}
 }
