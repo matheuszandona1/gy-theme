@@ -11,6 +11,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include media(s) {
+			padding: 0 24px;
+		}
 		#mega-menu-wrap-menu-principal {
 			background: transparent;
 		}
@@ -30,23 +33,23 @@
 					line-height: 100%;
 					border: none;
 					a.mega-menu-link {
-					 @include defaul-text;
-					 color: $verde-900;
-					 line-height: 100%;
-					 text-decoration: none;
-					 transition: ease-in-out 0.2s;
-					 height: auto;
-					 background: transparent !important;
-					 &:hover,
-					 &:focus {
-						 background: transparent !important;
-						 color: $verde-900;
-						 line-height: 100%;
-						 border: none;
-					 }
-				 }
+						@include defaul-text;
+						color: $verde-900;
+						line-height: 100%;
+						text-decoration: none;
+						transition: ease-in-out 0.2s;
+						height: auto;
+						background: transparent !important;
+						&:hover,
+						&:focus {
+							background: transparent !important;
+							color: $verde-900;
+							line-height: 100%;
+							border: none;
+						}
+					}
 				}
-				 a.mega-menu-link {
+				a.mega-menu-link {
 					@include defaul-text;
 					color: $verde-900;
 					line-height: 100%;
@@ -89,14 +92,14 @@
 	&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
 		padding: 16px 24px;
 		color: #fff;
-    background: #87bc25;
-    border-radius: 8px;
-    font-family: Nunito, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 100%;
-    position: relative;
-    box-shadow: 0 1px 1px #0000000f;
+		background: #87bc25;
+		border-radius: 8px;
+		font-family: Nunito, sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 100%;
+		position: relative;
+		box-shadow: 0 1px 1px #0000000f;
 		a {
 			font-size: 16px;
 			color: $neutro-50;
@@ -107,7 +110,8 @@
 		}
 	}
 }
-#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu, #mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu.mega-toggle-on ul.mega-sub-menu {
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu,
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu.mega-toggle-on ul.mega-sub-menu {
 	background: $neutro-50;
 	padding: 0;
 	width: fit-content;
@@ -115,11 +119,25 @@
 	min-width: 0;
 	border-radius: 8px;
 }
-#mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
+#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	> li.mega-menu-row
+	.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item {
 	padding: 0 !important;
 	position: relative;
 }
-#mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
+#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link {
 	color: $neutro-800 !important;
 	@include bold-h4;
 	font-weight: 400 !important;
@@ -136,7 +154,15 @@
 #mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu {
 	top: 50px;
 }
-header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link{
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link {
 	color: #266400;
 	height: auto;
 	font-family: Nunito Sans, sans-serif;
@@ -144,12 +170,20 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
 	font-weight: 400;
 	line-height: 100%;
 	text-decoration: none;
-	transition: all .2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	padding: 12px;
 	border-radius: 8px;
 	position: relative;
 }
-header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link::after {
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link::after {
 	content: url("../assets/seta-btn.svg");
 	position: absolute;
 	right: 0px;
@@ -160,8 +194,16 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
 	width: 20px;
 	height: 20px;
 }
-header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link:hover {
-	background: #F1F7E6;
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link:hover {
+	background: #f1f7e6;
 	&:after {
 		opacity: 1;
 		right: 18px;

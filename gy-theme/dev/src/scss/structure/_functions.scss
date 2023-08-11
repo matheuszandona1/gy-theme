@@ -32,6 +32,7 @@ $one-column: calc((1240px - ($margin * ($total-columns - 1))) / $total-columns);
 	width: ($one-column * $column-num) + (($column-num) - 1) * $margin;
 	box-sizing: border-box;
 	margin-right: $margin;
+	max-width: 100%;
 
 	&:last-child {
 		margin-right: 0;
