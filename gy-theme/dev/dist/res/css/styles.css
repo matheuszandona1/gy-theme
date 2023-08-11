@@ -648,7 +648,8 @@ html {
 }
 
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item:hover {
-  background: #dcebc0;
+  background-color: #f1f7e6;
+  border-radius: 8px;
 }
 
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item a.mega-menu-link {
@@ -675,10 +676,6 @@ html {
   position: absolute;
   top: 20px;
   left: 0;
-}
-
-.header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item .sub-menu li.mega-menu-item:hover {
-  background: none;
 }
 
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item.menu-item-has-children {
@@ -4709,4 +4706,3 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
