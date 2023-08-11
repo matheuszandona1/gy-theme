@@ -1,8 +1,9 @@
 .header {
 	background: transparent;
-	padding: 32px 0px;
 	border-bottom: 1px solid #dbdbdb;
 	position: relative;
+	width: 100%;
+	padding: 16px 0px;
 	.menu-item {
 		z-index: 21;
 	}
@@ -20,8 +21,8 @@
 			padding: 0px;
 			gap: 32px;
 			list-style: none;
-
 			li.mega-menu-item {
+				padding: 16px 0px;
 				&.mega-current-menu-item,
 				&.mega-current-menu-ancestor,
 				&.mega-current-page-ancestor {
@@ -46,6 +47,9 @@
 					 }
 				 }
 				}
+				&:hover {
+					background: $verde-100;
+				}
 				 a.mega-menu-link {
 					@include defaul-text;
 					color: $verde-900;
@@ -65,6 +69,11 @@
 					position: absolute;
 					left: 0;
 					top: 20px;
+					li.mega-menu-item {
+						&:hover {
+							background: transparent;
+						}
+					}
 				}
 				&.menu-item-has-children {
 					position: relative;

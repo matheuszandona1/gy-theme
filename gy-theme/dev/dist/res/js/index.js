@@ -81,5 +81,18 @@ paths.forEach(function(path) {
         if (tooltip && !tooltip.contains(event.target)) document.body.removeChild(tooltip);
     });
 });
+/* Fixed footer */ window.onload = function(e) {
+    var offset = document.getElementsByClassName("header")[0].offsetTop;
+    var menu = document.getElementsByClassName("header")[0];
+    document.addEventListener("scroll", function() {
+        if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
+            menu.style.position = "fixed";
+            menu.style.background = "#fff";
+        } else {
+            menu.style.position = "relative";
+            menu.style.background = "transparent";
+        }
+    });
+};
 
 //# sourceMappingURL=index.js.map

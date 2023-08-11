@@ -574,7 +574,8 @@ html {
 .header {
   background: none;
   border-bottom: 1px solid #dbdbdb;
-  padding: 32px 0;
+  width: 100%;
+  padding: 16px 0;
   position: relative;
 }
 
@@ -603,6 +604,10 @@ html {
   display: flex;
 }
 
+.header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item {
+  padding: 16px 0;
+}
+
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item.mega-current-menu-item, .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item.mega-current-menu-ancestor, .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item.mega-current-page-ancestor {
   color: #266400;
   border: none;
@@ -629,6 +634,10 @@ html {
   background: none !important;
 }
 
+.header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item:hover {
+  background: #dcebc0;
+}
+
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item a.mega-menu-link {
   color: #266400;
   height: auto;
@@ -652,6 +661,10 @@ html {
   position: absolute;
   top: 20px;
   left: 0;
+}
+
+.header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item .sub-menu li.mega-menu-item:hover {
+  background: none;
 }
 
 .header__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-item.menu-item-has-children {
@@ -3376,10 +3389,18 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
   margin-bottom: 24px;
 }
 
+.page--contato .talk-gy__container .box {
+  background: #dcebc0;
+  border-radius: 24px;
+  max-width: 400px;
+  margin: 0 auto 32px;
+  padding: 30px;
+}
+
 .page--contato .talk-gy__container .default__smaller {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 32px;
+  margin: 0 auto;
+  font-size: 20px;
 }
 
 .page--contato .vagas {

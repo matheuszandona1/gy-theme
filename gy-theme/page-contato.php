@@ -7,15 +7,19 @@ get_header();
 
 <main class="page--contato">
 	<?php get_template_part('components/hero'); ?>
-	<?php get_template_part('components/newsletter'); ?>
+	<div id="contato">
+		<?php get_template_part('components/newsletter'); ?>
+	</div>
 	<section class="talk-gy">
 		<div class="talk-gy__container">
 			<h2 class="default__title no-after">Assessoria de imprensa</h2>
-			<p class="default__smaller">
-				_a4e Holofote <br>
-				Marilia Pontes <br>
-				mariliapontes@a4eholofote.com.br
-			</p>
+			<div class="box">
+				<p class="default__smaller">
+					_a4e Holofote <br>
+					Marilia Pontes <br>
+					mariliapontes@a4eholofote.com.br
+				</p>
+			</div>
 			<div class="button--container center">
 				<a href="#contato" class="button button--default">fale com a gy</a>
 			</div>
