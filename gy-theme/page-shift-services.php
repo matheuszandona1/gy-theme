@@ -9,7 +9,7 @@ get_header();
 	<main>
 		<?php get_template_part('components/hero'); ?>
 		<section class="resources">
-			<h2 class="default__title smaller no-after">Conheça as três possibilidades que a GreenYellow oferece</h2>
+			<h2 class="default__title smaller no-after">Conheça os serviços em energia que a GreenYellow oferece</h2>
 			<div class="relatorios">
 				<div class="relatorios__container">
 					<nav>

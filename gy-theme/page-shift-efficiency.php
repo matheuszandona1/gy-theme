@@ -186,7 +186,7 @@ get_header();
 							<div class="type__content">
 								<div class="type__project--title">
 									<img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/apresentacao.svg" alt="" />
-									<h3 class="default__title no-after smaller">Contrato de Performance</h3>
+									<h3 class="default__title no-after smaller">Utilities as a service</h3>
 								</div>
 								<div class="type__addons">
 									<b>Investimento:</b>
