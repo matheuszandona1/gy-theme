@@ -584,6 +584,7 @@ html {
 }
 
 .header {
+  z-index: 9999;
   background: none;
   border-bottom: 1px solid #dbdbdb;
   width: 100%;
@@ -4035,6 +4036,7 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
 }
 
 .podcast__container--info .buttons {
+  flex-wrap: wrap;
   align-items: center;
   display: flex;
 }
@@ -4204,6 +4206,10 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
   .default__title {
     text-align: left;
     font-size: 32px;
+  }
+
+  .header {
+    z-index: 9999;
   }
 
   .header__container, .footer__container {
@@ -4670,6 +4676,24 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
     padding: 0 24px;
   }
 
+  .cases__container .card-flex {
+    flex-flow: column wrap;
+  }
+
+  .cases__container--destaque {
+    margin-top: -130px;
+  }
+
+  .cases__container--destaque .card {
+    position: unset;
+    transform: unset;
+    margin-right: 0;
+  }
+
+  .cases__container--destaque .card .card-flex {
+    flex-flow: column-reverse wrap;
+  }
+
   .case__heading {
     padding: 60px 24px;
   }
@@ -4869,7 +4893,15 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
     margin-top: -134px !important;
   }
 
-  .page--contato .talk-gy__container, .page--contato .vagas__container {
+  .page--contato .talk-gy__container {
+    padding: 0 24px;
+  }
+
+  .page--contato .vagas {
+    padding: 0;
+  }
+
+  .page--contato .vagas__container {
     padding: 0 24px;
   }
 
@@ -4967,15 +4999,85 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
     bottom: 20px;
   }
 
-  .midia__container, .podcast__container {
+  .midia__container {
     padding: 0 24px;
+  }
+
+  .midia__container--destaque .card {
+    position: unset;
+    transform: unset;
+    margin-top: -130px;
+    margin-bottom: 50px;
+  }
+
+  .podcast__container {
+    padding: 0 24px;
+  }
+
+  .podcast__container--destaque .info {
+    position: unset;
+    transform: unset;
+    margin-top: -130px;
+    margin-bottom: 50px;
+  }
+
+  .podcast__container--info {
+    padding: 32px;
   }
 
   .podcast__container--info p {
     font-size: 24px;
   }
 
-  .materiais__container, .mapa__container, .page--solucoes-gy .solucoes__container {
+  .podcast__container--info .buttons {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .podcast__container--info .buttons .button {
+    margin-right: 0;
+  }
+
+  .materiais__container {
+    padding: 0 24px;
+  }
+
+  .materiais__container--principais {
+    position: unset;
+    transform: unset;
+    flex-wrap: nowrap;
+    margin-top: -140px;
+    margin-bottom: 50px;
+    overflow: auto;
+  }
+
+  .materiais__container--principais .cards__bigger {
+    z-index: 2;
+    flex: unset;
+    flex-shrink: 0;
+    max-width: 350px;
+    height: 300px;
+  }
+
+  .materiais__container--principais .cards__bigger .cards__category {
+    position: unset;
+  }
+
+  .card-flex {
+    flex-direction: column-reverse;
+  }
+
+  .card-flex .card-img {
+    width: 100%;
+  }
+
+  .card-flex .card-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mapa__container, .page--solucoes-gy .solucoes__container {
     padding: 0 24px;
   }
 
