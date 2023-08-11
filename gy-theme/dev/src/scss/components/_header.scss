@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header {
 	background: transparent;
 	border-bottom: 1px solid #dbdbdb;
@@ -180,3 +181,220 @@ header #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-m
 	background: transparent !important;
 	color: #266400 !important;
 }
+=======
+.header {
+	background: transparent;
+	padding: 32px 0px;
+	border-bottom: 1px solid #dbdbdb;
+	position: relative;
+	.menu-item {
+		z-index: 21;
+	}
+	&__container {
+		@include container;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include media(s) {
+			padding: 0 24px;
+		}
+		#mega-menu-wrap-menu-principal {
+			background: transparent;
+		}
+		#mega-menu-wrap-menu-principal #mega-menu-menu-principal {
+			display: flex;
+			align-items: center;
+			padding: 0px;
+			gap: 32px;
+			list-style: none;
+
+			li.mega-menu-item {
+				&.mega-current-menu-item,
+				&.mega-current-menu-ancestor,
+				&.mega-current-page-ancestor {
+					background: transparent !important;
+					color: $verde-900;
+					line-height: 100%;
+					border: none;
+					a.mega-menu-link {
+						@include defaul-text;
+						color: $verde-900;
+						line-height: 100%;
+						text-decoration: none;
+						transition: ease-in-out 0.2s;
+						height: auto;
+						background: transparent !important;
+						&:hover,
+						&:focus {
+							background: transparent !important;
+							color: $verde-900;
+							line-height: 100%;
+							border: none;
+						}
+					}
+				}
+				a.mega-menu-link {
+					@include defaul-text;
+					color: $verde-900;
+					line-height: 100%;
+					text-decoration: none;
+					transition: ease-in-out 0.2s;
+					height: auto;
+					&:hover {
+						background: transparent;
+						color: $verde-900;
+						line-height: 100%;
+						border: none;
+					}
+				}
+				.sub-menu {
+					display: none;
+					position: absolute;
+					left: 0;
+					top: 20px;
+				}
+				&.menu-item-has-children {
+					position: relative;
+					padding-right: 20px;
+				}
+				&.menu-item-has-children:hover {
+					.sub-menu {
+						display: block;
+					}
+				}
+				&.menu-item-has-children::after {
+					content: url("../assets/arrow_drop_down.svg");
+					position: absolute;
+					top: -3px;
+					right: 0;
+					width: 8px;
+					height: 4px;
+				}
+			}
+		}
+	}
+	&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
+		padding: 16px 24px;
+		color: #fff;
+		background: #87bc25;
+		border-radius: 8px;
+		font-family: Nunito, sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 100%;
+		position: relative;
+		box-shadow: 0 1px 1px #0000000f;
+		a {
+			font-size: 16px;
+			color: $neutro-50;
+			height: auto;
+			&:hover {
+				padding-right: 40px;
+			}
+		}
+	}
+}
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu,
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu.mega-toggle-on ul.mega-sub-menu {
+	background: $neutro-50;
+	padding: 0;
+	width: fit-content;
+	max-width: fit-content;
+	min-width: 0;
+	border-radius: 8px;
+}
+#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	> li.mega-menu-row
+	.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item {
+	padding: 0 !important;
+	position: relative;
+}
+#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link {
+	color: $neutro-800 !important;
+	@include bold-h4;
+	font-weight: 400 !important;
+	text-transform: none !important;
+}
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+	width: fit-content !important;
+	min-width: 0 !important;
+	max-width: fit-content !important;
+}
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li {
+	padding: 24px;
+}
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu {
+	top: 50px;
+}
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link {
+	color: #266400;
+	height: auto;
+	font-family: Nunito Sans, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 100%;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	padding: 12px;
+	border-radius: 8px;
+	position: relative;
+}
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link::after {
+	content: url("../assets/seta-btn.svg");
+	position: absolute;
+	right: 0px;
+	opacity: 1;
+	top: 33%;
+	z-index: 999;
+	transition: all 0.2s ease-in;
+	width: 20px;
+	height: 20px;
+}
+header
+	#mega-menu-wrap-menu-principal
+	#mega-menu-menu-principal
+	> li.mega-menu-megamenu
+	> ul.mega-sub-menu
+	li.mega-menu-column
+	> ul.mega-sub-menu
+	> li.mega-menu-item
+	> a.mega-menu-link:hover {
+	background: #f1f7e6;
+	&:after {
+		opacity: 1;
+		right: 18px;
+	}
+}
+#mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-item > a.mega-menu-link {
+	background: transparent !important;
+	color: #266400 !important;
+}
+>>>>>>> 39188206405998d0a91d2ff31af55c56d81e161d

@@ -7,23 +7,40 @@
 
 .galeria {
 	padding-top: 120px;
+	@include media(s) {
+		padding-top: 60px;
+	}
 	&__container {
 		max-width: 1030px;
 		margin: 0 auto;
+		@include media(s) {
+			padding: 0px 24px;
+		}
 	}
 	&__holder {
 		margin: 78px auto;
 		display: flex;
 		align-items: center;
 		gap: 56px;
+		@include media(s) {
+			flex-direction: column-reverse;
+			gap: 24px;
+		}
 		&.fd {
 			flex-direction: row-reverse;
+			@include media(s) {
+				flex-direction: column-reverse;
+				gap: 24px;
+			}
 			.galeria__img {
 				&:before {
 					content: url("../assets/SOMBRA_VERDE.png");
 					position: absolute;
 					top: -130px;
 					left: -146px;
+					@include media(s) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -35,11 +52,17 @@
 		max-width: 390px;
 		justify-content: end;
 		position: relative;
+		@include media(s) {
+			justify-content: start;
+		}
 		&:before {
 			content: url("../assets/SOMBRA_AMARELA.png");
 			position: absolute;
 			top: -130px;
 			left: -146px;
+			@include media(s) {
+				display: none;
+			}
 		}
 		&--holder {
 			position: relative;
@@ -51,7 +74,7 @@
 			&:nth-child(1),
 			&:nth-child(4) {
 				img {
-					width: 190px;
+					width: 170px;
 					border-radius: 12px 12px 4px 12px;
 				}
 			}
@@ -75,6 +98,9 @@
 
 			&:nth-child(4) {
 				margin-right: 40px;
+				@include media(s) {
+					margin-right: 0px;
+				}
 				img {
 					border-radius: 4px 12px 12px 12px;
 				}
@@ -89,6 +115,9 @@
 		&--heading {
 			display: flex;
 			justify-content: center;
+			@include media(s) {
+				justify-content: start;
+			}
 			gap: 16px;
 			margin-bottom: 32px;
 			align-items: center;
@@ -100,8 +129,14 @@
 		}
 		&--title {
 			@include general-title;
+			@include media(s) {
+				text-align: left;
+			}
 		}
 		&--text {
+			@include media(s) {
+				text-align: left;
+			}
 			b {
 				font-weight: bold;
 			}

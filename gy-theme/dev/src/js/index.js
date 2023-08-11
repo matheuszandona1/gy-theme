@@ -5,7 +5,17 @@ $(".pr-operating__slider").slick({
 	dots: true,
 	prevArrow: $(".prev-arrow"),
 	nextArrow: $(".next-arrow"),
+	responsive: [
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1, //
+			},
+		},
+	],
 })
+console.log("teste slisder")
 
 $(document).ready(function () {
 	// Verifica se a seção ".cases" está presente
