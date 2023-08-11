@@ -1,4 +1,17 @@
 .hub {
+	&-holder {
+		@include media(s) {
+			flex-direction: column;
+			gap: 32px;
+			.cards__bigger {
+				height: 400px;
+				flex: unset;
+			}
+			.ebooks__container {
+				flex-direction: column;
+			}
+		}
+	}
 	&__container {
 		@include container;
 		padding-top: 100px;
@@ -57,12 +70,23 @@
 		padding: 100px 0 467px 0;
 		background: $verde-50;
 		margin-bottom: 60px;
+		@include media(s) {
+			padding-bottom: 60px;
+		}
 		&--links {
 			@include container;
 			margin-bottom: 24px;
+			@include media(s) {
+				overflow: auto;
+			}
 			.button__container {
 				display: flex;
 				justify-content: space-between;
+				@include media(s) {
+					justify-content: start;
+					gap: 16px;
+					padding-right: 24px;
+				}
 				.button {
 					display: flex;
 					align-items: center;
@@ -88,8 +112,12 @@
 		}
 		&--destaque {
 			@include container;
+
 			.card-flex {
 				gap: 16px;
+				@include media(s) {
+					flex-direction: column-reverse;
+				}
 			}
 			.card-block {
 				max-width: 819px;
@@ -99,6 +127,12 @@
 					width: 341px;
 					height: 238px;
 				}
+				@include media(s) {
+					max-width: 100%;
+					img {
+						width: 263px;
+					}
+				}
 			}
 		}
 	}
@@ -107,8 +141,27 @@
 		display: flex;
 		position: absolute;
 		gap: 24px;
+		.newsletter {
+			@include media(s) {
+				padding-top: 0px;
+				padding: 0;
+			}
+		}
+		@include media(s) {
+			flex-direction: column;
+			padding: 0;
+			max-width: 100%;
+			position: relative;
+		}
 		.cards__bigger {
 			@include s-shadow;
+			@include media(s) {
+				height: 450px;
+				flex: unset;
+				&:last-child {
+					display: none;
+				}
+			}
 		}
 		&--middle {
 			max-width: 608px;
@@ -168,6 +221,19 @@
 			.card {
 				position: relative;
 			}
+		}
+	}
+}
+
+.succes-cases {
+	@include media(s) {
+		flex-direction: column;
+		.card-flex {
+			max-width: 100%;
+			img {
+				width: 260px;
+			}
+			flex-direction: column;
 		}
 	}
 }

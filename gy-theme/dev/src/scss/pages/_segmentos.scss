@@ -52,6 +52,10 @@
 			background: $neutro-50;
 			box-shadow: none;
 			padding: 0;
+			@include media(s) {
+				flex-direction: column;
+				padding: 0px 24px;
+			}
 		}
 		&__content {
 			max-width: 485px;
@@ -60,6 +64,9 @@
 			margin: 0;
 			flex-shrink: 0;
 			position: relative;
+			@include media(s) {
+				overflow: unset;
+			}
 			.default__title {
 				text-align: left;
 				padding-right: 2px;
@@ -72,6 +79,9 @@
 			.nav-slide-holder {
 				display: flex;
 				position: relative;
+				@include media(s) {
+					display: none;
+				}
 				.prev-arrow,
 				.next-arrow {
 					display: flex;
@@ -99,14 +109,16 @@
 		}
 		&__slider {
 			max-width: 851px;
-
+			@include media(s) {
+				max-width: 100%;
+			}
 			.slick-list {
 				margin: 0 -12px;
 				padding: 0px 0px 40px;
 			}
 			.slick-dots {
 				position: absolute;
-				bottom: 57px;
+				bottom: 21px;
 				left: -450px;
 				max-width: 100px;
 				display: flex;
@@ -116,7 +128,10 @@
 				justify-content: center;
 				margin: 0;
 				@include media(s) {
-					bottom: 20px;
+					bottom: 0px;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
 				}
 				li {
 					opacity: 1;
@@ -147,36 +162,81 @@
 				max-width: 265px;
 				height: 147px;
 				width: 100%;
+				@include media(s) {
+					max-width: 100%;
+				}
+
 				&__text {
 					font-size: 16px;
 					text-align: left;
+					margin: 0;
 				}
 			}
 		}
 	}
 	.pr-custom {
+		@include media(s) {
+			padding-bottom: 60px;
+		}
 		&__content {
 			margin-bottom: 0px;
+			@include media(s) {
+				padding: 12px 0px;
+			}
 		}
 	}
 	.cases {
 		background: $verde-50;
 		padding: 80px 0px 400px;
+		@include media(s) {
+			padding: 60px 0 40px !important;
+			margin-bottom: 60px !important;
+		}
 		&__container {
 			@include container;
 			padding-top: 0px;
+			@include media(s) {
+				padding: 0;
+			}
 		}
 		&__holder {
 			margin: 32px 0;
+			@include media(s) {
+				flex-wrap: wrap;
+				padding: 0px 24px;
+				.card-flex {
+					flex-wrap: wrap;
+					.card-img {
+						height: 100px;
+						max-width: 100%;
+					}
+				}
+			}
 		}
 		.default__title {
 			margin-bottom: 32px;
+			@include media(s) {
+				@include container;
+				margin-bottom: 24px;
+			}
 		}
 		.relatorios__content {
-			margin-bottom: 0px;
+			@include media(s) {
+				margin-bottom: 0px !important;
+				padding: 0px 24px;
+				overflow: auto;
+				a {
+					margin-bottom: 0px !important;
+				}
+			}
 		}
 	}
 
+	.newsletter {
+		@include media(s) {
+			margin-top: -134px !important;
+		}
+	}
 	.cases-cta {
 		padding-top: 0px;
 	}
