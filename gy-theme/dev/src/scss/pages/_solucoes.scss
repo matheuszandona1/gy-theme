@@ -1,6 +1,9 @@
 .page--solucoes-gy {
 	.solucoes {
 		padding: 80px 0px;
+		@include media(s) {
+			padding: 10px 0px;
+		}
 		&__container {
 			@include container;
 		}

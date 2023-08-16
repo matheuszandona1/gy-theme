@@ -35,7 +35,16 @@ $(".clientes-slider").slick({
     slidesToScroll: 5,
     dots: true,
     prevArrow: $(".prev-arrow-clientes"),
-    nextArrow: $(".next-arrow-clientes")
+    nextArrow: $(".next-arrow-clientes"),
+    responsive: [
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+    ]
 });
 var isHovered = false;
 var paths = document.querySelectorAll("path[id]");

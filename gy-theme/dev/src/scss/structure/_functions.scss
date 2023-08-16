@@ -37,6 +37,9 @@ $one-column: calc((1240px - ($margin * ($total-columns - 1))) / $total-columns);
 	&:last-child {
 		margin-right: 0;
 	}
+	@include media(s) {
+		margin-right: 0
+	}
 }
 
 .col-1 {

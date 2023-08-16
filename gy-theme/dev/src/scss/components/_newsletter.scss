@@ -1,6 +1,6 @@
 .newsletter {
 	@include media(s) {
-		padding: 60px 24px 0px;
+		padding: 40px 20px 0px;
 	}
 	&__container {
 		@include container;
@@ -13,14 +13,14 @@
 		color: $neutro-50;
 		@include media(s) {
 			flex-direction: column;
-			padding: 24px;
+			padding: 15px;
 		}
 	}
 	&__content {
 		padding-top: 70px;
 		max-width: 503px;
 		@include media(s) {
-			padding-top: 32px;
+			padding-top: 15px;
 		}
 	}
 	&__icon {

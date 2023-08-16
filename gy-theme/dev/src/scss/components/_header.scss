@@ -4,6 +4,10 @@
 	border-bottom: 1px solid #dbdbdb;
 	position: relative;
 	width: 100%;
+	z-index: 9999;
+	@include media(s) {
+		padding: 5px 0;
+	}
 	.menu-item {
 		z-index: 21;
 	}
@@ -13,7 +17,10 @@
 		justify-content: space-between;
 		align-items: center;
 		@include media(s) {
-			padding: 0 24px;
+			padding: 0 20px;
+			.logo img{
+				max-width: 150px;
+			}
 		}
 		#mega-menu-wrap-menu-principal {
 			background: transparent;
@@ -218,4 +225,17 @@ header
 #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-item > a.mega-menu-link {
 	background: transparent !important;
 	color: #266400 !important;
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle {
+	background: transparent !important;
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner,
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::after,
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::before {
+	@include media(s) {
+		background: $verde-900;
+	}
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
+	margin: 0 !important;
 }

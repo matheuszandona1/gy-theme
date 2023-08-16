@@ -10,7 +10,7 @@
 	padding-top: 185px;
 	padding-bottom: 80px;
 	@include media(s) {
-		padding: 60px 0px;
+		padding: 40px 0px;
 	}
 	&__container {
 		@include container;
@@ -32,6 +32,9 @@
 	}
 	.default__title {
 		font-size: 32px;
+		@include media(s) {
+			font-size: 24px;
+		}
 	}
 	&__holder {
 		max-width: 1029px;
@@ -130,7 +133,7 @@
 		height: 100%;
 		@include media(s) {
 			flex-direction: column;
-			padding: 60px 24px;
+			padding: 40px 20px;
 		}
 	}
 	&__content {
@@ -172,6 +175,9 @@
 }
 .etica {
 	margin: 80px auto;
+	@include media(s) {
+		margin: 40px auto
+	}
 	&__container {
 		@include container;
 		gap: 40px;
