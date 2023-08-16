@@ -32,6 +32,9 @@
 		padding: 80px 100px;
 		background-size: cover;
 		background-position: center;
+		@include media(s) {
+			padding: 0px;
+		}
 		&__container {
 			@include container;
 			display: flex;

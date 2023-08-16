@@ -17,6 +17,13 @@
 			left: 50%;
 			transform: translateX(-50%);
 			display: flex;
+			@include media(s) {
+				overflow: auto;
+				position: unset;
+				margin-top: -140px;
+				transform: unset;
+				margin-bottom: 40px;
+			}
 			.card {
 				&-block {
 					max-width: 819px;
@@ -38,6 +45,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			@include media(s) {
+				justify-content: start;
+				overflow: auto;
+				gap: 16px;
+				padding: 20px 0px;
+			}
 			.button {
 				@include defaul-text;
 				line-height: 100%;
@@ -46,12 +59,23 @@
 				padding: 24px;
 				border-radius: 28px;
 				text-align: center;
+				&::after {
+					top: 17px;
+				}
+				&:hover {
+					color: $verde-900;
+
+					&::after {
+						right: 25px;
+						top: 17px;
+					}
+				}
 			}
 		}
 		&--ultimas {
 			display: flex;
 			flex-wrap: wrap;
-			margin: 80px 0 32px 0; 
+			margin: 80px 0 32px 0;
 			.col-4 {
 				margin-bottom: 32px;
 			}
@@ -72,6 +96,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			padding: 80px 0;
+
 			.titulo {
 				margin-bottom: 32px;
 				h2 {
@@ -96,6 +121,7 @@
 			}
 		}
 	}
+
 	.topo__post {
 		background: $verde-50;
 		&--container {
@@ -106,6 +132,14 @@
 			align-items: center;
 			gap: 32px;
 			position: relative;
+			&--img {
+				@include media(s) {
+					img {
+						max-width: 100%;
+						margin-right: 0;
+					}
+				}
+			}
 			img {
 				margin-right: 24px;
 			}
@@ -113,6 +147,9 @@
 				@include general-heading;
 				max-width: 700px;
 				margin: 0 auto;
+				@include media(s) {
+					font-size: 32px;
+				}
 			}
 		}
 		&--category {
@@ -136,6 +173,14 @@
 			bottom: -150px;
 			left: 50%;
 			transform: translateX(-50%);
+			@include media(s) {
+				position: unset;
+				transform: translateX(0);
+				margin-bottom: -100px;
+				img {
+					margin-right: 0;
+				}
+			}
 			img {
 				border-radius: 12px;
 				height: 300px;
@@ -154,7 +199,22 @@
 		padding: 230px 0 80px 0;
 		@include container;
 		display: flex;
+		@include media(s) {
+			margin-top: 150px;
+			.col-4 {
+				display: none;
+			}
+		}
+
+		.sidebar {
+			@include media(s) {
+				display: none;
+			}
+		}
 		&--content {
+			@include media(s) {
+				margin-right: 0px;
+			}
 			p,
 			code {
 				@include defaul-text;

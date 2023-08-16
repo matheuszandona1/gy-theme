@@ -111,6 +111,9 @@
 			background: $amarelo-50;
 			padding: 80px 100px;
 			align-items: center;
+			@include media(s) {
+				padding: 32px;
+			}
 		}
 		.newsletter__content {
 			padding-top: 0;
