@@ -33,35 +33,37 @@ get_header();
 				?>
 
 			</div>
-			<?php
-			$args = array(
-				'post_type' => 'case',
-				'post_status' => 'publish',
-				'posts_per_page' => -1,
-				'orderby' => 'date',
-				'order' => 'DESC',
-				'offset' => 1,
-			);
-			$wpb_all_query = new WP_Query($args); ?>
-			<?php if ($wpb_all_query->have_posts()) {
-				while ($wpb_all_query->have_posts()) {
-					$wpb_all_query->the_post();
-			?>
-					<?php get_template_part('components/card', 'conteudo'); ?>
-			<?php
+			<div class="cases__container--cards">
+				<?php
+				$args = array(
+					'post_type' => 'case',
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'offset' => 1,
+				);
+				$wpb_all_query = new WP_Query($args); ?>
+				<?php if ($wpb_all_query->have_posts()) {
+					while ($wpb_all_query->have_posts()) {
+						$wpb_all_query->the_post();
+				?>
+						<?php get_template_part('components/card', 'conteudo'); ?>
+				<?php
+					}
+					wp_reset_postdata();
+				} else {
+					echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
 				}
-				wp_reset_postdata();
-			} else {
-				echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
-			}
-			?>
+				?>
+			</div>
+
 			<div class="category">
 				<?php
 				// Get all terms of the custom taxonomy
 				$terms = get_terms('categoria_case', array(
 					'hide_empty' => false,
 				));
-
 				// Check if any term exists
 				if (!empty($terms) && !is_wp_error($terms)) {
 					foreach ($terms as $term) {
@@ -80,10 +82,14 @@ get_header();
 
 						$the_query = new WP_Query($args);
 
+
+
 						// Check if any post exists
 						if ($the_query->have_posts()) {
-							echo '<h2 class="titulo text-center">' . $term->name . '</h2>';  // Display the term name
-
+							echo '<h2 class="default__title no-after smaller text-center">' . $term->name . '</h2>';  // Display the term name
+				?>
+							<div class="category__container-cards">
+					<?php
 							while ($the_query->have_posts()) {
 								$the_query->the_post();
 
@@ -96,7 +102,8 @@ get_header();
 						}
 					}
 				}
-				?>
+					?>
+							</div>
 			</div>
 		</div>
 	</main>

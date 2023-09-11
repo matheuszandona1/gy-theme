@@ -45,19 +45,19 @@ get_header();
     </div>
   </section>
   <section class="solucoes container">
-    <h2 class="titulo text-center mb-5">Nossas soluções</h2>
+    <h2 class="default__title smaller no-after text-center mb-5">Nossas soluções</h2>
     <?php get_template_part('components/diagrama', 'solucoes'); ?>
     <div class="numeros">
       <div class="case__container--numbers">
-      <?php if (have_rows('numeros')) { ?>
-        <?php while (have_rows('numeros')) : the_row(); ?>
-          <div class="col-2">
-            <div class="box text-center">
-              <span>+<?php the_sub_field('numero'); ?></span>
-              <p><?php the_sub_field('descricao'); ?></p>
+        <?php if (have_rows('numeros')) { ?>
+          <?php while (have_rows('numeros')) : the_row(); ?>
+            <div class="col-2">
+              <div class="box text-center">
+                <span>+<?php the_sub_field('numero'); ?></span>
+                <p><?php the_sub_field('descricao'); ?></p>
+              </div>
             </div>
-          </div>
-        <?php endwhile; ?><?php  } ?>
+            <?php endwhile; ?><?php  } ?>
       </div>
     </div>
     <div class="button--container center">
@@ -65,8 +65,8 @@ get_header();
     </div>
   </section>
   <section class="segmentos container">
-    <h2 class="titulo text-center">Conheça as nossas áreas de atuação</h2>
-    <p class="text-center mb-5">e veja qual se encaixa melhor ao seu negócio:</p>
+    <h2 class="default__title smaller no-after text-center">Conheça as nossas áreas de atuação</h2>
+    <p class="text-center mb-5 default__desc">e veja qual se encaixa melhor ao seu negócio:</p>
     <section class="cases">
       <div class="cases__container">
         <div class="relatorios__content">
@@ -124,7 +124,7 @@ get_header();
 
   <section class="clientes">
     <div class="clientes__container">
-      <h2 class="default__title no-after smaller">Nossos Clientes</h2>
+      <h2 class="default__title smaller no-after no-after smaller">Nossos Clientes</h2>
       <div class="clientes-slider">
         <?php if (have_rows('clientes')) { ?>
           <?php while (have_rows('clientes')) : the_row(); ?>
@@ -141,8 +141,8 @@ get_header();
   </section>
   <section class="hub">
     <div class="hub__container">
-      <h2 class="titulo text-center">Tudo sobre transição energética e tendências do setor</h2>
-      <p class="text-center mb-5">Confira nossos conteúdos.</p>
+      <h2 class="default__title smaller no-after text-center">Tudo sobre transição energética e tendências do setor</h2>
+      <p class="text-center mb-5 default__desc">Confira nossos conteúdos.</p>
       <div class="topo__hub--destaque">
         <?php
         $args = array(
@@ -166,13 +166,33 @@ get_header();
         }
         ?>
         <div class="hub__floating">
-          <div class="cards cards__bigger">
-            <div class="cards__category">case de sucesso</div>
-            <div class="cards__info">
-              <h3 class="cards__title">Relatório de Responsabilidade Corporativa 2021 – ZOOM Brasil</h3>
-              <p class="cards__desc">Confira a 2ª edição do Relatório de Responsabilidade Corporativa – Zoom Brasil.</p>
-            </div>
-          </div>
+          <?php
+          $args = array(
+            'post_type' => 'case',
+            'post_status' => 'publish',
+            'posts_per_page' => 1,
+            'orderby' => 'date',
+            'order' => 'DESC',
+          );
+          $wpb_all_query = new WP_Query($args); ?>
+          <?php if ($wpb_all_query->have_posts()) {
+            while ($wpb_all_query->have_posts()) {
+              $wpb_all_query->the_post();
+          ?>
+              <a href="<?php the_permalink(); ?>" class="cards cards__bigger" style="background: url('<?php the_post_thumbnail_url(); ?>') 0 0 / cover no-repeat;">
+                <div class="cards__category">case de sucesso</div>
+                <div class="cards__info">
+                  <h3 class="cards__title"><?php the_title(); ?></h3>
+                  <p class="cards__desc">Saiba mais <span style="margin-left: 10px;">→</span></p>
+                </div>
+              </a>
+          <?php
+            }
+            wp_reset_postdata();
+          } else {
+            echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
+          }
+          ?>
           <div class="hub__floating--middle">
             <div class="sidebar">
               <?php
@@ -181,6 +201,7 @@ get_header();
                 'post_status' => 'publish',
                 'posts_per_page' => 2,
                 'orderby' => 'date',
+                'offset' => 1,
                 'order' => 'DESC',
               );
               $wpb_all_query = new WP_Query($args); ?>
@@ -192,7 +213,7 @@ get_header();
                     <h3 class="card-title">
                       <?php the_title(); ?>
                     </h3>
-                    <a href="<?php echo the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
+                    <a href="<?php the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
                   </div>
               <?php
                 }
@@ -203,15 +224,6 @@ get_header();
               ?>
               <?php get_template_part('components/newsletter', 'sidebar-hub'); ?>
             </div><!-- #secondary -->
-          </div>
-          <div class="hub__floating--end">
-            <a href="">
-              <div class="cards cards__bigger">
-                <div class="cards__info">
-                  <h3 class="cards__title">Relatório Anual</h3>
-                </div>
-              </div>
-            </a>
           </div>
         </div>
       </div>

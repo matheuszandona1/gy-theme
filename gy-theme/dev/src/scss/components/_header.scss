@@ -4,6 +4,11 @@
 	border-bottom: 1px solid #dbdbdb;
 	position: relative;
 	width: 100%;
+	z-index: 9999;
+	@include media(s) {
+		padding: 5px 0;
+	}
+
 	.menu-item {
 		z-index: 21;
 	}
@@ -12,8 +17,23 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 		@include media(s) {
-			padding: 0 24px;
+			position: relative;
+			#mega-menu-wrap-menu-principal {
+				position: unset;
+			}
+			#mega-menu-menu-principal {
+				position: absolute !important;
+				width: 100vw !important;
+				left: 0 !important;
+				background-color: $neutro-50 !important;
+				padding: 60px 24px !important;
+			}
+			padding: 0 20px;
+			.logo img {
+				max-width: 150px;
+			}
 		}
 		#mega-menu-wrap-menu-principal {
 			background: transparent;
@@ -24,7 +44,21 @@
 			padding: 0px;
 			gap: 32px;
 			list-style: none;
-
+			li #mega-menu-item-1175 {
+				background-color: $verde-50 !important;
+				@include s-border;
+				a {
+					position: relative;
+					display: block;
+					&::after {
+						content: "";
+						position: absolute;
+						width: 50px;
+						background-color: red;
+						height: 50px;
+					}
+				}
+			}
 			li.mega-menu-item {
 				padding: 16px 0px;
 				&.mega-current-menu-item,
@@ -39,7 +73,7 @@
 						color: $verde-900;
 						line-height: 100%;
 						text-decoration: none;
-						transition: ease-in-out 0.2s;
+						transition: ease-in 0.2s;
 						height: auto;
 						background: transparent !important;
 						&:hover,
@@ -48,23 +82,27 @@
 							color: $verde-900;
 							line-height: 100%;
 							border: none;
+							font-weight: bold;
 						}
 					}
 				}
 				&:hover {
-					background-color: $verde-50;
-					border-radius: 8px
+					a {
+					}
+					font-weight: bold !important;
+					border-radius: 8px;
 				}
 				a.mega-menu-link {
 					@include defaul-text;
 					color: $verde-900;
 					line-height: 100%;
 					text-decoration: none;
-					transition: ease-in-out 0.2s;
+					transition: all 200ms ease-in-out;
 					height: auto;
 					&:hover {
 						background: transparent;
 						color: $verde-900;
+						font-weight: bold;
 						line-height: 100%;
 						border: none;
 					}
@@ -96,9 +134,16 @@
 		}
 	}
 	&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
-		padding: 16px 24px;
-		color: #fff;
-		background: #87bc25;
+		padding: 0 !important;
+		a {
+			padding: 16px 24px;
+			color: #fff !important;
+			text-transform: uppercase;
+			&:hover {
+				// padding: ;
+				padding-right: 24px !important;
+			}
+		}
 		border-radius: 8px;
 		font-family: Nunito, sans-serif;
 		font-size: 20px;
@@ -110,9 +155,6 @@
 			font-size: 16px;
 			color: $neutro-50;
 			height: auto;
-			&:hover {
-				padding-right: 40px;
-			}
 		}
 	}
 }
@@ -121,7 +163,7 @@
 	background: $neutro-50;
 	padding: 0;
 	width: fit-content;
-	max-width: fit-content;
+	max-width: 100%;
 	min-width: 0;
 	border-radius: 8px;
 }
@@ -218,4 +260,35 @@ header
 #mega-menu-wrap-menu-principal #mega-menu-menu-principal > li.mega-menu-item > a.mega-menu-link {
 	background: transparent !important;
 	color: #266400 !important;
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle {
+	background: transparent !important;
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner,
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::after,
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::before {
+	@include media(s) {
+		background: $verde-900;
+	}
+}
+#mega-menu-wrap-menu-principal .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
+	margin: 0 !important;
+}
+
+#mega-menu-item-828 > ul.mega-sub-menu {
+	width: fit-content !important;
+	max-width: 500px !important;
+	margin: 0 auto;
+}
+
+#mega-menu-item-836 > ul.mega-sub-menu {
+	width: fit-content !important;
+	max-width: 500px !important;
+	margin: 0 auto;
+}
+
+#mega-menu-item-823 > ul.mega-sub-menu {
+	width: fit-content !important;
+	max-width: 550px !important;
+	margin: 0 auto;
 }

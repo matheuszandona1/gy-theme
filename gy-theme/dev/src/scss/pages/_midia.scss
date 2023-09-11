@@ -1,37 +1,44 @@
 .midia {
-  &__container {    
+	&__container {
 		@include container;
-    padding-top: 200px;
-    position: relative;
-    &--destaque {
-      .card {
-        position: absolute;
-        top: -140px;
-        left: 50%;
-        transform: translateX(-50%);
-        &-block {
-          max-width: 819px;
-        }
-        &-img {
-          width: 100%;
-          max-width: 341px;
-          height: auto;
-          img {
-            width: 100%;
-            max-width: 341px;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-    &--postagens {
-      display: flex;
-      flex-wrap: wrap;
-      padding-bottom: 80px;
-      .card.col-6:nth-child(even) {
-        margin-right: 0;
-      }
-    }
-  }
+		padding-top: 200px;
+		position: relative;
+		&--destaque {
+			.card {
+				position: absolute;
+				top: -140px;
+				left: 50%;
+				transform: translateX(-50%);
+				@include media(s) {
+					position: unset;
+					transform: unset;
+					margin-top: -130px;
+					margin-bottom: 50px;
+				}
+				&-block {
+					max-width: 819px;
+				}
+				&-img {
+					width: 100%;
+					max-width: 341px;
+					height: auto;
+					img {
+						width: 100%;
+						max-width: 341px;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+		&--postagens {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 24px;
+			padding-bottom: 80px;
+			.card.col-6:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
 }

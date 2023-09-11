@@ -12,7 +12,7 @@ get_header();
 			<div class="midia__container--destaque">
 				<?php
 				$args = array(
-					'post_type' => 'post',
+					'post_type' => 'midia',
 					'post_status' => 'publish',
 					'posts_per_page' => 1,
 					'orderby' => 'date',
@@ -23,7 +23,7 @@ get_header();
 					while ($wpb_all_query->have_posts()) {
 						$wpb_all_query->the_post();
 				?>
-						<?php get_template_part('components/card', 'destaque'); ?>
+						<?php get_template_part('components/card', 'destaque-midia'); ?>
 				<?php
 					}
 					wp_reset_postdata();
@@ -36,7 +36,7 @@ get_header();
 			<div class="midia__container--postagens">
 				<?php
 				$args = array(
-					'post_type' => 'post',
+					'post_type' => 'midia',
 					'post_status' => 'publish',
 					'posts_per_page' => 4,
 					'orderby' => 'date',
@@ -48,7 +48,7 @@ get_header();
 					while ($wpb_all_query->have_posts()) {
 						$wpb_all_query->the_post();
 				?>
-						<?php get_template_part('components/card', 'conteudo'); ?>
+						<?php get_template_part('components/card-conteudo', 'midia'); ?>
 				<?php
 					}
 					wp_reset_postdata();
@@ -58,19 +58,19 @@ get_header();
 				?>
 				<?php
 				$args = array(
-					'post_type' => 'post',
+					'post_type' => 'midia',
 					'post_status' => 'publish',
-					'posts_per_page' => 4,
+					'posts_per_page' => -1,
+					'offset' => 5,
 					'orderby' => 'date',
 					'order' => 'DESC',
-					'offset' => 5,
 				);
 				$wpb_all_query = new WP_Query($args); ?>
 				<?php if ($wpb_all_query->have_posts()) {
 					while ($wpb_all_query->have_posts()) {
 						$wpb_all_query->the_post();
 				?>
-						<?php get_template_part('components/card-blog', 'small'); ?>
+						<?php get_template_part('components/card-blog', 'smallmidia'); ?>
 				<?php
 					}
 					wp_reset_postdata();

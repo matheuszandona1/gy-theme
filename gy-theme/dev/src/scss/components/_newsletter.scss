@@ -1,6 +1,6 @@
 .newsletter {
 	@include media(s) {
-		padding: 60px 24px 0px;
+		padding: 40px 20px 0px;
 	}
 	&__container {
 		@include container;
@@ -11,16 +11,18 @@
 		padding: 80px;
 		background: linear-gradient(0deg, $azul-800, $azul-800), linear-gradient(90deg, rgba(0, 117, 126, 0.8) 0%, rgba(0, 117, 126, 0) 100%);
 		color: $neutro-50;
+		z-index: 10;
+    position: relative;
 		@include media(s) {
 			flex-direction: column;
-			padding: 24px;
+			padding: 15px;
 		}
 	}
 	&__content {
 		padding-top: 70px;
 		max-width: 503px;
 		@include media(s) {
-			padding-top: 32px;
+			padding-top: 15px;
 		}
 	}
 	&__icon {
@@ -111,6 +113,9 @@
 			background: $amarelo-50;
 			padding: 80px 100px;
 			align-items: center;
+			@include media(s) {
+				padding: 32px;
+			}
 		}
 		.newsletter__content {
 			padding-top: 0;

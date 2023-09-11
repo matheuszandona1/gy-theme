@@ -1,24 +1,32 @@
 .home {
 	.header {
-		background-color: $verde-50;
 		border-bottom: 0px;
 		position: relative;
+		&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
+			padding: 16px 24px;
+			a {
+				color: $verde-900 !important;
+				text-transform: uppercase;
+			}
+		}
 		.menu-item {
 			z-index: 21;
 		}
-		&__container #mega-menu-wrap-menu-principal #mega-menu-menu-principal .button.mega-button {
+		#mega-menu-item-843 {
 			position: relative;
 			z-index: 9999;
-			background-color: $verde-50;
+			background-color: $verde-50 !important;
 			font-size: 16px;
+			padding: 16px 16px !important;
+			color: $verde-900 !important;
+			text-transform: uppercase;
 			&:hover {
 				&:after {
 					display: none;
 				}
-				padding-right: 24px;
 			}
-			a {
-				color: $verde-900;
+			.mega-menu-link {
+				color: $verde-900 !important;
 				&:hover {
 					&:after {
 						display: none;
@@ -43,9 +51,22 @@
 				background-color: $verde-500;
 				position: absolute;
 				content: "";
-				right: -20px;
+				right: -15px;
 				top: -190px;
+				z-index: 9997;
 				border-radius: 16px 0px 0px 16px;
+				@include media(s) {
+					content: none;
+				}
+			}
+			.slick-list {
+				z-index: 9998;
+			}
+			.slick-slide {
+				height: 500px;
+				@include media(s) {
+					height: auto;
+				}
 			}
 			.slick-dots {
 				position: absolute;
@@ -154,15 +175,43 @@
 	}
 	.solucoes {
 		padding: 80px 0px;
+		@include media(s) {
+			padding: 40px 0;
+			.tab-content {
+				padding: 0px 24px;
+			}
+		}
+		.nav {
+			@include media(s) {
+				width: 100%;
+				flex-wrap: nowrap;
+				overflow: auto;
+				border-radius: 0;
+				margin-bottom: 20px;
+				padding: 16px 24px;
+				&-link {
+					padding: 10px 20px;
+					flex-shrink: 0;
+				}
+			}
+		}
 	}
 	.segmentos {
 		padding: 80px 0px;
+		@include media(s) {
+			padding: 40px 0;
+		}
 	}
 	.cases {
 		&__container {
 			padding-top: 0px;
 			a {
 				text-decoration: none;
+			}
+			.col-2 {
+				@include media(s) {
+					margin-right: 20px;
+				}
 			}
 			.cards__bigger {
 				height: 339px;
@@ -181,14 +230,21 @@
 	}
 	.clientes {
 		padding: 80px 0px;
+		@include media(s) {
+			padding: 40px 0;
+		}
 		.default__title {
 			margin-bottom: 50px;
+			@include media(s) {
+				padding: 0px 24px;
+			}
 		}
 		&__container {
 			max-width: 1129px;
 			margin: 0 auto;
 		}
 		.clientes-slider {
+			width: 100%;
 			.slick-dots {
 				position: absolute;
 				bottom: -72px;
@@ -256,19 +312,56 @@
 	.hub {
 		padding-bottom: 321px;
 		background-color: $verde-50;
+		@include media(s) {
+			padding: 40px 0;
+		}
 		.newsletter.sidebar {
 			margin-top: 0px !important;
 		}
 		.button--container {
 			margin: 56px 0 100px;
 		}
+		&__floating--middle {
+			max-width: 100%;
+		}
 	}
 	.topo__hub--destaque {
+		@include media(s) {
+			padding: 0;
+		}
 		.hub__floating {
 			position: relative;
+			.cards__bigger {
+				.cards__desc {
+					color: $verde-900;
+					font-weight: bold;
+					@include highlight-links;
+					font-size: 16px;
+					transition: all 0.3s ease-in;
+					opacity: 0;
+				}
+				&:hover {
+					.cards__desc {
+						opacity: 1;
+						height: 100%;
+					}
+				}
+			}
 		}
 	}
 	.mapa {
 		padding: 80px 0px;
+	}
+	.newsletter {
+		@include media(s) {
+			margin-top: -130px !important;
+			padding: 40px 24px;
+		}
+	}
+}
+
+.mapa {
+	@include media(s) {
+		display: none;
 	}
 }

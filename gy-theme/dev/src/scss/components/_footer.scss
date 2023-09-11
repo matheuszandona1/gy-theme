@@ -1,5 +1,8 @@
 .footer {
   padding: 80px 0;
+  @include media(s) {
+    padding: 40px 0;
+  }
   &__container {
     @include container;
     display: flex;
@@ -12,6 +15,15 @@
     justify-content: center;
     align-items: flex-start;
     gap: 32px;
+		@include media(s) {
+			margin-bottom: 24px;
+      gap: 16px;
+		}
+    &:last-child {
+      @include media(s) {
+        margin-bottom: 0;
+      }
+    }
     &.middle {
       gap: 24px;
     }
@@ -20,6 +32,9 @@
       justify-content: center;
       align-items: center;
       gap: 32px;
+      @include media(s) {
+        gap: 16px;
+      }
     }
   }
   .logo {

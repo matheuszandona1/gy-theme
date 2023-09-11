@@ -86,7 +86,7 @@ get_header();
 				<a href="" class="button button--default">Carregar mais posts</a>
 			</div>
 			<div class="blog__container--maislidos container-grid">
-				<div class="titulo col-12">
+				<div class="default__title col-12">
 					<h2>Posts mais lidos</h2>
 				</div>
 				<?php
@@ -107,7 +107,7 @@ get_header();
 							<h3 class="card-title">
 								<?php the_title(); ?>
 							</h3>
-							<a href="<?php echo the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
+							<a href="<?php the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
 						</div>
 				<?php
 					}

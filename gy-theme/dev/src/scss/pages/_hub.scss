@@ -1,4 +1,35 @@
 .hub {
+	&-holder {
+		@include media(s) {
+			flex-direction: column;
+			gap: 32px;
+			.cards__bigger {
+				height: 400px;
+				flex: unset;
+			}
+			.ebooks__container {
+				flex-direction: column;
+				.cards__bigger {
+					.cards__info {
+						.cards__desc {
+							color: $verde-900 !important;
+							font-weight: bold;
+							@include highlight-links;
+							font-size: 16px;
+							transition: all 0.3s ease-in;
+							opacity: 0;
+						}
+					}
+					&:hover {
+						.cards__desc {
+							opacity: 1;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 	&__container {
 		@include container;
 		padding-top: 100px;
@@ -57,12 +88,23 @@
 		padding: 100px 0 467px 0;
 		background: $verde-50;
 		margin-bottom: 60px;
+		@include media(s) {
+			padding-bottom: 60px;
+		}
 		&--links {
 			@include container;
 			margin-bottom: 24px;
+			@include media(s) {
+				overflow: auto;
+			}
 			.button__container {
 				display: flex;
 				justify-content: space-between;
+				@include media(s) {
+					justify-content: start;
+					gap: 16px;
+					padding-right: 24px;
+				}
 				.button {
 					display: flex;
 					align-items: center;
@@ -88,8 +130,12 @@
 		}
 		&--destaque {
 			@include container;
+
 			.card-flex {
 				gap: 16px;
+				@include media(s) {
+					flex-direction: column-reverse;
+				}
 			}
 			.card-block {
 				max-width: 819px;
@@ -99,6 +145,12 @@
 					width: 341px;
 					height: 238px;
 				}
+				@include media(s) {
+					max-width: 100%;
+					img {
+						width: 263px;
+					}
+				}
 			}
 		}
 	}
@@ -107,66 +159,158 @@
 		display: flex;
 		position: absolute;
 		gap: 24px;
+		height: 646px;
+		.newsletter {
+			@include media(s) {
+				padding-top: 0px;
+				padding: 0;
+			}
+			&__content {
+				max-width: 650px;
+			}
+			&__form {
+				display: flex;
+				.button--newsletter {
+					max-width: 75px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0;
+				}
+				.newsletter__form--input {
+					width: 100%;
+					margin-right: 24px;
+				}
+			}
+		}
+		@include media(s) {
+			flex-direction: column;
+			padding: 0;
+			max-width: 100%;
+			position: relative;
+		}
 		.cards__bigger {
 			@include s-shadow;
+			height: 646px;
+			@include media(s) {
+				height: 450px;
+				flex: unset;
+				&:last-child {
+					display: none;
+				}
+			}
+			.cards__info {
+				.cards__desc {
+					color: $verde-900 !important;
+					font-weight: bold;
+					@include highlight-links;
+					font-size: 16px;
+					transition: all 0.3s ease-in;
+					opacity: 0;
+				}
+			}
+			&:hover {
+				.cards__desc {
+					opacity: 1;
+					height: 100%;
+				}
+			}
 		}
-		&--middle {
-			max-width: 608px;
-			.card-title {
-				height: 46px;
-			}
-			.card-link {
-				line-height: 11px;
-			}
-			.sidebar {
-				.newsletter {
-					&__icon {
+	}
+	&--middle {
+		//max-width: 608px;
+		max-width: 100%;
+		.card-title {
+			height: 46px;
+		}
+		.card-link {
+			line-height: 11px;
+		}
+		.sidebar {
+			.newsletter {
+				&__icon {
+					svg {
+						width: 67px;
+						height: 67px;
+					}
+				}
+				&__container {
+					justify-content: start !important;
+					@include s-shadow;
+				}
+				&__heading {
+					height: 28px;
+				}
+				&__content {
+					align-items: start !important;
+					max-width: 100%;
+				}
+				&__form {
+					display: flex;
+					&--input {
+						max-width: 480px;
+						width: 100%;
+						margin-right: 24px;
+						margin-bottom: 0px;
+					}
+					.button {
+						text-align: center;
+						max-width: 70px;
+						padding: 0;
 						svg {
-							width: 67px;
-							height: 67px;
-						}
-					}
-					&__container {
-						justify-content: start !important;
-						@include s-shadow;
-					}
-					&__heading {
-						height: 28px;
-					}
-					&__content {
-						align-items: start !important;
-						max-width: 100%;
-					}
-					&__form {
-						display: flex;
-						&--input {
-							max-width: 480px;
-							width: 100%;
-							margin-right: 24px;
-							margin-bottom: 0px;
-						}
-						.button {
-							text-align: center;
-							max-width: 70px;
-							padding: 0;
-							svg {
-								display: block;
-							}
+							display: block;
 						}
 					}
 				}
 			}
 		}
-		&--end {
-			a {
-				text-decoration: none;
-			}
+	}
+	&--end {
+		width: 100%;
+		max-width: 197px;
+		a {
+			text-decoration: none;
 		}
 	}
-	.cases {
-		&__container--destaque {
-			.card {
-				position: relative;
+}
+.cases {
+	&__container--destaque {
+		.card {
+			position: relative;
+		}
+	}
+}
+
+.succes-cases {
+	@include media(s) {
+		flex-direction: column;
+		.card-flex {
+			max-width: 100%;
+			img {
+				width: 260px;
+			}
+			flex-direction: column;
+		}
+	}
+}
+.ebooks {
+	&__container {
+		.cards__bigger {
+			.cards__info {
+				.cards__desc {
+					color: $verde-900 !important;
+					font-weight: bold;
+					@include highlight-links;
+					font-size: 16px;
+					transition: all 0.3s ease-in;
+					opacity: 0;
+				}
+			}
+			&:hover {
+				.cards__desc {
+					opacity: 1;
+					height: 100%;
+				}
 			}
 		}
 	}

@@ -53,38 +53,41 @@ get_header();
         ?>
       </div>
       <div class="blog__container--ultimas">
-        <div class="titulo col-12 text-center">
-          <h2>Últimas do blog</h2>
+        <div class=" col-12 text-center">
+          <h2 class="default__title smaller no-after" style="margin-bottom: 24px;">Últimas do blog</h2>
         </div>
-        <?php
-        $args = array(
-          'post_type' => 'post',
-          'post_status' => 'publish',
-          'posts_per_page' => 3,
-          'orderby' => 'date',
-          'order' => 'DESC',
-          'offset' => 2,
-        );
-        $wpb_all_query = new WP_Query($args); ?>
-        <?php if ($wpb_all_query->have_posts()) {
-          while ($wpb_all_query->have_posts()) {
-            $wpb_all_query->the_post();
-        ?>
-            <div class="col-4"><?php get_template_part('components/card', 'blog'); ?></div>
-        <?php
+        <div class="blog__card-container">
+          <?php
+          $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 3,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'offset' => 2,
+          );
+          $wpb_all_query = new WP_Query($args); ?>
+          <?php if ($wpb_all_query->have_posts()) {
+            while ($wpb_all_query->have_posts()) {
+              $wpb_all_query->the_post();
+          ?>
+              <div class=""><?php get_template_part('components/card', 'blog'); ?></div>
+          <?php
+            }
+            wp_reset_postdata();
+          } else {
+            echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
           }
-          wp_reset_postdata();
-        } else {
-          echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
-        }
-        ?>
+          ?>
+
+        </div>
       </div>
       <div class="col-12 text-center">
         <a href="" class="button button--default">Leia mais no nosso blog</a>
       </div>
       <div class="blog__container--maislidos container-grid">
-        <div class="titulo col-12">
-          <h2>Posts mais lidos</h2>
+        <div class=" col-12">
+          <h2 class="default__title smaller no-after" style="margin-bottom: 24px;">Posts mais lidos</h2>
         </div>
         <?php
         $args = array(
@@ -104,7 +107,7 @@ get_header();
               <h3 class="card-title">
                 <?php the_title(); ?>
               </h3>
-              <a href="<?php echo the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
+              <a href="<?php the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
             </div>
         <?php
           }
