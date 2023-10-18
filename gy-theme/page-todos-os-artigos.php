@@ -101,7 +101,7 @@ get_header();
               <h3 class="card-title">
                 <?php the_title(); ?>
               </h3>
-              <a href="<?php echo the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
+              <a href="<?php the_permalink(); ?>" class="card-link">Ler o artigo <span>→</span></a>
             </div>
         <?php
           }

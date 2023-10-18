@@ -17,40 +17,30 @@ get_header();
 ?>
 
 <main class="general-page">
-	<include src="./html/components/hero.html"></include>
-	<section class="dynamic">
-		<div class="dynamic__container">
-			<div class="dynamic__img"></div>
-			<div class="dynamic__content">
-				<h3 class="default__title no-after smaller">Lorem ipsum</h3>
-				<p class="dynamic__desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci. Etiam at ex rutrum, vehicula quam vitae, consequat ex. Mauris dictum interdum augue vitae dictum. Suspendisse potenti. Nulla venenatis massa non porttitor eleifend.
-				</p>
-			</div>
-		</div>
-	</section>
-	<section class="dynamic">
-		<div class="dynamic__container">
-			<div class="dynamic__content">
-				<h3 class="default__title no-after smaller">Lorem ipsum</h3>
-				<p class="dynamic__desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci. Etiam at ex rutrum, vehicula quam vitae, consequat ex. Mauris dictum interdum augue vitae dictum. Suspendisse potenti. Nulla venenatis massa non porttitor eleifend.
-				</p>
-			</div>
-			<div class="dynamic__img"></div>
-		</div>
-	</section>
-	<section class="dynamic">
-		<div class="dynamic__container">
-			<div class="dynamic__img"></div>
-			<div class="dynamic__content">
-				<h3 class="default__title no-after smaller">Lorem ipsum</h3>
-				<p class="default__smaller">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ipsum consequat, gravida quam nec, ornare orci. Etiam at ex rutrum, vehicula quam vitae, consequat ex. Mauris dictum interdum augue vitae dictum. Suspendisse potenti. Nulla venenatis massa non porttitor eleifend.
-				</p>
-			</div>
-		</div>
-	</section>
+	<?php get_template_part('components/hero'); ?>
+	<p class="default__text">
+		<?php echo the_content(); ?>
+	</p>
+	<?php if (have_rows('secoes')) { ?>
+		<?php while (have_rows('secoes')) : the_row(); ?>
+			<?php if (have_rows('conteudo_secao')) { ?>
+				<?php while (have_rows('conteudo_secao')) : the_row(); ?>
+
+					<section class="dynamic">
+						<div class="dynamic__container">
+							<div class="dynamic__img" style="background-image: url('<?php the_sub_field('imagem'); ?>');"></div>
+							<div class="dynamic__content">
+								<h3 class="default__title no-after smaller"><?php the_sub_field('titulo'); ?></h3>
+								<p class="dynamic__desc">
+									<?php the_sub_field('texto'); ?>
+								</p>
+							</div>
+						</div>
+					</section>
+				<?php endwhile; ?>
+	<?php  }
+		endwhile;
+	} ?>
 </main>
 <?php
 get_footer();

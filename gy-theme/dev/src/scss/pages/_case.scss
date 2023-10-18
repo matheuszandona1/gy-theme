@@ -40,6 +40,10 @@
 			display: flex;
 			padding: 24px;
 			align-items: center;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 			justify-content: center;
 			@include media(s) {
 				margin-bottom: 24px;
@@ -78,6 +82,10 @@
 			justify-content: space-between;
 			@include media(s) {
 				justify-content: center;
+<<<<<<< Updated upstream
+=======
+				padding: 0px 24px;
+>>>>>>> Stashed changes
 			}
 			.col-2 {
 				width: 20%;

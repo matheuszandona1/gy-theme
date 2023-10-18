@@ -99,30 +99,37 @@ get_header();
 					</div>
 				</div>
 			</section>
-			<section class="cases">
+			<section id="cases" class="cases">
 				<div class="cases__container">
 					<h2 class="default__title no-after smaller">Nossos cases de sucesso</h2>
 					<div class="relatorios__content">
-						<div class="cards cards__bigger">
-							<div class="cards__category">case de sucesso</div>
-							<div class="cards__info">
-								<h3 class="cards__title">Relatório Anual de Responsabilidade Corporativa 2021</h3>
-								<p class="cards__desc">Confira a 3ª edição do relatório global GreenYellow e entenda nossas ações e políticas.</p>
-							</div>
-						</div>
-						<div class="cards cards__bigger">
-							<div class="cards__category">case de sucesso</div>
-							<div class="cards__info">
-								<h3 class="cards__title">Relatório de Responsabilidade Corporativa 2021 – ZOOM Brasil</h3>
-								<p class="cards__desc">Confira a 2ª edição do Relatório de Responsabilidade Corporativa – Zoom Brasil.</p>
-							</div>
-						</div>
-						<div class="cards cards__bigger">
-							<div class="cards__category">case de sucesso</div>
-							<div class="cards__info">
-								<h3 class="cards__title">Código de Aquisição Responsável</h3>
-							</div>
-						</div>
+						<?php
+						$args = array(
+							'post_type' => 'case',
+							'post_status' => 'publish',
+							'posts_per_page' => 3,
+							'orderby' => 'date',
+							'order' => 'DESC',
+						);
+						$wpb_all_query = new WP_Query($args); ?>
+						<?php if ($wpb_all_query->have_posts()) {
+							while ($wpb_all_query->have_posts()) {
+								$wpb_all_query->the_post();
+						?>
+								<a href="<?php the_permalink(); ?>" class="cards cards__bigger" style="background: url('<?php the_post_thumbnail_url(); ?>') 0 0 / cover no-repeat;">
+									<div class="cards__category">case de sucesso</div>
+									<div class="cards__info">
+										<h3 class="cards__title"><?php the_title(); ?></h3>
+										<p class="cards__desc"><?php the_excerpt(); ?></p>
+									</div>
+								</a>
+						<?php
+							}
+							wp_reset_postdata();
+						} else {
+							echo '<p>Nenhum case antigo, veja nossos últimos cases acima!</p>';
+						}
+						?>
 					</div>
 				</div>
 			</section>

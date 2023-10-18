@@ -90,6 +90,11 @@
 			.col-6:nth-child(odd) {
 				margin-right: 0;
 			}
+			@media (max-width: 1201px) {
+				.card {
+					max-width: 460px;
+				}
+			}
 		}
 		&--relacionados {
 			@include container;
@@ -121,7 +126,15 @@
 			}
 		}
 	}
+<<<<<<< Updated upstream
 
+=======
+	&__card-container {
+		display: flex;
+		gap: 24px;
+		padding: 0px 24px;
+	}
+>>>>>>> Stashed changes
 	.topo__post {
 		background: $verde-50;
 		&--container {

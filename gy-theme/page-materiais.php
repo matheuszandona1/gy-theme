@@ -23,7 +23,7 @@ get_header();
 					while ($wpb_all_query->have_posts()) {
 						$wpb_all_query->the_post();
 				?>
-						<div class="cards cards__bigger col-4">
+						<a href="<?php the_field('link_material'); ?>" target="_blank" class="cards cards__bigger col-4">
 							<div class="cards__category">
 								<?php
 								// Get the custom taxonomy terms for the post
@@ -37,7 +37,7 @@ get_header();
 							<div class="cards__info">
 								<h3 class="cards__title"><?php the_title(); ?></h3>
 							</div>
-						</div>
+						</a>
 				<?php
 					}
 					wp_reset_postdata();
@@ -59,7 +59,7 @@ get_header();
 					while ($wpb_all_query->have_posts()) {
 						$wpb_all_query->the_post();
 				?>
-						<?php get_template_part('components/card', 'destaque'); ?>
+						<?php get_template_part('components/card-destaque', 'materiais'); ?>
 				<?php
 					}
 					wp_reset_postdata();
@@ -93,18 +93,18 @@ get_header();
 
 						// Check if any post exists
 						if ($the_query->have_posts()) {
-							echo '<h2 class="titulo col-12 text-center">' . $term->name . '</h2>';  // Display the term name
+							echo '<h2 class="default__title smaller no-after  col-12 text-center">' . $term->name . '</h2>';  // Display the term name
 
 							while ($the_query->have_posts()) {
 								$the_query->the_post(); ?>
 
 
-								<div class="cards cards__bigger col-4" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+								<a href="<?php the_field('link_material'); ?>" target="_blank" class="cards cards__bigger col-4" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 									<div class="cards__category"><?php echo $term->name ?></div>
 									<div class="cards__info">
-										<h3 class="cards__title">Código de Aquisição Responsável</h3>
+										<h3 class="cards__title"><?php the_title(); ?></h3>
 									</div>
-								</div>
+								</a>
 				<?php }
 
 							// Reset post data

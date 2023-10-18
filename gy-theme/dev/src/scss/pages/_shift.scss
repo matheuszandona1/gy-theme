@@ -34,6 +34,9 @@
 		}
 		&__content {
 			height: fit-content;
+			@media (max-width: 1200px) {
+				max-width: 510px;
+			}
 		}
 		&__container {
 			@include container;
@@ -87,6 +90,13 @@
 			align-items: center;
 			padding: 32px;
 			gap: 24px;
+			@media (max-width: 1200px) {
+				max-width: 243px;
+				img {
+					width: 32px;
+					height: 32px;
+				}
+			}
 			@include media(s) {
 				flex-direction: column;
 				max-width: 45%;
@@ -111,7 +121,7 @@
 		}
 	}
 	.type {
-		padding: 80px 0px;
+		padding: 80px 24px;
 		&__container {
 			@include container;
 		}
@@ -227,6 +237,7 @@
 
 			&__container {
 				@include container;
+				padding: 0px 24px;
 				@include media(s) {
 					padding-left: 0px;
 					padding-right: 0px;
@@ -247,6 +258,9 @@
 				}
 				img {
 					display: block;
+					@media (max-width: 1200px) {
+						max-width: 96%;
+					}
 				}
 				.mt-neg {
 					margin-top: -105px;
@@ -451,6 +465,9 @@
 				flex-direction: column;
 				justify-content: start;
 				align-items: start;
+				@media (max-width: 1200px) {
+					max-width: 265px;
+				}
 				&--top {
 					gap: 24px;
 					align-items: center;
@@ -883,7 +900,7 @@
 .page-template-page-shift-efficiency {
 	.cases-cta {
 		&__container {
-			background-image: linear-gradient(0deg, #f7f7f7e6 0% 100%), url("../../dist/res/img/assets/implementar-shift-efficiency.jpg");
+			background-image: linear-gradient(0deg, #f7f7f7e6 0% 100%), url("../assets/implementar-shift-efficiency.jpg");
 			background-position: bottom;
 		}
 	}

@@ -41,9 +41,12 @@
 			color: $neutro-700;
 			margin-bottom: 0px;
 		}
-		&:nth-child(2) {
+		&:nth-child(3) {
 			.dynamic__container {
 				background: transparent;
+			}
+			.dynamic__img {
+				order: 2;
 			}
 		}
 	}

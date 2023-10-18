@@ -29,16 +29,20 @@ $margin: 24px;
 $one-column: calc((1240px - ($margin * ($total-columns - 1))) / $total-columns);
 
 @mixin grid($column-num) {
-	width: ($one-column * $column-num) + (($column-num) - 1) * $margin;
+	width: 100%;
 	box-sizing: border-box;
 	margin-right: $margin;
-	max-width: 100%;
+	max-width: ($one-column * $column-num) + (($column-num) - 1) * $margin;
 
 	&:last-child {
 		margin-right: 0;
 	}
 	@include media(s) {
+<<<<<<< Updated upstream
 		margin-right: 0
+=======
+		margin-right: 0;
+>>>>>>> Stashed changes
 	}
 }
 

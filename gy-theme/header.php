@@ -8,7 +8,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>-Title</title>
+	<title><?php echo get_the_title(); ?></title>
 
 	<script type="module">
 		document.documentElement.classList.remove("no-js")
@@ -33,8 +33,8 @@
 	<meta property="og:url" content="#" />
 	<link rel="canonical" href="#" />
 
-	<!-- <link rel="icon" href="./img/favicon.ico">
-	<link rel="icon" href="./img/favicon.svg" type="image/svg+xml"> -->
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/favicon.png">
+	<!-- <link rel="icon" href="./img/favicon.svg" type="image/svg+xml"> -->
 	<!-- <link rel="apple-touch-icon" href="./img/favicon.svg"> -->
 	<?php
 	wp_head(); ?>

@@ -1,5 +1,5 @@
-<div class="card card-s-img card--border col-6">
-  <a href="<?php the_permalink(); ?>">
+<a href="<?php the_permalink(); ?>">
+  <div class="card card-s-img card--border col-6">
     <div class="card-flex">
       <div class="card-img">
         <img src="<?php the_post_thumbnail_url(); ?>" alt="imagem <?php the_title(); ?>">
@@ -11,5 +11,5 @@
         <div class="card-link">Ler o artigo <span>→</span></div>
       </div>
     </div>
-  </a>
-</div>
+  </div>
+</a>

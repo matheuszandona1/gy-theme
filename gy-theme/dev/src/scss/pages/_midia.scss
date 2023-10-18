@@ -15,6 +15,12 @@
 					margin-top: -130px;
 					margin-bottom: 50px;
 				}
+<<<<<<< Updated upstream
+=======
+				&-flex {
+					flex-wrap: nowrap;
+				}
+>>>>>>> Stashed changes
 				&-block {
 					max-width: 819px;
 				}
@@ -34,6 +40,10 @@
 		&--postagens {
 			display: flex;
 			flex-wrap: wrap;
+<<<<<<< Updated upstream
+=======
+			gap: 24px;
+>>>>>>> Stashed changes
 			padding-bottom: 80px;
 			.card.col-6:nth-child(even) {
 				margin-right: 0;

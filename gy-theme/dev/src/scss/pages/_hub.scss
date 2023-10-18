@@ -1,5 +1,11 @@
 .hub {
 	&-holder {
+<<<<<<< Updated upstream
+=======
+		padding: 0px 24px;
+		gap: 24px;
+		justify-content: center;
+>>>>>>> Stashed changes
 		@include media(s) {
 			flex-direction: column;
 			gap: 32px;
@@ -9,6 +15,32 @@
 			}
 			.ebooks__container {
 				flex-direction: column;
+<<<<<<< Updated upstream
+=======
+				@media (max-width: 1201px) {
+					.cards {
+						max-width: 300px;
+					}
+				}
+				.cards__bigger {
+					.cards__info {
+						.cards__desc {
+							color: $verde-900 !important;
+							font-weight: bold;
+							@include highlight-links;
+							font-size: 16px;
+							transition: all 0.3s ease-in;
+							opacity: 0;
+						}
+					}
+					&:hover {
+						.cards__desc {
+							opacity: 1;
+							height: 100%;
+						}
+					}
+				}
+>>>>>>> Stashed changes
 			}
 		}
 	}
@@ -67,7 +99,7 @@
 		}
 	}
 	.topo__hub {
-		padding: 100px 0 467px 0;
+		padding: 100px 24px 467px 24px;
 		background: $verde-50;
 		margin-bottom: 60px;
 		@include media(s) {
@@ -123,8 +155,12 @@
 				max-width: 819px;
 			}
 			.card-img {
+				@media (max-width: 1200px) {
+					max-width: 250px;
+					width: 100%;
+				}
 				img {
-					width: 341px;
+					width: 100%;
 					height: 238px;
 				}
 				@include media(s) {
@@ -133,6 +169,19 @@
 						width: 263px;
 					}
 				}
+<<<<<<< Updated upstream
+=======
+			}
+		}
+		.hub__floating {
+			.sidebar {
+				@media (max-width: 1201px) {
+					max-width: 731px;
+					.newsletter {
+						padding: 0;
+					}
+				}
+>>>>>>> Stashed changes
 			}
 		}
 	}
@@ -141,11 +190,38 @@
 		display: flex;
 		position: absolute;
 		gap: 24px;
+<<<<<<< Updated upstream
+=======
+		height: 646px;
+		@media (max-width: 1201px) {
+			max-width: 1160px;
+		}
+>>>>>>> Stashed changes
 		.newsletter {
 			@include media(s) {
 				padding-top: 0px;
 				padding: 0;
 			}
+<<<<<<< Updated upstream
+=======
+			&__content {
+				max-width: 650px;
+			}
+			&__form {
+				display: flex;
+				.button--newsletter {
+					max-width: 75px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0;
+				}
+				.newsletter__form--input {
+					width: 100%;
+					margin-right: 24px;
+				}
+			}
+>>>>>>> Stashed changes
 		}
 		@include media(s) {
 			flex-direction: column;
@@ -155,6 +231,10 @@
 		}
 		.cards__bigger {
 			@include s-shadow;
+<<<<<<< Updated upstream
+=======
+			height: 646px;
+>>>>>>> Stashed changes
 			@include media(s) {
 				height: 450px;
 				flex: unset;
@@ -162,64 +242,132 @@
 					display: none;
 				}
 			}
+<<<<<<< Updated upstream
+=======
+			.cards__info {
+				.cards__desc {
+					color: $verde-900 !important;
+					font-weight: bold;
+					@include highlight-links;
+					font-size: 16px;
+					transition: all 0.3s ease-in;
+					opacity: 0;
+				}
+			}
+			&:hover {
+				.cards__desc {
+					opacity: 1;
+					height: 100%;
+				}
+			}
+>>>>>>> Stashed changes
 		}
-		&--middle {
-			max-width: 608px;
-			.card-title {
-				height: 46px;
+	}
+	&--middle {
+		//max-width: 608px;
+		max-width: 100%;
+		.card-title {
+			height: 46px;
+		}
+		.card-link {
+			line-height: 11px;
+		}
+		.sidebar {
+			@media (max-width: 1201px) {
+				max-width: 731px;
+				.card {
+					background-color: red;
+				}
 			}
-			.card-link {
-				line-height: 11px;
-			}
-			.sidebar {
-				.newsletter {
-					&__icon {
+			.newsletter {
+				&__icon {
+					svg {
+						width: 67px;
+						height: 67px;
+					}
+				}
+				&__container {
+					justify-content: start !important;
+					@include s-shadow;
+				}
+				&__heading {
+					height: 28px;
+				}
+				&__content {
+					align-items: start !important;
+					max-width: 100%;
+				}
+				&__form {
+					display: flex;
+					&--input {
+						max-width: 480px;
+						width: 100%;
+						margin-right: 24px;
+						margin-bottom: 0px;
+					}
+					.button {
+						text-align: center;
+						max-width: 70px;
+						padding: 0;
 						svg {
-							width: 67px;
-							height: 67px;
-						}
-					}
-					&__container {
-						justify-content: start !important;
-						@include s-shadow;
-					}
-					&__heading {
-						height: 28px;
-					}
-					&__content {
-						align-items: start !important;
-						max-width: 100%;
-					}
-					&__form {
-						display: flex;
-						&--input {
-							max-width: 480px;
-							width: 100%;
-							margin-right: 24px;
-							margin-bottom: 0px;
-						}
-						.button {
-							text-align: center;
-							max-width: 70px;
-							padding: 0;
-							svg {
-								display: block;
-							}
+							display: block;
 						}
 					}
 				}
 			}
 		}
-		&--end {
-			a {
-				text-decoration: none;
-			}
+	}
+	&--end {
+		width: 100%;
+		max-width: 197px;
+		a {
+			text-decoration: none;
 		}
 	}
-	.cases {
-		&__container--destaque {
-			.card {
-				position: relative;
+}
+.cases {
+	&__container--destaque {
+		.card {
+			position: relative;
+		}
+	}
+}
+
+.succes-cases {
+	justify-content: center;
+	flex-wrap: wrap;
+	@include media(s) {
+		flex-direction: column;
+		.card-flex {
+			max-width: 100%;
+			img {
+				width: 260px;
+			}
+			flex-direction: column;
+		}
+	}
+}
+.ebooks {
+	&__container {
+		.cards__bigger {
+			@media (max-width: 1201px) {
+				max-width: 300px;
+			}
+			.cards__info {
+				.cards__desc {
+					color: $verde-900 !important;
+					font-weight: bold;
+					@include highlight-links;
+					font-size: 16px;
+					transition: all 0.3s ease-in;
+					opacity: 0;
+				}
+			}
+			&:hover {
+				.cards__desc {
+					opacity: 1;
+					height: 100%;
+				}
 			}
 		}
 	}

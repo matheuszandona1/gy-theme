@@ -38,6 +38,9 @@
 					position: absolute;
 					top: -130px;
 					left: -146px;
+					@media (max-width: 1200px) {
+						display: none;
+					}
 					@include media(s) {
 						display: none;
 					}

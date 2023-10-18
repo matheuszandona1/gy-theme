@@ -3,6 +3,17 @@
 		padding: 80px 0px;
 		@include media(s) {
 			padding: 10px 0px;
+<<<<<<< Updated upstream
+=======
+			.nav {
+				flex-wrap: nowrap;
+				overflow: auto;
+				max-width: 100%;
+				&-link {
+					flex-shrink: 0;
+				}
+			}
+>>>>>>> Stashed changes
 		}
 		&__container {
 			@include container;

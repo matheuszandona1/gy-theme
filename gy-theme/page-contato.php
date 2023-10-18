@@ -15,9 +15,7 @@ get_header();
 			<h2 class="default__title no-after">Assessoria de imprensa</h2>
 			<div class="box">
 				<p class="default__smaller">
-					_a4e Holofote <br>
-					Marilia Pontes <br>
-					mariliapontes@a4eholofote.com.br
+					<?php the_field('informacoes_assessoria'); ?>
 				</p>
 			</div>
 			<div class="button--container center">
@@ -25,17 +23,20 @@ get_header();
 			</div>
 		</div>
 	</section>
-	<section class="vagas" style="background-image: url('<?php echo site_url(); ?>/wp-content/uploads/2023/07/b7dcd6c95a5c32de695f17beb130b513.jpg')">
-		<div class="vagas__container">
-			<div class="vagas__content">
-				<h2 class="default__title no-after smaller">Faça parte do nosso time</h2>
-				<p class="default__smaller">Confira nossas vagas abertas</p>
-				<div class="button--container center">
-					<a href="#" target="_blank" class="button button--default">CONHEÇA TODAS NOSSAS VAGAS</a>
+	<?php if (have_rows('secao_vagas')) { ?>
+		<?php while (have_rows('secao_vagas')) : the_row(); ?>
+			<section class="vagas" style="background-image: url('<?php the_sub_field('background'); ?>')">
+				<div class="vagas__container">
+					<div class="vagas__content">
+						<h2 class="default__title no-after smaller"><?php the_sub_field('titulo'); ?></h2>
+						<p class="default__smaller"><?php the_sub_field('subtitulo'); ?></p>
+						<div class="button--container center">
+							<a href="<?php the_sub_field('link_cta'); ?>" target="_blank" class="button button--default"><?php the_sub_field('texto_cta'); ?></a>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</section>
+			</section>
+			<?php endwhile; ?><?php  } ?>
 </main>
 
 <?php

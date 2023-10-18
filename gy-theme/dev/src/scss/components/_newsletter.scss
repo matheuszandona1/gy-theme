@@ -1,4 +1,5 @@
 .newsletter {
+	padding: 0px 24px;
 	@include media(s) {
 		padding: 40px 20px 0px;
 	}
@@ -11,6 +12,8 @@
 		padding: 80px;
 		background: linear-gradient(0deg, $azul-800, $azul-800), linear-gradient(90deg, rgba(0, 117, 126, 0.8) 0%, rgba(0, 117, 126, 0) 100%);
 		color: $neutro-50;
+		z-index: 10;
+		position: relative;
 		@include media(s) {
 			flex-direction: column;
 			padding: 15px;

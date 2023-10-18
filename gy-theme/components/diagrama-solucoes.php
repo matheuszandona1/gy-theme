@@ -12,6 +12,7 @@
     <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-solucoes-mob.png" alt="" class="d-md-none mx-auto w-100" width="100%">
   </div>
   <div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile2-tab" tabindex="0">
+<<<<<<< Updated upstream
     <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia.png" alt="" width="100%" class="d-none d-md-block">
     <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia-mob.png" alt="" width="100%" class="d-md-none">
   </div>
@@ -26,5 +27,21 @@
   <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
     <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos.png" alt="" width="100%" class="d-none d-md-block">
     <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos-mob.png" alt="" width="100%" class="d-md-none">
+=======
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-efficiency"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia.png" alt="" width="100%" class="d-none d-md-block"></a>
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-efficiency"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-eficiencia-mob.png" alt="" width="100%" class="d-md-none">
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-production"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-energia.png" alt="" width="100%" class="d-none d-md-block"></a>
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-production"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-energia-mob.png" alt="" width="100%" class="d-md-none"></a>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-mobility"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-mobilidade.png" alt="" width="100%" class="d-none d-md-block"></a>
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-mobility"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-mobilidade-mob.png" alt="" width="100%" class="d-md-none"></a>
+  </div>
+  <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-mobility"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos.png" alt="" width="100%" class="d-none d-md-block"></a>
+    <a href="<?php echo site_url(); ?>/solucoes-gy/shift-mobility"><img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/diagrama-servicos-mob.png" alt="" width="100%" class="d-md-none"></a>
+>>>>>>> Stashed changes
   </div>
 </div>
